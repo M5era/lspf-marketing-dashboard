@@ -5,25 +5,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lisbon Street Photo Fest 2026 — Open Call Dashboard</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="data.js"></script>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: #0f0f13; color: #e0e0e0; font-family: 'Helvetica Neue', Arial, sans-serif; padding: 32px; }
-  h1 { font-size: 18px; font-weight: 500; color: #fff; letter-spacing: 0.04em; text-transform: uppercase; }
-  .subtitle { font-size: 12px; color: #666; margin-top: 4px; letter-spacing: 0.06em; text-transform: uppercase; }
-  header { margin-bottom: 32px; border-bottom: 1px solid #222; padding-bottom: 20px; display: flex; justify-content: space-between; align-items: flex-end; }
-  .kpi-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-bottom: 28px; }
-  .kpi { background: #16161d; border: 1px solid #222; border-radius: 8px; padding: 20px; }
-  .kpi-label { font-size: 10px; color: #555; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
-  .kpi-value { font-size: 28px; font-weight: 600; color: #fff; }
-  .kpi-sub { font-size: 11px; color: #4ade80; margin-top: 4px; }
-  .kpi-sub.warn { color: #facc15; }
-  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
-  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px; }
-  .card { background: #16161d; border: 1px solid #222; border-radius: 8px; padding: 24px; }
-  .card h2 { font-size: 11px; color: #555; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 20px; }
+  body { background: #f2f2f7; color: #1a1a1a; font-family: 'Helvetica Neue', Arial, sans-serif; padding: 32px; }
+
+  h1 { font-size: 18px; font-weight: 600; color: #111; letter-spacing: 0.03em; text-transform: uppercase; }
+  .subtitle { font-size: 11px; color: #999; margin-top: 4px; letter-spacing: 0.06em; text-transform: uppercase; }
+  header { margin-bottom: 24px; border-bottom: 1px solid #e0e0e0; padding-bottom: 20px;
+           display: flex; justify-content: space-between; align-items: flex-end; }
+
+  .tag { display: inline-block; background: #fff; border: 1px solid #ddd;
+         border-radius: 4px; font-size: 10px; color: #888; padding: 3px 8px; margin-right: 6px; }
+  .tag.green { border-color: #86efac; color: #16a34a; background: #f0fdf4; }
+
+  /* ── Filter bar ─────────────────────────────────────────────── */
+  .filter-bar {
+    display: flex; align-items: center; flex-wrap: wrap; gap: 6px;
+    background: #fff; border: 1px solid #e0e0e0; border-radius: 10px;
+    padding: 10px 16px; margin-bottom: 28px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  .filter-sep { width: 1px; height: 18px; background: #e0e0e0; margin: 0 6px; flex-shrink: 0; }
+  .filter-label { font-size: 9px; color: #bbb; text-transform: uppercase;
+                  letter-spacing: 0.1em; margin-right: 2px; flex-shrink: 0; }
+  .filter-group { display: flex; gap: 4px; flex-wrap: wrap; align-items: center; }
+  .fbtn {
+    background: transparent; border: 1px solid #e0e0e0; border-radius: 6px;
+    color: #888; font-size: 10px; padding: 4px 10px; cursor: pointer;
+    letter-spacing: 0.03em; transition: all 0.15s; white-space: nowrap;
+    font-family: inherit;
+  }
+  .fbtn:hover { border-color: #6d5af0; color: #6d5af0; background: #f3f1fe; }
+  .fbtn.active { background: #6d5af0; border-color: #6d5af0; color: #fff; font-weight: 500; }
+
+  /* ── KPIs ───────────────────────────────────────────────────── */
+  .kpi-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-bottom: 24px; }
+  .kpi { background: #fff; border: 1px solid #e8e8e8; border-radius: 10px; padding: 20px;
+         box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .kpi-label { font-size: 10px; color: #aaa; text-transform: uppercase;
+               letter-spacing: 0.08em; margin-bottom: 8px; }
+  .kpi-value { font-size: 28px; font-weight: 700; color: #111; }
+  .kpi-sub { font-size: 11px; color: #22c55e; margin-top: 4px; }
+  .kpi-sub.warn { color: #d97706; }
+  .kpi-sub.neutral { color: #999; }
+
+  /* ── Charts ─────────────────────────────────────────────────── */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+  .card { background: #fff; border: 1px solid #e8e8e8; border-radius: 10px; padding: 24px;
+          box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .card h2 { font-size: 10px; color: #bbb; text-transform: uppercase;
+             letter-spacing: 0.08em; margin-bottom: 20px; font-weight: 500; }
   canvas { max-width: 100%; }
-  .tag { display: inline-block; background: #1e1e2e; border: 1px solid #333; border-radius: 4px; font-size: 10px; color: #888; padding: 3px 8px; margin-right: 6px; }
-  .tag.green { border-color: #4ade8033; color: #4ade80; background: #4ade8011; }
 </style>
 </head>
 <body>
@@ -31,7 +65,7 @@
 <header>
   <div>
     <h1>Lisbon Street Photo Fest 2026</h1>
-    <div class="subtitle">Open Call · Meta Ads · Apr 3–10, 2026</div>
+    <div class="subtitle">Open Call · Meta Ads · Apr 3 – May 31, 2026</div>
   </div>
   <div style="text-align:right">
     <span class="tag green">Live</span>
@@ -40,21 +74,35 @@
   </div>
 </header>
 
+<!-- ── Filter bar ─────────────────────────────────────────────────── -->
+<div class="filter-bar">
+  <div class="filter-group">
+    <button class="fbtn active" data-mode="all">All Time</button>
+  </div>
+  <div class="filter-sep"></div>
+  <span class="filter-label">Month</span>
+  <div class="filter-group" id="month-filters"></div>
+  <div class="filter-sep"></div>
+  <span class="filter-label">Week</span>
+  <div class="filter-group" id="week-filters"></div>
+</div>
+
+<!-- ── KPIs ───────────────────────────────────────────────────────── -->
 <div class="kpi-row">
   <div class="kpi">
     <div class="kpi-label">Submissions</div>
-    <div class="kpi-value">121</div>
-    <div class="kpi-sub">+22 organic (pre-campaign)</div>
+    <div class="kpi-value" id="kpi-submissions">—</div>
+    <div class="kpi-sub neutral" id="kpi-submissions-sub"></div>
   </div>
   <div class="kpi">
     <div class="kpi-label">Landing Page Views</div>
     <div class="kpi-value">1,398</div>
-    <div class="kpi-sub">Submission rate: 8.6% ↑</div>
+    <div class="kpi-sub neutral">Submission rate: 8.6% ↑</div>
   </div>
   <div class="kpi">
     <div class="kpi-label">Cost Per Submission</div>
     <div class="kpi-value">€0.81</div>
-    <div class="kpi-sub">Based on €98 spent</div>
+    <div class="kpi-sub neutral">Based on €98 spent</div>
   </div>
   <div class="kpi">
     <div class="kpi-label">Avg CPV</div>
@@ -64,10 +112,11 @@
   <div class="kpi">
     <div class="kpi-label">Impressions</div>
     <div class="kpi-value">121K</div>
-    <div class="kpi-sub">CTR: 1.15% ↑</div>
+    <div class="kpi-sub neutral">CTR: 1.15% ↑</div>
   </div>
 </div>
 
+<!-- ── Charts ─────────────────────────────────────────────────────── -->
 <div class="grid-2">
   <div class="card">
     <h2>Submissions per Day</h2>
@@ -106,200 +155,361 @@
 </div>
 
 <script>
+/* ─────────────────────────────────────────────────────────────────────────────
+   Colors & Chart.js defaults
+───────────────────────────────────────────────────────────────────────────── */
 const C = {
-  bg: '#16161d',
-  grid: '#222',
-  text: '#666',
-  white: '#e0e0e0',
-  accent: '#7c6af7',
-  green: '#4ade80',
-  yellow: '#facc15',
-  pink: '#f472b6',
-  blue: '#60a5fa',
+  grid:   '#eeeeee',
+  text:   '#bbb',
+  dark:   '#222',
+  accent: '#6d5af0',
+  green:  '#22c55e',
+  yellow: '#f59e0b',
+  pink:   '#ec4899',
+  blue:   '#3b82f6',
 };
 
 Chart.defaults.color = C.text;
 Chart.defaults.font.family = "'Helvetica Neue', Arial, sans-serif";
 Chart.defaults.font.size = 11;
 
-const gridOpts = {
-  color: C.grid,
-  drawBorder: false,
+const CAMPAIGN_START = '2026-04-03';
+const TOP_N = 11;
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Meta Ads data (hardcoded — not in xlsx)
+───────────────────────────────────────────────────────────────────────────── */
+const SPEND_BY_DATE = {
+  '2026-04-03': 12.03, '2026-04-04': 17.43, '2026-04-05': 20.83,
+  '2026-04-06': 17.35, '2026-04-07': 8.96,  '2026-04-08': 15.04,
+  '2026-04-09': 6.43,
 };
 
-// 1. Submissions per day
-new Chart(document.getElementById('submissionsChart'), {
-  type: 'bar',
-  data: {
-    labels: ['Apr 2*', 'Apr 3', 'Apr 4', 'Apr 5', 'Apr 6 (Sun)', 'Apr 7', 'Apr 8', 'Apr 9'],
-    datasets: [{
-      label: 'Submissions',
-      data: [22, 10, 5, 8, 18, 21, 18, 19],
-      backgroundColor: ['#4ade8044','#7c6af766','#7c6af766','#7c6af766','#facc1599','#7c6af766','#7c6af766','#7c6af766'],
-      borderColor:     ['#4ade80',  '#7c6af7',  '#7c6af7',  '#7c6af7',  '#facc15',  '#7c6af7',  '#7c6af7',  '#7c6af7'],
-      borderWidth: 1,
-      borderRadius: 4,
-    }]
-  },
-  options: {
-    plugins: { legend: { display: false }, tooltip: { callbacks: { afterLabel: ctx => ctx.dataIndex === 0 ? '* pre-campaign organic' : '' } } },
-    scales: {
-      x: { grid: { color: C.grid }, ticks: { color: C.text } },
-      y: { grid: { color: C.grid }, ticks: { color: C.text } }
-    }
-  }
-});
+const CPV_BY_DATE = {
+  '2026-04-03': 0.101, '2026-04-04': 0.102, '2026-04-05': 0.089,
+  '2026-04-06': 0.059, '2026-04-07': 0.051, '2026-04-08': 0.068,
+  '2026-04-09': 0.053, '2026-04-10': 0.046,
+};
 
-// 2. CPV trend
-new Chart(document.getElementById('cpvChart'), {
-  type: 'line',
-  data: {
-    labels: ['Apr 3', 'Apr 4', 'Apr 5', 'Apr 6', 'Apr 7', 'Apr 8', 'Apr 9', 'Apr 10'],
-    datasets: [{
-      label: 'CPV (€)',
-      data: [0.101, 0.102, 0.089, 0.059, 0.051, 0.068, 0.053, 0.046],
-      borderColor: C.green,
-      backgroundColor: '#4ade8022',
-      fill: true,
-      tension: 0.4,
-      pointRadius: 4,
-      pointBackgroundColor: C.green,
-    }]
-  },
-  options: {
-    plugins: { legend: { display: false } },
-    scales: {
-      x: { grid: { color: C.grid } },
-      y: { grid: { color: C.grid }, ticks: { callback: v => '€' + v.toFixed(3) } }
-    }
-  }
-});
+/* ─────────────────────────────────────────────────────────────────────────────
+   Helpers
+───────────────────────────────────────────────────────────────────────────── */
+function fmtShort(iso) {
+  const d = new Date(iso + 'T12:00:00');
+  return d.getDate() + ' ' + d.toLocaleString('en', { month: 'short' });
+}
+function fmtMonth(ym) {   // "2026-04" → "April"
+  return new Date(ym + '-01T12:00:00').toLocaleString('en', { month: 'long' });
+}
+function isSunday(iso) { return new Date(iso + 'T12:00:00').getDay() === 0; }
 
-// 3. Country bar (horizontal)
-new Chart(document.getElementById('countryChart'), {
-  type: 'bar',
-  data: {
-    labels: ['PT','US','IT','FR','DE','GB','ES','BE','MX','CA','BR'],
-    datasets: [{
-      data: [18,13,12,9,9,8,7,5,5,5,4],
-      backgroundColor: C.accent + '88',
-      borderColor: C.accent,
-      borderWidth: 1,
-      borderRadius: 3,
-    }]
-  },
-  options: {
-    indexAxis: 'y',
-    plugins: { legend: { display: false } },
-    scales: {
-      x: { grid: { color: C.grid } },
-      y: { grid: { display: false } }
-    }
-  }
-});
+function weekStart(iso) {
+  const d = new Date(iso + 'T12:00:00');
+  const diff = d.getDay() === 0 ? -6 : 1 - d.getDay();
+  const mon = new Date(d); mon.setDate(d.getDate() + diff);
+  return mon.toISOString().slice(0, 10);
+}
+function weekEnd(monIso) {
+  const d = new Date(monIso + 'T12:00:00');
+  d.setDate(d.getDate() + 6);
+  return d.toISOString().slice(0, 10);
+}
 
-// 4. Gender doughnut
-new Chart(document.getElementById('genderChart'), {
-  type: 'doughnut',
-  data: {
-    labels: ['Male (66%)', 'Female (34%)'],
-    datasets: [{
-      data: [80, 41],
-      backgroundColor: [C.blue + 'cc', C.pink + 'cc'],
-      borderColor: [C.blue, C.pink],
-      borderWidth: 1,
-    }]
-  },
-  options: {
-    cutout: '65%',
-    plugins: {
-      legend: { position: 'bottom', labels: { padding: 16, color: C.white } }
-    }
+// Date range for a filter mode — returns [startISO, endISO] or null for all-time
+function modeRange(mode) {
+  if (mode === 'all') return null;
+  if (mode.startsWith('month:')) {
+    const ym = mode.slice(6);
+    const start = ym + '-01';
+    const end   = new Date(new Date(start + 'T12:00:00').setMonth(
+                    new Date(start + 'T12:00:00').getMonth() + 1) - 86400000)
+                  .toISOString().slice(0,10);
+    return [start, end];
   }
-});
-
-// 5. Age distribution
-new Chart(document.getElementById('ageChart'), {
-  type: 'bar',
-  data: {
-    labels: ['20s','30s','40s','50s','60s','70s','80s'],
-    datasets: [{
-      data: [6, 37, 25, 28, 18, 5, 2],
-      backgroundColor: C.yellow + '88',
-      borderColor: C.yellow,
-      borderWidth: 1,
-      borderRadius: 3,
-    }]
-  },
-  options: {
-    plugins: { legend: { display: false } },
-    scales: {
-      x: { grid: { display: false } },
-      y: { grid: { color: C.grid } }
-    }
+  if (mode.startsWith('week:')) {
+    return mode.slice(5).split('/');
   }
-});
+  return null;
+}
 
-// 6. Nationality horizontal bar
-new Chart(document.getElementById('nationalityChart'), {
-  type: 'bar',
-  data: {
-    labels: ['PT','IT','DE','US','FR','GB','BR','BE','ES','CA'],
-    datasets: [{
-      data: [14,12,12,12,8,7,7,6,6,4],
-      backgroundColor: C.pink + '88',
-      borderColor: C.pink,
-      borderWidth: 1,
-      borderRadius: 3,
-    }]
-  },
-  options: {
-    indexAxis: 'y',
-    plugins: { legend: { display: false } },
-    scales: {
-      x: { grid: { color: C.grid } },
-      y: { grid: { display: false } }
+/* ─────────────────────────────────────────────────────────────────────────────
+   Aggregation from records
+───────────────────────────────────────────────────────────────────────────── */
+function aggregate(records) {
+  const dayMap = {};
+  records.forEach(r => { dayMap[r.date] = (dayMap[r.date] || 0) + 1; });
+  const sortedDates = Object.keys(dayMap).sort();
+  const dayLabels = sortedDates.map(iso => {
+    let lbl = fmtShort(iso);
+    if (iso < CAMPAIGN_START) lbl += '*';
+    if (isSunday(iso))        lbl += ' (Sun)';
+    return lbl;
+  });
+  const dayData   = sortedDates.map(iso => dayMap[iso]);
+  const dayBg     = sortedDates.map(iso =>
+    iso < CAMPAIGN_START ? C.green  + '44' :
+    isSunday(iso)        ? C.yellow + '66' : C.accent + '55');
+  const dayBorder = sortedDates.map(iso =>
+    iso < CAMPAIGN_START ? C.green  :
+    isSunday(iso)        ? C.yellow : C.accent);
+
+  let male = 0, female = 0;
+  records.forEach(r => { if (r.gender==='male') male++; else if (r.gender==='female') female++; });
+
+  const BUCKETS = [['teens',10,19],['20s',20,29],['30s',30,39],['40s',40,49],
+                   ['50s',50,59],['60s',60,69],['70s',70,79],['80s',80,89]];
+  const ageLabels = BUCKETS.map(b => b[0]);
+  const ageData   = BUCKETS.map(([,lo,hi]) => records.filter(r => r.age>=lo && r.age<=hi).length);
+
+  const cMap = {}, nMap = {};
+  records.forEach(r => {
+    if (r.country)     cMap[r.country]     = (cMap[r.country]||0) + 1;
+    if (r.nationality) nMap[r.nationality] = (nMap[r.nationality]||0) + 1;
+  });
+  const topCountries = Object.entries(cMap).sort((a,b)=>b[1]-a[1]).slice(0, TOP_N);
+  const topNat       = Object.entries(nMap).sort((a,b)=>b[1]-a[1]).slice(0, TOP_N - 1);
+
+  return { total: records.length, sortedDates, dayLabels, dayData, dayBg, dayBorder,
+           male, female, ageLabels, ageData, topCountries, topNat };
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Filter records + Meta Ads data
+───────────────────────────────────────────────────────────────────────────── */
+function filterRecords(mode) {
+  if (mode === 'all') return DATA.records;
+  const [start, end] = modeRange(mode);
+  return DATA.records.filter(r => r.date >= start && r.date <= end);
+}
+
+function filterMetaDates(mode) {
+  // Returns sorted date keys of SPEND_BY_DATE within the current range
+  const allDates = Object.keys(SPEND_BY_DATE).sort();
+  if (mode === 'all') return allDates;
+  const [start, end] = modeRange(mode);
+  return allDates.filter(d => d >= start && d <= end);
+}
+
+function filterCpvDates(mode) {
+  const allDates = Object.keys(CPV_BY_DATE).sort();
+  if (mode === 'all') return allDates;
+  const [start, end] = modeRange(mode);
+  return allDates.filter(d => d >= start && d <= end);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Filter bar
+───────────────────────────────────────────────────────────────────────────── */
+function buildFilters() {
+  const months = [...new Set(DATA.records.map(r => r.date.slice(0,7)))].sort();
+  const weeks  = [...new Set(DATA.records.map(r => weekStart(r.date)))].sort();
+
+  months.forEach(m => {
+    const btn = document.createElement('button');
+    btn.className = 'fbtn'; btn.dataset.mode = 'month:' + m;
+    btn.textContent = fmtMonth(m);
+    document.getElementById('month-filters').appendChild(btn);
+  });
+
+  weeks.forEach(monIso => {
+    const end = weekEnd(monIso);
+    const btn = document.createElement('button');
+    btn.className = 'fbtn'; btn.dataset.mode = 'week:' + monIso + '/' + end;
+    btn.textContent = fmtShort(monIso) + '–' + fmtShort(end);
+    document.getElementById('week-filters').appendChild(btn);
+  });
+
+  document.querySelector('.filter-bar').addEventListener('click', e => {
+    const btn = e.target.closest('.fbtn');
+    if (!btn) return;
+    document.querySelectorAll('.fbtn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    applyFilter(btn.dataset.mode);
+  });
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Charts
+───────────────────────────────────────────────────────────────────────────── */
+const charts = {};
+
+function initCharts(agg, mode) {
+  const gTotal = agg.male + agg.female;
+  const mPct   = gTotal ? Math.round(agg.male   / gTotal * 100) : 0;
+  const fPct   = gTotal ? Math.round(agg.female / gTotal * 100) : 0;
+  const cpvDates   = filterCpvDates(mode);
+  const metaDates  = filterMetaDates(mode);
+
+  charts.subs = new Chart(document.getElementById('submissionsChart'), {
+    type: 'bar',
+    data: {
+      labels: agg.dayLabels,
+      datasets: [{ label:'Submissions', data:agg.dayData,
+        backgroundColor:agg.dayBg, borderColor:agg.dayBorder, borderWidth:1, borderRadius:4 }]
+    },
+    options: {
+      plugins: { legend:{display:false}, tooltip:{ callbacks:{
+        afterLabel: ctx => agg.sortedDates[ctx.dataIndex] < CAMPAIGN_START ? '* pre-campaign organic' : ''
+      }}},
+      scales: { x:{grid:{color:C.grid}}, y:{grid:{color:C.grid}} }
     }
-  }
-});
+  });
 
-// 7. Spend vs Submissions dual axis
-new Chart(document.getElementById('spendChart'), {
-  type: 'bar',
-  data: {
-    labels: ['Apr 3','Apr 4','Apr 5','Apr 6','Apr 7','Apr 8','Apr 9'],
-    datasets: [
-      {
-        label: 'Spend (€)',
-        data: [12.03, 17.43, 20.83, 17.35, 8.96, 15.04, 6.43],
-        backgroundColor: C.blue + '66',
-        borderColor: C.blue,
-        borderWidth: 1,
-        borderRadius: 3,
-        yAxisID: 'y',
-      },
-      {
-        label: 'Submissions',
-        data: [10, 5, 8, 18, 21, 18, 19],
-        type: 'line',
-        borderColor: C.green,
-        backgroundColor: 'transparent',
-        pointBackgroundColor: C.green,
-        pointRadius: 4,
-        tension: 0.4,
-        yAxisID: 'y1',
+  charts.cpv = new Chart(document.getElementById('cpvChart'), {
+    type: 'line',
+    data: {
+      labels: cpvDates.map(fmtShort),
+      datasets: [{ label:'CPV (€)', data:cpvDates.map(d=>CPV_BY_DATE[d]),
+        borderColor:C.green, backgroundColor:C.green+'22',
+        fill:true, tension:0.4, pointRadius:4, pointBackgroundColor:C.green }]
+    },
+    options: {
+      plugins:{ legend:{display:false} },
+      scales: { x:{grid:{color:C.grid}}, y:{grid:{color:C.grid}, ticks:{callback:v=>'€'+v.toFixed(3)}} }
+    }
+  });
+
+  charts.country = new Chart(document.getElementById('countryChart'), {
+    type: 'bar',
+    data: {
+      labels: agg.topCountries.map(e=>e[0]),
+      datasets: [{ data:agg.topCountries.map(e=>e[1]),
+        backgroundColor:C.accent+'55', borderColor:C.accent, borderWidth:1, borderRadius:3 }]
+    },
+    options: { indexAxis:'y', plugins:{legend:{display:false}},
+      scales:{x:{grid:{color:C.grid}},y:{grid:{display:false}}} }
+  });
+
+  charts.gender = new Chart(document.getElementById('genderChart'), {
+    type: 'doughnut',
+    data: {
+      labels: [`Male (${mPct}%)`, `Female (${fPct}%)`],
+      datasets: [{ data:[agg.male, agg.female],
+        backgroundColor:[C.blue+'cc', C.pink+'cc'], borderColor:[C.blue, C.pink], borderWidth:1 }]
+    },
+    options: { cutout:'65%',
+      plugins:{ legend:{ position:'bottom', labels:{padding:16, color:C.dark} } } }
+  });
+
+  charts.age = new Chart(document.getElementById('ageChart'), {
+    type: 'bar',
+    data: {
+      labels: agg.ageLabels,
+      datasets: [{ data:agg.ageData,
+        backgroundColor:C.yellow+'66', borderColor:C.yellow, borderWidth:1, borderRadius:3 }]
+    },
+    options: { plugins:{legend:{display:false}},
+      scales:{x:{grid:{display:false}},y:{grid:{color:C.grid}}} }
+  });
+
+  charts.nat = new Chart(document.getElementById('nationalityChart'), {
+    type: 'bar',
+    data: {
+      labels: agg.topNat.map(e=>e[0]),
+      datasets: [{ data:agg.topNat.map(e=>e[1]),
+        backgroundColor:C.pink+'55', borderColor:C.pink, borderWidth:1, borderRadius:3 }]
+    },
+    options: { indexAxis:'y', plugins:{legend:{display:false}},
+      scales:{x:{grid:{color:C.grid}},y:{grid:{display:false}}} }
+  });
+
+  const subMap = {};
+  agg.sortedDates.forEach((d,i) => { subMap[d] = agg.dayData[i]; });
+
+  charts.spend = new Chart(document.getElementById('spendChart'), {
+    type: 'bar',
+    data: {
+      labels: metaDates.map(fmtShort),
+      datasets: [
+        { label:'Spend (€)', data:metaDates.map(d=>SPEND_BY_DATE[d]),
+          backgroundColor:C.blue+'55', borderColor:C.blue, borderWidth:1, borderRadius:3, yAxisID:'y' },
+        { label:'Submissions', data:metaDates.map(d=>subMap[d]||0), type:'line',
+          borderColor:C.green, backgroundColor:'transparent',
+          pointBackgroundColor:C.green, pointRadius:4, tension:0.4, yAxisID:'y1' }
+      ]
+    },
+    options: {
+      plugins:{ legend:{ position:'bottom', labels:{padding:16, color:C.dark} } },
+      scales:{
+        x:{ grid:{color:C.grid} },
+        y:{ grid:{color:C.grid}, position:'left', ticks:{callback:v=>'€'+v} },
+        y1:{ grid:{display:false}, position:'right' }
       }
-    ]
-  },
-  options: {
-    plugins: { legend: { position: 'bottom', labels: { padding: 16, color: C.white } } },
-    scales: {
-      x: { grid: { color: C.grid } },
-      y: { grid: { color: C.grid }, position: 'left', ticks: { callback: v => '€'+v } },
-      y1: { grid: { display: false }, position: 'right' }
     }
+  });
+}
+
+function updateCharts(agg, mode) {
+  const gTotal = agg.male + agg.female;
+  const mPct   = gTotal ? Math.round(agg.male   / gTotal * 100) : 0;
+  const fPct   = gTotal ? Math.round(agg.female / gTotal * 100) : 0;
+  const cpvDates  = filterCpvDates(mode);
+  const metaDates = filterMetaDates(mode);
+  const subMap = {};
+  agg.sortedDates.forEach((d,i) => { subMap[d] = agg.dayData[i]; });
+
+  charts.subs.data.labels                      = agg.dayLabels;
+  charts.subs.data.datasets[0].data            = agg.dayData;
+  charts.subs.data.datasets[0].backgroundColor = agg.dayBg;
+  charts.subs.data.datasets[0].borderColor     = agg.dayBorder;
+  charts.subs.options.plugins.tooltip.callbacks.afterLabel =
+    ctx => agg.sortedDates[ctx.dataIndex] < CAMPAIGN_START ? '* pre-campaign organic' : '';
+  charts.subs.update();
+
+  charts.cpv.data.labels               = cpvDates.map(fmtShort);
+  charts.cpv.data.datasets[0].data     = cpvDates.map(d => CPV_BY_DATE[d]);
+  charts.cpv.update();
+
+  charts.country.data.labels           = agg.topCountries.map(e=>e[0]);
+  charts.country.data.datasets[0].data = agg.topCountries.map(e=>e[1]);
+  charts.country.update();
+
+  charts.gender.data.labels            = [`Male (${mPct}%)`, `Female (${fPct}%)`];
+  charts.gender.data.datasets[0].data  = [agg.male, agg.female];
+  charts.gender.update();
+
+  charts.age.data.datasets[0].data     = agg.ageData;
+  charts.age.update();
+
+  charts.nat.data.labels               = agg.topNat.map(e=>e[0]);
+  charts.nat.data.datasets[0].data     = agg.topNat.map(e=>e[1]);
+  charts.nat.update();
+
+  charts.spend.data.labels             = metaDates.map(fmtShort);
+  charts.spend.data.datasets[0].data   = metaDates.map(d => SPEND_BY_DATE[d]);
+  charts.spend.data.datasets[1].data   = metaDates.map(d => subMap[d] || 0);
+  charts.spend.update();
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Apply filter
+───────────────────────────────────────────────────────────────────────────── */
+function applyFilter(mode) {
+  const filtered = filterRecords(mode);
+  const agg      = aggregate(filtered);
+
+  document.getElementById('kpi-submissions').textContent = agg.total;
+  const subEl = document.getElementById('kpi-submissions-sub');
+  if (mode === 'all') {
+    const n = DATA.records.filter(r => r.date < CAMPAIGN_START).length;
+    subEl.textContent = n ? '+' + n + ' pre-campaign organic' : '';
+  } else {
+    subEl.textContent = '';
   }
-});
+
+  updateCharts(agg, mode);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Boot
+───────────────────────────────────────────────────────────────────────────── */
+buildFilters();
+const initAgg = aggregate(DATA.records);
+document.getElementById('kpi-submissions').textContent = initAgg.total;
+const organic = DATA.records.filter(r => r.date < CAMPAIGN_START).length;
+document.getElementById('kpi-submissions-sub').textContent =
+  organic ? '+' + organic + ' pre-campaign organic' : '';
+initCharts(initAgg, 'all');
 </script>
 </body>
 </html>
