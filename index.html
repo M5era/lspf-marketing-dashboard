@@ -8,56 +8,77 @@
 <script src="data.js"></script>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: #f2f2f7; color: #1a1a1a; font-family: 'Helvetica Neue', Arial, sans-serif; padding: 32px; }
+  body { background: #f2f2f7; color: #1a1a1a; font-family: 'Helvetica Neue', Arial, sans-serif; padding: 20px; }
 
-  h1 { font-size: 18px; font-weight: 600; color: #111; letter-spacing: 0.03em; text-transform: uppercase; }
+  h1 { font-size: 16px; font-weight: 600; color: #111; letter-spacing: 0.03em; text-transform: uppercase; }
   .subtitle { font-size: 11px; color: #999; margin-top: 4px; letter-spacing: 0.06em; text-transform: uppercase; }
-  header { margin-bottom: 24px; border-bottom: 1px solid #e0e0e0; padding-bottom: 20px;
-           display: flex; justify-content: space-between; align-items: flex-end; }
+  header { margin-bottom: 20px; border-bottom: 1px solid #e0e0e0; padding-bottom: 16px;
+           display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; }
+  .header-tags { display: flex; flex-wrap: wrap; gap: 4px; justify-content: flex-end; }
 
   .tag { display: inline-block; background: #fff; border: 1px solid #ddd;
-         border-radius: 4px; font-size: 10px; color: #888; padding: 3px 8px; margin-right: 6px; }
+         border-radius: 4px; font-size: 10px; color: #888; padding: 3px 8px; }
   .tag.green { border-color: #86efac; color: #16a34a; background: #f0fdf4; }
 
   /* ── Filter bar ─────────────────────────────────────────────── */
   .filter-bar {
-    display: flex; align-items: center; flex-wrap: wrap; gap: 6px;
     background: #fff; border: 1px solid #e0e0e0; border-radius: 10px;
-    padding: 10px 16px; margin-bottom: 28px;
+    padding: 10px 14px; margin-bottom: 20px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    display: flex; flex-direction: column; gap: 8px;
   }
-  .filter-sep { width: 1px; height: 18px; background: #e0e0e0; margin: 0 6px; flex-shrink: 0; }
+  .filter-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .filter-sep { display: none; }   /* hidden — rows replace separators */
   .filter-label { font-size: 9px; color: #bbb; text-transform: uppercase;
-                  letter-spacing: 0.1em; margin-right: 2px; flex-shrink: 0; }
+                  letter-spacing: 0.1em; flex-shrink: 0; min-width: 38px; }
   .filter-group { display: flex; gap: 4px; flex-wrap: wrap; align-items: center; }
   .fbtn {
     background: transparent; border: 1px solid #e0e0e0; border-radius: 6px;
-    color: #888; font-size: 10px; padding: 4px 10px; cursor: pointer;
+    color: #888; font-size: 10px; padding: 5px 10px; cursor: pointer;
     letter-spacing: 0.03em; transition: all 0.15s; white-space: nowrap;
-    font-family: inherit;
+    font-family: inherit; touch-action: manipulation;
   }
   .fbtn:hover { border-color: #6d5af0; color: #6d5af0; background: #f3f1fe; }
   .fbtn.active { background: #6d5af0; border-color: #6d5af0; color: #fff; font-weight: 500; }
 
   /* ── KPIs ───────────────────────────────────────────────────── */
-  .kpi-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-bottom: 24px; }
-  .kpi { background: #fff; border: 1px solid #e8e8e8; border-radius: 10px; padding: 20px;
+  .kpi-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px; margin-bottom: 20px;
+  }
+  .kpi { background: #fff; border: 1px solid #e8e8e8; border-radius: 10px; padding: 16px;
          box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
   .kpi-label { font-size: 10px; color: #aaa; text-transform: uppercase;
-               letter-spacing: 0.08em; margin-bottom: 8px; }
-  .kpi-value { font-size: 28px; font-weight: 700; color: #111; }
+               letter-spacing: 0.08em; margin-bottom: 6px; }
+  .kpi-value { font-size: 24px; font-weight: 700; color: #111; }
   .kpi-sub { font-size: 11px; color: #22c55e; margin-top: 4px; }
   .kpi-sub.warn { color: #d97706; }
   .kpi-sub.neutral { color: #999; }
 
   /* ── Charts ─────────────────────────────────────────────────── */
-  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
-  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-bottom: 14px; }
-  .card { background: #fff; border: 1px solid #e8e8e8; border-radius: 10px; padding: 24px;
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+  .card { background: #fff; border: 1px solid #e8e8e8; border-radius: 10px; padding: 20px;
           box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
   .card h2 { font-size: 10px; color: #bbb; text-transform: uppercase;
-             letter-spacing: 0.08em; margin-bottom: 20px; font-weight: 500; }
+             letter-spacing: 0.08em; margin-bottom: 16px; font-weight: 500; }
   canvas { max-width: 100%; }
+
+  /* ── Mobile ──────────────────────────────────────────────────── */
+  @media (max-width: 700px) {
+    body { padding: 14px; }
+    h1 { font-size: 14px; }
+    .kpi-row { grid-template-columns: 1fr 1fr; }
+    .kpi-value { font-size: 22px; }
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 420px) {
+    .kpi-row { grid-template-columns: 1fr 1fr; }
+    .kpi-value { font-size: 20px; }
+    .kpi { padding: 12px; }
+  }
 </style>
 </head>
 <body>
@@ -67,24 +88,29 @@
     <h1>Lisbon Street Photo Fest 2026</h1>
     <div class="subtitle">Open Call · Meta Ads · Apr 3 – May 31, 2026</div>
   </div>
-  <div style="text-align:right">
+  <div class="header-tags">
     <span class="tag green">Live</span>
-    <span class="tag">€1,250 total budget</span>
+    <span class="tag">€1,250 budget</span>
     <span class="tag">Closes May 31</span>
   </div>
 </header>
 
 <!-- ── Filter bar ─────────────────────────────────────────────────── -->
 <div class="filter-bar">
-  <div class="filter-group">
-    <button class="fbtn active" data-mode="all">All Time</button>
+  <div class="filter-row">
+    <span class="filter-label">View</span>
+    <div class="filter-group">
+      <button class="fbtn active" data-mode="all">All Time</button>
+    </div>
   </div>
-  <div class="filter-sep"></div>
-  <span class="filter-label">Month</span>
-  <div class="filter-group" id="month-filters"></div>
-  <div class="filter-sep"></div>
-  <span class="filter-label">Week</span>
-  <div class="filter-group" id="week-filters"></div>
+  <div class="filter-row">
+    <span class="filter-label">Month</span>
+    <div class="filter-group" id="month-filters"></div>
+  </div>
+  <div class="filter-row">
+    <span class="filter-label">Week</span>
+    <div class="filter-group" id="week-filters"></div>
+  </div>
 </div>
 
 <!-- ── KPIs ───────────────────────────────────────────────────────── -->
