@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lisbon Street Photo Fest 2026 — Open Call Dashboard</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0f0f13; color: #e0e0e0; font-family: 'Helvetica Neue', Arial, sans-serif; padding: 32px; }
+  h1 { font-size: 18px; font-weight: 500; color: #fff; letter-spacing: 0.04em; text-transform: uppercase; }
+  .subtitle { font-size: 12px; color: #666; margin-top: 4px; letter-spacing: 0.06em; text-transform: uppercase; }
+  header { margin-bottom: 32px; border-bottom: 1px solid #222; padding-bottom: 20px; display: flex; justify-content: space-between; align-items: flex-end; }
+  .kpi-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-bottom: 28px; }
+  .kpi { background: #16161d; border: 1px solid #222; border-radius: 8px; padding: 20px; }
+  .kpi-label { font-size: 10px; color: #555; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+  .kpi-value { font-size: 28px; font-weight: 600; color: #fff; }
+  .kpi-sub { font-size: 11px; color: #4ade80; margin-top: 4px; }
+  .kpi-sub.warn { color: #facc15; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .card { background: #16161d; border: 1px solid #222; border-radius: 8px; padding: 24px; }
+  .card h2 { font-size: 11px; color: #555; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 20px; }
+  canvas { max-width: 100%; }
+  .tag { display: inline-block; background: #1e1e2e; border: 1px solid #333; border-radius: 4px; font-size: 10px; color: #888; padding: 3px 8px; margin-right: 6px; }
+  .tag.green { border-color: #4ade8033; color: #4ade80; background: #4ade8011; }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Lisbon Street Photo Fest 2026</h1>
+    <div class="subtitle">Open Call · Meta Ads · Apr 3–10, 2026</div>
+  </div>
+  <div style="text-align:right">
+    <span class="tag green">Live</span>
+    <span class="tag">€1,250 total budget</span>
+    <span class="tag">Closes May 31</span>
+  </div>
+</header>
+
+<div class="kpi-row">
+  <div class="kpi">
+    <div class="kpi-label">Submissions</div>
+    <div class="kpi-value">121</div>
+    <div class="kpi-sub">+22 organic (pre-campaign)</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">Landing Page Views</div>
+    <div class="kpi-value">1,398</div>
+    <div class="kpi-sub">Submission rate: 8.6% ↑</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">Cost Per Submission</div>
+    <div class="kpi-value">€0.81</div>
+    <div class="kpi-sub">Based on €98 spent</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">Avg CPV</div>
+    <div class="kpi-value">€0.070</div>
+    <div class="kpi-sub warn">Benchmark: €0.05–0.15</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">Impressions</div>
+    <div class="kpi-value">121K</div>
+    <div class="kpi-sub">CTR: 1.15% ↑</div>
+  </div>
+</div>
+
+<div class="grid-2">
+  <div class="card">
+    <h2>Submissions per Day</h2>
+    <canvas id="submissionsChart" height="160"></canvas>
+  </div>
+  <div class="card">
+    <h2>CPV Trend</h2>
+    <canvas id="cpvChart" height="160"></canvas>
+  </div>
+</div>
+
+<div class="grid-3">
+  <div class="card">
+    <h2>Top Countries (residence)</h2>
+    <canvas id="countryChart" height="220"></canvas>
+  </div>
+  <div class="card">
+    <h2>Gender Split</h2>
+    <canvas id="genderChart" height="220"></canvas>
+  </div>
+  <div class="card">
+    <h2>Age Distribution</h2>
+    <canvas id="ageChart" height="220"></canvas>
+  </div>
+</div>
+
+<div class="grid-2">
+  <div class="card">
+    <h2>Top Nationalities</h2>
+    <canvas id="nationalityChart" height="160"></canvas>
+  </div>
+  <div class="card">
+    <h2>Daily Spend vs Submissions</h2>
+    <canvas id="spendChart" height="160"></canvas>
+  </div>
+</div>
+
+<script>
+const C = {
+  bg: '#16161d',
+  grid: '#222',
+  text: '#666',
+  white: '#e0e0e0',
+  accent: '#7c6af7',
+  green: '#4ade80',
+  yellow: '#facc15',
+  pink: '#f472b6',
+  blue: '#60a5fa',
+};
+
+Chart.defaults.color = C.text;
+Chart.defaults.font.family = "'Helvetica Neue', Arial, sans-serif";
+Chart.defaults.font.size = 11;
+
+const gridOpts = {
+  color: C.grid,
+  drawBorder: false,
+};
+
+// 1. Submissions per day
+new Chart(document.getElementById('submissionsChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Apr 2*', 'Apr 3', 'Apr 4', 'Apr 5', 'Apr 6 (Sun)', 'Apr 7', 'Apr 8', 'Apr 9'],
+    datasets: [{
+      label: 'Submissions',
+      data: [22, 10, 5, 8, 18, 21, 18, 19],
+      backgroundColor: ['#4ade8044','#7c6af766','#7c6af766','#7c6af766','#facc1599','#7c6af766','#7c6af766','#7c6af766'],
+      borderColor:     ['#4ade80',  '#7c6af7',  '#7c6af7',  '#7c6af7',  '#facc15',  '#7c6af7',  '#7c6af7',  '#7c6af7'],
+      borderWidth: 1,
+      borderRadius: 4,
+    }]
+  },
+  options: {
+    plugins: { legend: { display: false }, tooltip: { callbacks: { afterLabel: ctx => ctx.dataIndex === 0 ? '* pre-campaign organic' : '' } } },
+    scales: {
+      x: { grid: { color: C.grid }, ticks: { color: C.text } },
+      y: { grid: { color: C.grid }, ticks: { color: C.text } }
+    }
+  }
+});
+
+// 2. CPV trend
+new Chart(document.getElementById('cpvChart'), {
+  type: 'line',
+  data: {
+    labels: ['Apr 3', 'Apr 4', 'Apr 5', 'Apr 6', 'Apr 7', 'Apr 8', 'Apr 9', 'Apr 10'],
+    datasets: [{
+      label: 'CPV (€)',
+      data: [0.101, 0.102, 0.089, 0.059, 0.051, 0.068, 0.053, 0.046],
+      borderColor: C.green,
+      backgroundColor: '#4ade8022',
+      fill: true,
+      tension: 0.4,
+      pointRadius: 4,
+      pointBackgroundColor: C.green,
+    }]
+  },
+  options: {
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { grid: { color: C.grid } },
+      y: { grid: { color: C.grid }, ticks: { callback: v => '€' + v.toFixed(3) } }
+    }
+  }
+});
+
+// 3. Country bar (horizontal)
+new Chart(document.getElementById('countryChart'), {
+  type: 'bar',
+  data: {
+    labels: ['PT','US','IT','FR','DE','GB','ES','BE','MX','CA','BR'],
+    datasets: [{
+      data: [18,13,12,9,9,8,7,5,5,5,4],
+      backgroundColor: C.accent + '88',
+      borderColor: C.accent,
+      borderWidth: 1,
+      borderRadius: 3,
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { grid: { color: C.grid } },
+      y: { grid: { display: false } }
+    }
+  }
+});
+
+// 4. Gender doughnut
+new Chart(document.getElementById('genderChart'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Male (66%)', 'Female (34%)'],
+    datasets: [{
+      data: [80, 41],
+      backgroundColor: [C.blue + 'cc', C.pink + 'cc'],
+      borderColor: [C.blue, C.pink],
+      borderWidth: 1,
+    }]
+  },
+  options: {
+    cutout: '65%',
+    plugins: {
+      legend: { position: 'bottom', labels: { padding: 16, color: C.white } }
+    }
+  }
+});
+
+// 5. Age distribution
+new Chart(document.getElementById('ageChart'), {
+  type: 'bar',
+  data: {
+    labels: ['20s','30s','40s','50s','60s','70s','80s'],
+    datasets: [{
+      data: [6, 37, 25, 28, 18, 5, 2],
+      backgroundColor: C.yellow + '88',
+      borderColor: C.yellow,
+      borderWidth: 1,
+      borderRadius: 3,
+    }]
+  },
+  options: {
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { grid: { display: false } },
+      y: { grid: { color: C.grid } }
+    }
+  }
+});
+
+// 6. Nationality horizontal bar
+new Chart(document.getElementById('nationalityChart'), {
+  type: 'bar',
+  data: {
+    labels: ['PT','IT','DE','US','FR','GB','BR','BE','ES','CA'],
+    datasets: [{
+      data: [14,12,12,12,8,7,7,6,6,4],
+      backgroundColor: C.pink + '88',
+      borderColor: C.pink,
+      borderWidth: 1,
+      borderRadius: 3,
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { grid: { color: C.grid } },
+      y: { grid: { display: false } }
+    }
+  }
+});
+
+// 7. Spend vs Submissions dual axis
+new Chart(document.getElementById('spendChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Apr 3','Apr 4','Apr 5','Apr 6','Apr 7','Apr 8','Apr 9'],
+    datasets: [
+      {
+        label: 'Spend (€)',
+        data: [12.03, 17.43, 20.83, 17.35, 8.96, 15.04, 6.43],
+        backgroundColor: C.blue + '66',
+        borderColor: C.blue,
+        borderWidth: 1,
+        borderRadius: 3,
+        yAxisID: 'y',
+      },
+      {
+        label: 'Submissions',
+        data: [10, 5, 8, 18, 21, 18, 19],
+        type: 'line',
+        borderColor: C.green,
+        backgroundColor: 'transparent',
+        pointBackgroundColor: C.green,
+        pointRadius: 4,
+        tension: 0.4,
+        yAxisID: 'y1',
+      }
+    ]
+  },
+  options: {
+    plugins: { legend: { position: 'bottom', labels: { padding: 16, color: C.white } } },
+    scales: {
+      x: { grid: { color: C.grid } },
+      y: { grid: { color: C.grid }, position: 'left', ticks: { callback: v => '€'+v } },
+      y1: { grid: { display: false }, position: 'right' }
+    }
+  }
+});
+</script>
+</body>
+</html>
