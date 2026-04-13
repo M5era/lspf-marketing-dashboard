@@ -3,948 +3,1282 @@ const DATA = {
   "records": [
     {
       "date": "2026-04-04",
+      "id": "LS02-0034-M5W",
       "gender": "male",
       "age": 59,
       "nationality": "FR",
+      "city": "CHATENAY MALABRY",
       "country": "FR"
     },
     {
       "date": "2026-04-05",
+      "id": "LS02-0042-068",
       "gender": "male",
       "age": 30,
       "nationality": "BE",
+      "city": "Ixelles",
       "country": "BE"
     },
     {
       "date": "2026-04-06",
+      "id": "LS02-0049-EOR",
       "gender": "male",
       "age": 44,
       "nationality": "RO",
+      "city": "Bucharest",
       "country": "RO"
     },
     {
       "date": "2026-04-05",
+      "id": "LS02-0045-LNT",
       "gender": "male",
       "age": 52,
       "nationality": "PT",
+      "city": "Sobral de Monte Agra\u00e7o",
       "country": "PT"
     },
     {
       "date": "2026-04-08",
+      "id": "LS02-0085-9FM",
       "gender": "male",
       "age": 57,
       "nationality": "DE",
+      "city": "Ludwigsburg",
       "country": "DE"
     },
     {
       "date": "2026-04-09",
+      "id": "LS02-0116-FWO",
       "gender": "male",
       "age": 59,
       "nationality": "CZ",
+      "city": "Liberec",
       "country": "CZ"
     },
     {
       "date": "2026-04-08",
+      "id": "LS02-0088-GYH",
       "gender": "female",
       "age": 64,
       "nationality": "GB",
+      "city": "Oare Faversham",
       "country": "GB"
     },
     {
       "date": "2026-04-08",
+      "id": "LS02-0089-CZG",
       "gender": "male",
       "age": 38,
       "nationality": "DE",
+      "city": "Dortmund",
       "country": "DE"
     },
     {
       "date": "2026-04-08",
+      "id": "LS02-0092-WPZ",
       "gender": "female",
       "age": 41,
       "nationality": "BR",
+      "city": "Fontenay-sous-Bois",
       "country": "FR"
     },
     {
       "date": "2026-04-08",
+      "id": "LS02-0099-FNM",
       "gender": "male",
       "age": 45,
       "nationality": "DE",
+      "city": "Krefeld",
       "country": "DE"
     },
     {
       "date": "2026-04-09",
+      "id": "LS02-0119-IHN",
       "gender": "male",
       "age": 63,
       "nationality": "US",
+      "city": "Bethesda",
       "country": "US"
     },
     {
       "date": "2026-04-09",
+      "id": "LS02-0104-PZO",
       "gender": "female",
       "age": 47,
       "nationality": "MX",
+      "city": "CDMX",
       "country": "MX"
     },
     {
       "date": "2026-04-06",
+      "id": "LS02-0061-TWX",
       "gender": "male",
       "age": 51,
       "nationality": "DE",
+      "city": "Dortmund",
       "country": "DE"
     },
     {
       "date": "2026-04-06",
+      "id": "LS02-0063-OAH",
       "gender": "male",
       "age": 56,
       "nationality": "NZ",
+      "city": "Wanaka",
       "country": "NZ"
     },
     {
       "date": "2026-04-09",
+      "id": "LS02-0106-B94",
       "gender": "male",
       "age": 58,
       "nationality": "IT",
+      "city": "Beinasco",
       "country": "IT"
     },
     {
       "date": "2026-04-09",
+      "id": "LS02-0112-B3S",
       "gender": "male",
       "age": 53,
       "nationality": "GB",
+      "city": "Kingston Upon Thames",
       "country": "GB"
     },
     {
       "date": "2026-04-11",
+      "id": "LS02-0125-Q2N",
       "gender": "female",
       "age": 35,
       "nationality": "IN",
+      "city": "Navi Mumbai",
       "country": "IN"
     },
     {
       "date": "2026-04-07",
+      "id": "LS02-0071-LVU",
       "gender": "male",
       "age": 65,
       "nationality": "DE",
+      "city": "Felanitx/Baleres",
       "country": "ES"
     },
     {
       "date": "2026-04-07",
+      "id": "LS02-0077-3GG",
       "gender": "female",
       "age": 54,
       "nationality": "FR",
+      "city": "Grasse",
       "country": "FR"
     },
     {
       "date": "2026-04-07",
+      "id": "LS02-0083-EIK",
       "gender": "female",
       "age": 69,
       "nationality": "PT",
+      "city": "Montijo",
       "country": "PT"
     },
     {
       "date": "2026-04-07",
+      "id": "LS02-0080-QXD",
       "gender": "male",
       "age": 67,
       "nationality": "BR",
+      "city": "Fortaleza",
       "country": "BR"
     },
     {
       "date": "2026-04-08",
+      "id": "LS02-0097-T68",
       "gender": "female",
       "age": 28,
       "nationality": "PT",
+      "city": "Almada",
       "country": "PT"
     },
     {
       "date": "2026-04-07",
+      "id": "LS02-0082-KSW",
       "gender": "female",
       "age": 60,
       "nationality": "CA",
+      "city": "Toronto",
       "country": "CA"
     },
     {
       "date": "2026-04-08",
+      "id": "LS02-0094-FSE",
       "gender": "female",
       "age": 56,
       "nationality": "PL",
+      "city": "Aberystwyth",
       "country": "GB"
     },
     {
       "date": "2026-04-09",
+      "id": "LS02-0111-FZW",
       "gender": "female",
       "age": 27,
       "nationality": "BR",
+      "city": "Curitiba",
       "country": "BR"
     },
     {
       "date": "2026-04-03",
+      "id": "LS02-0028-3HE",
       "gender": "male",
       "age": 68,
       "nationality": "DE",
+      "city": "Hilpoltstein",
       "country": "DE"
     },
     {
       "date": "2026-04-05",
+      "id": "LS02-0043-U2Z",
       "gender": "male",
       "age": 45,
       "nationality": "DE",
+      "city": "D\u00fcsseldorf",
       "country": "DE"
     },
     {
       "date": "2026-04-03",
+      "id": "LS02-0030-FQX",
       "gender": "male",
       "age": 47,
       "nationality": "DE",
+      "city": "Paris",
       "country": "FR"
     },
     {
       "date": "2026-04-07",
+      "id": "LS02-0081-R5M",
       "gender": "female",
       "age": 33,
       "nationality": "MX",
+      "city": "Monterrey",
       "country": "MX"
     },
     {
       "date": "2026-04-04",
+      "id": "LS02-0033-TAT",
       "gender": "female",
       "age": 40,
       "nationality": "US",
+      "city": "St. Louis",
       "country": "US"
     },
     {
       "date": "2026-04-06",
+      "id": "LS02-0050-XAW",
       "gender": "male",
       "age": 48,
       "nationality": "BE",
+      "city": "Brugge",
       "country": "BE"
     },
     {
       "date": "2026-04-12",
+      "id": "LS02-0129-W4W",
       "gender": "female",
       "age": 37,
       "nationality": "GB",
+      "city": "Burgess Hill",
       "country": "GB"
     },
     {
       "date": "2026-04-02",
+      "id": "LS02-0014-4RV",
       "gender": "female",
       "age": 33,
       "nationality": "RO",
+      "city": "Bucharest",
       "country": "RO"
     },
     {
       "date": "2026-04-02",
+      "id": "LS02-0006-FTI",
       "gender": "male",
       "age": 35,
       "nationality": "PH",
+      "city": "Bacoor",
       "country": "PH"
     },
     {
       "date": "2026-04-02",
+      "id": "LS02-0002-JZ1",
       "gender": "male",
       "age": 52,
       "nationality": "PT",
+      "city": "Sd Rana",
       "country": "PT"
     },
     {
       "date": "2026-04-07",
+      "id": "LS02-0073-LHD",
       "gender": "male",
       "age": 55,
       "nationality": "BE",
+      "city": "Brussel",
       "country": "BE"
     },
     {
       "date": "2026-04-02",
+      "id": "LS02-0016-FIB",
       "gender": "female",
       "age": 60,
       "nationality": "FR",
+      "city": "Marseillan",
       "country": "FR"
     },
     {
       "date": "2026-04-06",
+      "id": "LS02-0053-F98",
       "gender": "female",
       "age": 41,
       "nationality": "BR",
+      "city": "S\u00e3o Paulo",
       "country": "BR"
     },
     {
       "date": "2026-04-02",
+      "id": "LS02-0004-PWB",
       "gender": "male",
       "age": 36,
       "nationality": "GB",
+      "city": "Bristol",
       "country": "GB"
     },
     {
       "date": "2026-04-06",
+      "id": "LS02-0055-FBH",
       "gender": "male",
       "age": 31,
       "nationality": "IN",
+      "city": "Amsterdam",
       "country": "NL"
     },
     {
       "date": "2026-04-02",
+      "id": "LS02-0020-OS0",
       "gender": "male",
       "age": 69,
       "nationality": "US",
+      "city": "North Bergen",
       "country": "US"
     },
     {
       "date": "2026-04-12",
+      "id": "LS02-0132-KI8",
       "gender": "male",
       "age": 45,
       "nationality": "CN",
+      "city": "Beijing",
       "country": "CN"
     },
     {
       "date": "2026-04-03",
+      "id": "LS02-0023-GWZ",
       "gender": "female",
       "age": 30,
       "nationality": "US",
+      "city": "Baltimore",
       "country": "US"
     },
     {
       "date": "2026-04-03",
+      "id": "LS02-0024-134",
       "gender": "male",
       "age": 48,
       "nationality": "BR",
+      "city": "Bainbridge Island",
       "country": "US"
     },
     {
       "date": "2026-04-03",
+      "id": "LS02-0025-WXF",
       "gender": "male",
       "age": 41,
       "nationality": "VE",
+      "city": "Maracaibo, VE",
       "country": "VE"
     },
     {
       "date": "2026-04-03",
+      "id": "LS02-0026-CZT",
       "gender": "male",
       "age": 68,
       "nationality": "PR",
+      "city": "San Juan",
       "country": "PR"
     },
     {
       "date": "2026-04-08",
+      "id": "LS02-0087-3NV",
       "gender": "male",
       "age": 31,
       "nationality": "FR",
+      "city": "Bruges",
       "country": "FR"
     },
     {
       "date": "2026-04-06",
+      "id": "LS02-0059-1MA",
       "gender": "male",
       "age": 36,
       "nationality": "IT",
+      "city": "Carobbio degli angeli",
       "country": "IT"
     },
     {
       "date": "2026-04-05",
+      "id": "LS02-0044-HE3",
       "gender": "female",
       "age": 23,
       "nationality": "PT",
+      "city": "Caldas da Rainha",
       "country": "PT"
     },
     {
       "date": "2026-04-02",
+      "id": "LS02-0021-2NB",
       "gender": "female",
       "age": 38,
       "nationality": "IT",
+      "city": "Naples",
       "country": "IT"
     },
     {
       "date": "2026-04-08",
+      "id": "LS02-0096-D6L",
       "gender": "female",
       "age": 47,
       "nationality": "GB",
+      "city": "London",
       "country": "GB"
     },
     {
       "date": "2026-04-02",
+      "id": "LS02-0001-K9C",
       "gender": "male",
       "age": 57,
       "nationality": "ES",
+      "city": "A Coru\u00f1a",
       "country": "ES"
     },
     {
       "date": "2026-04-02",
+      "id": "LS02-0015-HBU",
       "gender": "female",
       "age": 75,
       "nationality": "US",
+      "city": "Jamaica Plain",
       "country": "US"
     },
     {
       "date": "2026-04-02",
+      "id": "LS02-0003-SZ1",
       "gender": "female",
       "age": 56,
       "nationality": "ES",
+      "city": "Torrelodones",
       "country": "ES"
     },
     {
       "date": "2026-04-02",
+      "id": "LS02-0005-TPR",
       "gender": "female",
       "age": 40,
       "nationality": "PL",
+      "city": "Sosnwiec",
       "country": "PL"
     },
     {
       "date": "2026-04-02",
+      "id": "LS02-0007-E2F",
       "gender": "male",
       "age": 40,
       "nationality": "GB",
+      "city": "Edinburgh",
       "country": "GB"
     },
     {
       "date": "2026-04-02",
+      "id": "LS02-0008-BWO",
       "gender": "male",
       "age": 42,
       "nationality": "ES",
+      "city": "Barcelona",
       "country": "ES"
     },
     {
       "date": "2026-04-02",
+      "id": "LS02-0010-SDK",
       "gender": "male",
       "age": 39,
       "nationality": "PT",
+      "city": "Set\u00fabal",
       "country": "PT"
     },
     {
       "date": "2026-04-02",
+      "id": "LS02-0009-L9E",
       "gender": "male",
       "age": 35,
       "nationality": "KR",
+      "city": "Watsonia North",
       "country": "AU"
     },
     {
       "date": "2026-04-02",
+      "id": "LS02-0011-ZNK",
       "gender": "female",
       "age": 51,
       "nationality": "IL",
+      "city": "Yehud",
       "country": "IL"
     },
     {
       "date": "2026-04-02",
+      "id": "LS02-0012-SRB",
       "gender": "female",
       "age": 46,
       "nationality": "HK",
+      "city": "Hong Kong",
       "country": "HK"
     },
     {
       "date": "2026-04-02",
+      "id": "LS02-0013-SPX",
       "gender": "male",
       "age": 89,
       "nationality": "US",
+      "city": "New York City",
       "country": "US"
     },
     {
       "date": "2026-04-02",
+      "id": "LS02-0017-LNI",
       "gender": "male",
       "age": 24,
       "nationality": "CN",
+      "city": "Beijing",
       "country": "CN"
     },
     {
       "date": "2026-04-02",
+      "id": "LS02-0018-TXX",
       "gender": "male",
       "age": 39,
       "nationality": "PT",
+      "city": "Belmonte",
       "country": "PT"
     },
     {
       "date": "2026-04-02",
+      "id": "LS02-0019-QRF",
       "gender": "male",
       "age": 62,
       "nationality": "CA",
+      "city": "Mont-Saint-Hilaire",
       "country": "CA"
     },
     {
       "date": "2026-04-02",
+      "id": "LS02-0022-K92",
       "gender": "female",
       "age": 32,
       "nationality": "IT",
+      "city": "Milano",
       "country": "IT"
     },
     {
       "date": "2026-04-03",
+      "id": "LS02-0027-YBF",
       "gender": "male",
       "age": 52,
       "nationality": "IT",
+      "city": "Pesaro",
       "country": "IT"
     },
     {
       "date": "2026-04-03",
+      "id": "LS02-0029-JON",
       "gender": "male",
       "age": 64,
       "nationality": "BE",
+      "city": "Brussels",
       "country": "BE"
     },
     {
       "date": "2026-04-03",
+      "id": "LS02-0031-ISV",
       "gender": "male",
       "age": 63,
       "nationality": "DE",
+      "city": "Riehen",
       "country": "CH"
     },
     {
       "date": "2026-04-03",
+      "id": "LS02-0032-DDO",
       "gender": "female",
       "age": 77,
       "nationality": "US",
+      "city": "Puerto Vallarta",
       "country": "MX"
     },
     {
       "date": "2026-04-04",
+      "id": "LS02-0035-TEP",
       "gender": "male",
       "age": 45,
       "nationality": "PT",
+      "city": "Lisbon",
       "country": "PT"
     },
     {
       "date": "2026-04-04",
+      "id": "LS02-0036-PRC",
       "gender": "male",
       "age": 39,
       "nationality": "CY",
+      "city": "Dublin",
       "country": "IE"
     },
     {
       "date": "2026-04-05",
+      "id": "LS02-0038-RO7",
       "gender": "male",
       "age": 38,
       "nationality": "PT",
+      "city": "Lagos",
       "country": "PT"
     },
     {
       "date": "2026-04-05",
+      "id": "LS02-0039-HVA",
       "gender": "female",
       "age": 39,
       "nationality": "ZA",
+      "city": "Singapore",
       "country": "SG"
     },
     {
       "date": "2026-04-05",
+      "id": "LS02-0040-7RU",
       "gender": "male",
       "age": 37,
       "nationality": "AT",
+      "city": "Baden",
       "country": "AT"
     },
     {
       "date": "2026-04-05",
+      "id": "LS02-0041-8ON",
       "gender": "male",
       "age": 52,
       "nationality": "GB",
+      "city": "London",
       "country": "GB"
     },
     {
       "date": "2026-04-06",
+      "id": "LS02-0046-DTU",
       "gender": "male",
       "age": 74,
       "nationality": "US",
+      "city": "Manhattan",
       "country": "US"
     },
     {
       "date": "2026-04-06",
+      "id": "LS02-0047-KWV",
       "gender": "male",
       "age": 37,
       "nationality": "SG",
+      "city": "Singapore",
       "country": "SG"
     },
     {
       "date": "2026-04-06",
+      "id": "LS02-0048-8IT",
       "gender": "female",
       "age": 58,
       "nationality": "ES",
+      "city": "Lleida",
       "country": "ES"
     },
     {
       "date": "2026-04-06",
+      "id": "LS02-0054-FPT",
       "gender": "male",
       "age": 50,
       "nationality": "IT",
+      "city": "Bologna",
       "country": "IT"
     },
     {
       "date": "2026-04-06",
+      "id": "LS02-0051-RA9",
       "gender": "male",
       "age": 42,
       "nationality": "IT",
+      "city": "Citt\u00e0 di Castello",
       "country": "IT"
     },
     {
       "date": "2026-04-06",
+      "id": "LS02-0052-BWI",
       "gender": "male",
       "age": 71,
       "nationality": "IE",
+      "city": "Cazes-Mondenard",
       "country": "FR"
     },
     {
       "date": "2026-04-06",
+      "id": "LS02-0056-BV2",
       "gender": "male",
       "age": 76,
       "nationality": "US",
+      "city": "New York",
       "country": "US"
     },
     {
       "date": "2026-04-06",
+      "id": "LS02-0057-5EX",
       "gender": "male",
       "age": 38,
       "nationality": "PT",
+      "city": "Lisboa",
       "country": "PT"
     },
     {
       "date": "2026-04-06",
+      "id": "LS02-0058-O15",
       "gender": "male",
       "age": 37,
       "nationality": "FR",
+      "city": "Montreal",
       "country": "CA"
     },
     {
       "date": "2026-04-06",
+      "id": "LS02-0060-A9L",
       "gender": "male",
       "age": 30,
       "nationality": "KR",
+      "city": "Seoul",
       "country": "KR"
     },
     {
       "date": "2026-04-06",
+      "id": "LS02-0062-OBC",
       "gender": "male",
       "age": 32,
       "nationality": "BR",
+      "city": "amadora",
       "country": "PT"
     },
     {
       "date": "2026-04-07",
+      "id": "LS02-0064-BSK",
       "gender": "male",
       "age": 48,
       "nationality": "US",
+      "city": "Boulder",
       "country": "US"
     },
     {
       "date": "2026-04-07",
+      "id": "LS02-0065-QRT",
       "gender": "male",
       "age": 68,
       "nationality": "US",
+      "city": "Sunnyvale",
       "country": "US"
     },
     {
       "date": "2026-04-07",
+      "id": "LS02-0066-WAK",
       "gender": "male",
       "age": 52,
       "nationality": "ID",
+      "city": "Jakarta",
       "country": "ID"
     },
     {
       "date": "2026-04-07",
+      "id": "LS02-0067-M9K",
       "gender": "female",
       "age": 34,
       "nationality": "MX",
+      "city": "Guadalajara",
       "country": "MX"
     },
     {
       "date": "2026-04-07",
+      "id": "LS02-0068-V9T",
       "gender": "male",
       "age": 53,
       "nationality": "FR",
+      "city": "VERSAILLES",
       "country": "FR"
     },
     {
       "date": "2026-04-07",
+      "id": "LS02-0069-Z4Q",
       "gender": "male",
       "age": 40,
       "nationality": "IT",
+      "city": "Rome",
       "country": "IT"
     },
     {
       "date": "2026-04-07",
+      "id": "LS02-0070-BYH",
       "gender": "male",
       "age": 46,
       "nationality": "GB",
+      "city": "Cheltenham",
       "country": "GB"
     },
     {
       "date": "2026-04-07",
+      "id": "LS02-0072-Z9D",
       "gender": "female",
       "age": 50,
       "nationality": "FR",
+      "city": NaN,
       "country": "SG"
     },
     {
       "date": "2026-04-07",
+      "id": "LS02-0074-NAC",
       "gender": "male",
       "age": 33,
       "nationality": "IT",
+      "city": "Vicenza",
       "country": "IT"
     },
     {
       "date": "2026-04-07",
+      "id": "LS02-0075-ME7",
       "gender": "female",
       "age": 60,
       "nationality": "BE",
+      "city": "Leuven",
       "country": "BE"
     },
     {
       "date": "2026-04-07",
+      "id": "LS02-0076-FKQ",
       "gender": "male",
       "age": 65,
       "nationality": "CA",
+      "city": "Montreal",
       "country": "CA"
     },
     {
       "date": "2026-04-07",
+      "id": "LS02-0078-NQK",
       "gender": "female",
       "age": 22,
       "nationality": "PT",
+      "city": "Loul\u00e9",
       "country": "PT"
     },
     {
       "date": "2026-04-07",
+      "id": "LS02-0079-WHO",
       "gender": "male",
       "age": 36,
       "nationality": "FR",
+      "city": "Binic-Etables sur mer",
       "country": "FR"
     },
     {
       "date": "2026-04-07",
+      "id": "LS02-0084-4RY",
       "gender": "female",
       "age": 65,
       "nationality": "IE",
+      "city": "Dublin 16",
       "country": "IE"
     },
     {
       "date": "2026-04-11",
+      "id": "LS02-0127-HXT",
       "gender": "male",
       "age": 43,
       "nationality": "TR",
+      "city": "ankara",
       "country": "TR"
     },
     {
       "date": "2026-04-08",
+      "id": "LS02-0086-A7T",
       "gender": "female",
       "age": 33,
       "nationality": "ES",
+      "city": "Cabo de Gata",
       "country": "ES"
     },
     {
       "date": "2026-04-08",
+      "id": "LS02-0090-NNG",
       "gender": "male",
       "age": 56,
       "nationality": "IN",
+      "city": "New Delhi",
       "country": "IN"
     },
     {
       "date": "2026-04-08",
+      "id": "LS02-0091-KMX",
       "gender": "male",
       "age": 51,
       "nationality": "FI",
+      "city": "Helsinki",
       "country": "FI"
     },
     {
       "date": "2026-04-08",
+      "id": "LS02-0093-8XR",
       "gender": "male",
       "age": 54,
       "nationality": "IT",
+      "city": "mordano",
       "country": "IT"
     },
     {
       "date": "2026-04-08",
+      "id": "LS02-0095-EGA",
       "gender": "male",
       "age": 60,
       "nationality": "DE",
+      "city": "K\u00f6ln",
       "country": "DE"
     },
     {
       "date": "2026-04-08",
+      "id": "LS02-0098-5TJ",
       "gender": "female",
       "age": 51,
       "nationality": "ES",
+      "city": "Madrid",
       "country": "ES"
     },
     {
       "date": "2026-04-08",
+      "id": "LS02-0100-ACH",
       "gender": "male",
       "age": 34,
       "nationality": "PT",
+      "city": "lisboa",
       "country": "PT"
     },
     {
       "date": "2026-04-08",
+      "id": "LS02-0101-HT2",
       "gender": "male",
       "age": 43,
       "nationality": "UA",
+      "city": "Pa\u00e7o de Arcos",
       "country": "PT"
     },
     {
       "date": "2026-04-08",
+      "id": "LS02-0102-HKQ",
       "gender": "female",
       "age": 32,
       "nationality": "BR",
+      "city": "Piracicaba",
       "country": "BR"
     },
     {
       "date": "2026-04-09",
+      "id": "LS02-0103-MVT",
       "gender": "female",
       "age": 32,
       "nationality": "VE",
+      "city": "Ciudad de Mexico",
       "country": "MX"
     },
     {
       "date": "2026-04-09",
+      "id": "LS02-0105-ZAA",
       "gender": "male",
       "age": 69,
       "nationality": "IT",
+      "city": "Marsciano (Perugia)",
       "country": "IT"
     },
     {
       "date": "2026-04-09",
+      "id": "LS02-0108-QHG",
       "gender": "female",
       "age": 45,
       "nationality": "PL",
+      "city": "Murtal",
       "country": "PT"
     },
     {
       "date": "2026-04-09",
+      "id": "LS02-0107-6WF",
       "gender": "male",
       "age": 62,
       "nationality": "IT",
+      "city": "Rome",
       "country": "IT"
     },
     {
       "date": "2026-04-09",
+      "id": "LS02-0109-VA6",
       "gender": "female",
       "age": 41,
       "nationality": "DE",
+      "city": "Hamburg",
       "country": "DE"
     },
     {
       "date": "2026-04-09",
+      "id": "LS02-0110-JFA",
       "gender": "male",
       "age": 40,
       "nationality": "DE",
+      "city": "Leipzig",
       "country": "DE"
     },
     {
       "date": "2026-04-09",
+      "id": "LS02-0113-1UP",
       "gender": "male",
       "age": 36,
       "nationality": "PT",
+      "city": "Lisbon",
       "country": "PT"
     },
     {
       "date": "2026-04-09",
+      "id": "LS02-0114-ASA",
       "gender": "male",
       "age": 31,
       "nationality": "IN",
+      "city": "Sunnyvale",
       "country": "US"
     },
     {
       "date": "2026-04-09",
+      "id": "LS02-0115-TF1",
       "gender": "female",
       "age": 35,
       "nationality": "IE",
+      "city": "Crosshaven",
       "country": "IE"
     },
     {
       "date": "2026-04-09",
+      "id": "LS02-0117-SOM",
       "gender": "male",
       "age": 34,
       "nationality": "PT",
+      "city": "Lisboa",
       "country": "PT"
     },
     {
       "date": "2026-04-09",
+      "id": "LS02-0118-G2M",
       "gender": "male",
       "age": 52,
       "nationality": "BE",
+      "city": "Lisboa",
       "country": "PT"
     },
     {
       "date": "2026-04-09",
+      "id": "LS02-0120-R8L",
       "gender": "male",
       "age": 81,
       "nationality": "IL",
+      "city": "Ramat Gan",
       "country": "IL"
     },
     {
       "date": "2026-04-09",
+      "id": "LS02-0121-2JU",
       "gender": "female",
       "age": 70,
       "nationality": "US",
+      "city": "San Diego",
       "country": "US"
     },
     {
       "date": "2026-04-10",
+      "id": "LS02-0122-MS3",
       "gender": "female",
       "age": 67,
       "nationality": "IT",
+      "city": "Cesate",
       "country": "IT"
     },
     {
       "date": "2026-04-10",
+      "id": "LS02-0123-8AF",
       "gender": "male",
       "age": 30,
       "nationality": "NL",
+      "city": "De Meern",
       "country": "NL"
     },
     {
       "date": "2026-04-11",
+      "id": "LS02-0124-UB8",
       "gender": "male",
       "age": 60,
       "nationality": "AT",
+      "city": "St.P\u00f6lten",
       "country": "AT"
     },
     {
       "date": "2026-04-04",
+      "id": "LS02-0037-PCK",
       "gender": "female",
       "age": 46,
       "nationality": "CA",
+      "city": "Coquitlam",
       "country": "CA"
     },
     {
       "date": "2026-04-11",
+      "id": "LS02-0126-ZD9",
       "gender": "female",
       "age": 24,
       "nationality": "GR",
+      "city": "Nafplio",
       "country": "GR"
     },
     {
       "date": "2026-04-11",
+      "id": "LS02-0128-ECO",
       "gender": "male",
       "age": 33,
       "nationality": "PT",
+      "city": "Lisboa",
       "country": "PT"
     },
     {
       "date": "2026-04-12",
+      "id": "LS02-0130-ETA",
       "gender": "male",
       "age": 45,
       "nationality": "TR",
+      "city": "Lisboa",
       "country": "PT"
     },
     {
       "date": "2026-04-12",
+      "id": "LS02-0131-SAR",
       "gender": "female",
       "age": 64,
       "nationality": "NL",
+      "city": "ANO VIANNOS",
       "country": "GR"
     },
     {
       "date": "2026-04-12",
+      "id": "LS02-0133-PP4",
       "gender": "female",
       "age": 29,
       "nationality": "VN",
+      "city": "Milton Keynes",
       "country": "GB"
     },
     {
       "date": "2026-04-13",
+      "id": "LS02-0134-UW1",
       "gender": "female",
       "age": 65,
       "nationality": "BR",
+      "city": "Rio De Janeiro",
       "country": "BR"
     },
     {
       "date": "2026-04-13",
+      "id": "LS02-0135-RHT",
       "gender": "female",
       "age": 36,
       "nationality": "IT",
+      "city": "Montecchio",
       "country": "IT"
+    },
+    {
+      "date": "2026-04-13",
+      "id": "LS02-0136-LP2",
+      "gender": "male",
+      "age": 49,
+      "nationality": "DE",
+      "city": "Hamburg",
+      "country": "DE"
     }
-  ]
+  ],
+  "stripe": {
+    "totalRevenue": 4240.0,
+    "totalCount": 140,
+    "currency": "eur",
+    "byDay": {
+      "2026-04-02": {
+        "revenue": 580.0,
+        "count": 22
+      },
+      "2026-04-03": {
+        "revenue": 400.0,
+        "count": 10
+      },
+      "2026-04-04": {
+        "revenue": 105.0,
+        "count": 5
+      },
+      "2026-04-05": {
+        "revenue": 210.0,
+        "count": 8
+      },
+      "2026-04-06": {
+        "revenue": 885.0,
+        "count": 20
+      },
+      "2026-04-07": {
+        "revenue": 630.0,
+        "count": 22
+      },
+      "2026-04-08": {
+        "revenue": 490.0,
+        "count": 18
+      },
+      "2026-04-09": {
+        "revenue": 460.0,
+        "count": 20
+      },
+      "2026-04-10": {
+        "revenue": 80.0,
+        "count": 2
+      },
+      "2026-04-11": {
+        "revenue": 120.0,
+        "count": 5
+      },
+      "2026-04-12": {
+        "revenue": 240.0,
+        "count": 5
+      },
+      "2026-04-13": {
+        "revenue": 40.0,
+        "count": 3
+      }
+    }
+  }
 };

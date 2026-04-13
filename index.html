@@ -65,6 +65,12 @@
              letter-spacing: 0.08em; margin-bottom: 16px; font-weight: 500; }
   canvas { max-width: 100%; }
 
+  /* ── Stripe KPI row ─────────────────────────────────────────── */
+  .kpi-row-stripe { margin-top: -4px; }
+  .kpi-stripe { border-color: #d1fae5; background: #f0fdf4; }
+  .kpi-stripe .kpi-label { color: #6ee7b7; }
+  .kpi-stripe .kpi-value { color: #065f46; }
+
   /* ── Mobile ──────────────────────────────────────────────────── */
   @media (max-width: 700px) {
     body { padding: 14px; }
@@ -113,7 +119,7 @@
   </div>
 </div>
 
-<!-- ── KPIs ───────────────────────────────────────────────────────── -->
+<!-- ── KPIs: Submissions & Ads ────────────────────────────────────── -->
 <div class="kpi-row">
   <div class="kpi">
     <div class="kpi-label">Submissions</div>
@@ -139,6 +145,30 @@
     <div class="kpi-label">Impressions</div>
     <div class="kpi-value">121K</div>
     <div class="kpi-sub neutral">CTR: 1.15% ↑</div>
+  </div>
+</div>
+
+<!-- ── KPIs: Stripe revenue ───────────────────────────────────────── -->
+<div class="kpi-row kpi-row-stripe">
+  <div class="kpi kpi-stripe">
+    <div class="kpi-label">Total Revenue</div>
+    <div class="kpi-value" id="kpi-revenue">—</div>
+    <div class="kpi-sub neutral" id="kpi-revenue-sub"></div>
+  </div>
+  <div class="kpi kpi-stripe">
+    <div class="kpi-label">Paid Submissions</div>
+    <div class="kpi-value" id="kpi-paid-count">—</div>
+    <div class="kpi-sub neutral" id="kpi-paid-sub"></div>
+  </div>
+  <div class="kpi kpi-stripe">
+    <div class="kpi-label">Avg Fee</div>
+    <div class="kpi-value" id="kpi-avg-fee">—</div>
+    <div class="kpi-sub neutral">per payment</div>
+  </div>
+  <div class="kpi kpi-stripe" style="grid-column: span 2;">
+    <div class="kpi-label">Revenue vs Ad Spend</div>
+    <div class="kpi-value" id="kpi-roi">—</div>
+    <div class="kpi-sub neutral" id="kpi-roi-sub"></div>
   </div>
 </div>
 
@@ -177,6 +207,17 @@
   <div class="card">
     <h2>Daily Spend vs Submissions</h2>
     <canvas id="spendChart" height="160"></canvas>
+  </div>
+</div>
+
+<div class="grid-2">
+  <div class="card">
+    <h2>Daily Revenue (Stripe)</h2>
+    <canvas id="revenueChart" height="160"></canvas>
+  </div>
+  <div class="card">
+    <h2>Revenue vs Ad Spend per Day</h2>
+    <canvas id="revenueSpendChart" height="160"></canvas>
   </div>
 </div>
 
@@ -300,7 +341,7 @@ function aggregate(records) {
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   Filter records + Meta Ads data
+   Filter records + Meta Ads + Stripe data
 ───────────────────────────────────────────────────────────────────────────── */
 function filterRecords(mode) {
   if (mode === 'all') return DATA.records;
@@ -308,27 +349,35 @@ function filterRecords(mode) {
   return DATA.records.filter(r => r.date >= start && r.date <= end);
 }
 
-function filterMetaDates(mode) {
-  // Returns sorted date keys of SPEND_BY_DATE within the current range
-  const allDates = Object.keys(SPEND_BY_DATE).sort();
+function filterDates(obj, mode) {
+  const allDates = Object.keys(obj).sort();
   if (mode === 'all') return allDates;
   const [start, end] = modeRange(mode);
   return allDates.filter(d => d >= start && d <= end);
 }
 
-function filterCpvDates(mode) {
-  const allDates = Object.keys(CPV_BY_DATE).sort();
-  if (mode === 'all') return allDates;
-  const [start, end] = modeRange(mode);
-  return allDates.filter(d => d >= start && d <= end);
+// Aggregate Stripe byDay data for a given mode
+function stripeAgg(mode) {
+  const byDay = DATA.stripe.byDay || {};
+  const dates = filterDates(byDay, mode);
+  let revenue = 0, count = 0;
+  dates.forEach(d => { revenue += byDay[d]?.revenue || 0; count += byDay[d]?.count || 0; });
+  const labels   = dates.map(fmtShort);
+  const revData  = dates.map(d => byDay[d]?.revenue || 0);
+  return { revenue: Math.round(revenue * 100) / 100, count, labels, revData, dates };
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Filter bar
 ───────────────────────────────────────────────────────────────────────────── */
 function buildFilters() {
-  const months = [...new Set(DATA.records.map(r => r.date.slice(0,7)))].sort();
-  const weeks  = [...new Set(DATA.records.map(r => weekStart(r.date)))].sort();
+  // Use union of submission dates + stripe dates for filter coverage
+  const allDates = [
+    ...DATA.records.map(r => r.date),
+    ...Object.keys(DATA.stripe.byDay || {}),
+  ];
+  const months = [...new Set(allDates.map(d => d.slice(0,7)))].sort();
+  const weeks  = [...new Set(allDates.map(d => weekStart(d)))].sort();
 
   months.forEach(m => {
     const btn = document.createElement('button');
@@ -363,8 +412,9 @@ function initCharts(agg, mode) {
   const gTotal = agg.male + agg.female;
   const mPct   = gTotal ? Math.round(agg.male   / gTotal * 100) : 0;
   const fPct   = gTotal ? Math.round(agg.female / gTotal * 100) : 0;
-  const cpvDates   = filterCpvDates(mode);
-  const metaDates  = filterMetaDates(mode);
+  const cpvDates   = filterDates(CPV_BY_DATE, mode);
+  const metaDates  = filterDates(SPEND_BY_DATE, mode);
+  const strp       = stripeAgg(mode);
 
   charts.subs = new Chart(document.getElementById('submissionsChart'), {
     type: 'bar',
@@ -463,16 +513,59 @@ function initCharts(agg, mode) {
       }
     }
   });
+
+  // Stripe: daily revenue bars
+  charts.revenue = new Chart(document.getElementById('revenueChart'), {
+    type: 'bar',
+    data: {
+      labels: strp.labels,
+      datasets: [{ label:'Revenue (€)', data:strp.revData,
+        backgroundColor:'#10b98155', borderColor:'#10b981', borderWidth:1, borderRadius:4 }]
+    },
+    options: {
+      plugins:{ legend:{display:false} },
+      scales:{
+        x:{ grid:{color:C.grid} },
+        y:{ grid:{color:C.grid}, ticks:{callback:v=>'€'+v} }
+      }
+    }
+  });
+
+  // Stripe: revenue vs ad spend
+  const revSpendDates = [...new Set([...strp.dates, ...metaDates])].sort();
+  const byDay = DATA.stripe.byDay || {};
+  charts.revenueSpend = new Chart(document.getElementById('revenueSpendChart'), {
+    type: 'bar',
+    data: {
+      labels: revSpendDates.map(fmtShort),
+      datasets: [
+        { label:'Revenue (€)', data:revSpendDates.map(d=>byDay[d]?.revenue||0),
+          backgroundColor:'#10b98155', borderColor:'#10b981', borderWidth:1, borderRadius:3, yAxisID:'y' },
+        { label:'Ad Spend (€)', data:revSpendDates.map(d=>SPEND_BY_DATE[d]||0),
+          backgroundColor:C.blue+'55', borderColor:C.blue, borderWidth:1, borderRadius:3, yAxisID:'y' }
+      ]
+    },
+    options: {
+      plugins:{ legend:{ position:'bottom', labels:{padding:16, color:C.dark} } },
+      scales:{
+        x:{ grid:{color:C.grid} },
+        y:{ grid:{color:C.grid}, ticks:{callback:v=>'€'+v} }
+      }
+    }
+  });
 }
 
 function updateCharts(agg, mode) {
   const gTotal = agg.male + agg.female;
   const mPct   = gTotal ? Math.round(agg.male   / gTotal * 100) : 0;
   const fPct   = gTotal ? Math.round(agg.female / gTotal * 100) : 0;
-  const cpvDates  = filterCpvDates(mode);
-  const metaDates = filterMetaDates(mode);
+  const cpvDates  = filterDates(CPV_BY_DATE, mode);
+  const metaDates = filterDates(SPEND_BY_DATE, mode);
+  const strp      = stripeAgg(mode);
   const subMap = {};
   agg.sortedDates.forEach((d,i) => { subMap[d] = agg.dayData[i]; });
+  const byDay = DATA.stripe.byDay || {};
+  const revSpendDates = [...new Set([...strp.dates, ...metaDates])].sort();
 
   charts.subs.data.labels                      = agg.dayLabels;
   charts.subs.data.datasets[0].data            = agg.dayData;
@@ -505,6 +598,40 @@ function updateCharts(agg, mode) {
   charts.spend.data.datasets[0].data   = metaDates.map(d => SPEND_BY_DATE[d]);
   charts.spend.data.datasets[1].data   = metaDates.map(d => subMap[d] || 0);
   charts.spend.update();
+
+  charts.revenue.data.labels           = strp.labels;
+  charts.revenue.data.datasets[0].data = strp.revData;
+  charts.revenue.update();
+
+  charts.revenueSpend.data.labels             = revSpendDates.map(fmtShort);
+  charts.revenueSpend.data.datasets[0].data   = revSpendDates.map(d => byDay[d]?.revenue||0);
+  charts.revenueSpend.data.datasets[1].data   = revSpendDates.map(d => SPEND_BY_DATE[d]||0);
+  charts.revenueSpend.update();
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Stripe KPI update
+───────────────────────────────────────────────────────────────────────────── */
+const CUR = (DATA.stripe.currency || 'eur').toUpperCase();
+const totalAdSpend = Object.values(SPEND_BY_DATE).reduce((a,b)=>a+b, 0);
+
+function updateStripeKpis(strp) {
+  const cur = CUR === 'EUR' ? '€' : CUR + ' ';
+  document.getElementById('kpi-revenue').textContent =
+    cur + strp.revenue.toLocaleString('en', {minimumFractionDigits:2, maximumFractionDigits:2});
+  document.getElementById('kpi-revenue-sub').textContent =
+    strp.count + ' payments';
+  document.getElementById('kpi-paid-count').textContent = strp.count;
+  const avgFee = strp.count ? (strp.revenue / strp.count) : 0;
+  document.getElementById('kpi-avg-fee').textContent =
+    cur + avgFee.toFixed(2);
+
+  // Revenue vs ad spend ratio (for all-time, use full spend; otherwise just show revenue
+  const spend = Object.values(SPEND_BY_DATE).reduce((a,b)=>a+b,0);
+  const ratio = spend ? (strp.revenue / spend).toFixed(1) : '—';
+  document.getElementById('kpi-roi').textContent = ratio + 'x';
+  document.getElementById('kpi-roi-sub').textContent =
+    cur + strp.revenue.toFixed(0) + ' revenue vs ' + cur + spend.toFixed(0) + ' ad spend';
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -513,6 +640,7 @@ function updateCharts(agg, mode) {
 function applyFilter(mode) {
   const filtered = filterRecords(mode);
   const agg      = aggregate(filtered);
+  const strp     = stripeAgg(mode);
 
   document.getElementById('kpi-submissions').textContent = agg.total;
   const subEl = document.getElementById('kpi-submissions-sub');
@@ -523,6 +651,7 @@ function applyFilter(mode) {
     subEl.textContent = '';
   }
 
+  updateStripeKpis(strp);
   updateCharts(agg, mode);
 }
 
@@ -530,11 +659,13 @@ function applyFilter(mode) {
    Boot
 ───────────────────────────────────────────────────────────────────────────── */
 buildFilters();
-const initAgg = aggregate(DATA.records);
+const initAgg  = aggregate(DATA.records);
+const initStrp = stripeAgg('all');
 document.getElementById('kpi-submissions').textContent = initAgg.total;
 const organic = DATA.records.filter(r => r.date < CAMPAIGN_START).length;
 document.getElementById('kpi-submissions-sub').textContent =
   organic ? '+' + organic + ' pre-campaign organic' : '';
+updateStripeKpis(initStrp);
 initCharts(initAgg, 'all');
 </script>
 </body>
