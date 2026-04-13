@@ -64,7 +64,7 @@
   .card h2 { font-size: 10px; color: #bbb; text-transform: uppercase;
              letter-spacing: 0.08em; margin-bottom: 16px; font-weight: 500;
              display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-  canvas { max-width: 100%; }
+  canvas { max-width: 100%; max-height: 280px; }
 
   /* ── Data source badges ─────────────────────────────────────── */
   .src {
@@ -248,19 +248,18 @@
   </div>
 </div>
 
-<div class="card" style="margin-bottom:12px">
-  <h2>Submissions by Day of Week <span class="src src-picter">Picter</span></h2>
-  <canvas id="dowChart" height="160"></canvas>
-</div>
-
-<div class="grid-2">
+<div class="grid-3">
   <div class="card">
-    <h2>Daily Revenue <span class="src src-stripe">Stripe</span></h2>
-    <canvas id="revenueChart" height="160"></canvas>
+    <h2>Submissions by Day of Week <span class="src src-picter">Picter</span></h2>
+    <canvas id="dowChart" height="180"></canvas>
   </div>
   <div class="card">
-    <h2>Revenue vs Ad Spend per Day <span class="src src-stripe">Stripe</span> <span class="src src-meta">Meta Ads</span></h2>
-    <canvas id="revenueSpendChart" height="160"></canvas>
+    <h2>Daily Revenue <span class="src src-stripe">Stripe</span></h2>
+    <canvas id="revenueChart" height="180"></canvas>
+  </div>
+  <div class="card">
+    <h2>Revenue vs Spend <span class="src src-stripe">Stripe</span> <span class="src src-meta">Meta</span></h2>
+    <canvas id="revenueSpendChart" height="180"></canvas>
   </div>
 </div>
 
