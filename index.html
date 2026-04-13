@@ -151,23 +151,23 @@
   </div>
   <div class="kpi">
     <div class="kpi-label"><span class="src-dot src-dot-meta"></span>Landing Page Views</div>
-    <div class="kpi-value">1,398</div>
-    <div class="kpi-sub neutral">Submission rate: 8.6% ↑</div>
+    <div class="kpi-value" id="kpi-lpv">—</div>
+    <div class="kpi-sub neutral" id="kpi-lpv-sub">—</div>
   </div>
   <div class="kpi">
     <div class="kpi-label"><span class="src-dot src-dot-meta"></span>Cost Per Submission</div>
-    <div class="kpi-value">€0.81</div>
-    <div class="kpi-sub neutral">Based on €98 spent</div>
+    <div class="kpi-value" id="kpi-cps">—</div>
+    <div class="kpi-sub neutral" id="kpi-cps-sub">—</div>
   </div>
   <div class="kpi">
     <div class="kpi-label"><span class="src-dot src-dot-meta"></span>Avg CPV</div>
-    <div class="kpi-value">€0.070</div>
-    <div class="kpi-sub warn">Benchmark: €0.05–0.15</div>
+    <div class="kpi-value" id="kpi-cpv">—</div>
+    <div class="kpi-sub neutral" id="kpi-cpv-sub">—</div>
   </div>
   <div class="kpi">
     <div class="kpi-label"><span class="src-dot src-dot-meta"></span>Impressions</div>
-    <div class="kpi-value">121K</div>
-    <div class="kpi-sub neutral">CTR: 1.15% ↑</div>
+    <div class="kpi-value" id="kpi-impressions">—</div>
+    <div class="kpi-sub neutral" id="kpi-impressions-sub">—</div>
   </div>
 </div>
 
@@ -188,11 +188,22 @@
     <div class="kpi-value" id="kpi-avg-fee">—</div>
     <div class="kpi-sub neutral">per payment</div>
   </div>
-  <div class="kpi kpi-stripe" style="grid-column: span 2;">
+  <div class="kpi kpi-stripe">
+    <div class="kpi-label"><span class="src-dot src-dot-stripe"></span><span class="src-dot src-dot-picter"></span>Paid Conversion</div>
+    <div class="kpi-value" id="kpi-conversion">—</div>
+    <div class="kpi-sub neutral" id="kpi-conversion-sub"></div>
+  </div>
+  <div class="kpi kpi-stripe">
     <div class="kpi-label"><span class="src-dot src-dot-stripe"></span><span class="src-dot src-dot-meta"></span>Revenue vs Ad Spend</div>
     <div class="kpi-value" id="kpi-roi">—</div>
     <div class="kpi-sub neutral" id="kpi-roi-sub"></div>
   </div>
+</div>
+
+<!-- ── Pacing ───────────────────────────────────────────────────────── -->
+<div class="card" style="margin-bottom:12px">
+  <h2>Campaign Pacing <span class="src src-meta">Meta Ads</span> <span class="src src-picter">Picter</span></h2>
+  <div id="pacing-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;"></div>
 </div>
 
 <!-- ── Charts ─────────────────────────────────────────────────────── -->
@@ -237,6 +248,11 @@
   </div>
 </div>
 
+<div class="card" style="margin-bottom:12px">
+  <h2>Submissions by Day of Week <span class="src src-picter">Picter</span></h2>
+  <canvas id="dowChart" height="160"></canvas>
+</div>
+
 <div class="grid-2">
   <div class="card">
     <h2>Daily Revenue <span class="src src-stripe">Stripe</span></h2>
@@ -245,6 +261,33 @@
   <div class="card">
     <h2>Revenue vs Ad Spend per Day <span class="src src-stripe">Stripe</span> <span class="src src-meta">Meta Ads</span></h2>
     <canvas id="revenueSpendChart" height="160"></canvas>
+  </div>
+</div>
+
+<!-- ── Campaign Insights ─────────────────────────────────────────── -->
+<div class="card" style="margin-bottom:20px; border-left: 4px solid #6d5af0;">
+  <h2 style="color: #6d5af0; font-size: 14px; margin-bottom: 12px;">Campaign Insights & Strategy</h2>
+  <div style="font-size: 13px; line-height: 1.6; color: #444;">
+    <div style="margin-bottom: 12px;">
+      <span style="color: #6d5af0; margin-right: 8px;">▲</span>
+      <strong>Apr 10:</strong> Only 2 registrations and €80 revenue — the steepest single-day collapse. Check whether a campaign paused, a budget cap hit, or an ad was disapproved that day.
+    </div>
+    <div style="margin-bottom: 12px;">
+      <span style="color: #6d5af0; margin-right: 8px;">▲</span>
+      <strong>Apr 4:</strong> 5 registrations vs 22 on Apr 2 and 20 on Apr 6 — mid-week trough. If spend was flat, your CTR or conversion rate dropped sharply. Worth segmenting by ad group for that date.
+    </div>
+    <div style="margin-bottom: 12px;">
+      <span style="color: #1d4ed8; margin-right: 8px;">◆</span>
+      <strong>Geo Distribution:</strong> DE + PT + IT + FR account for ~43% of registrants. If Google Ads geo bid adjustments aren't boosting these four, you're leaving efficiency on the table.
+    </div>
+    <div style="margin-bottom: 12px;">
+      <span style="color: #1d4ed8; margin-right: 8px;">◆</span>
+      <strong>Gender Mix:</strong> Gender is 64% male. If your creative/targeting isn't intentionally skewed male, your female audience may be underserved — or your ad creative self-selects. Worth A/B testing gendered creative.
+    </div>
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 16px 0;">
+    <div style="font-style: italic; color: #888; font-size: 12px;">
+      <strong>Google Ads Layer:</strong> Dual-axis correlation (spend vs registrations) and Geo Overlap tables are the priority for next-phase analysis to identify underweight high-conversion markets like Germany.
+    </div>
   </div>
 </div>
 
@@ -271,19 +314,16 @@ const CAMPAIGN_START = '2026-04-03';
 const TOP_N = 11;
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   Meta Ads data (hardcoded — not in xlsx)
+   Meta Ads data (live — fetched via Meta API in build.py)
 ───────────────────────────────────────────────────────────────────────────── */
-const SPEND_BY_DATE = {
-  '2026-04-03': 12.03, '2026-04-04': 17.43, '2026-04-05': 20.83,
-  '2026-04-06': 17.35, '2026-04-07': 8.96,  '2026-04-08': 15.04,
-  '2026-04-09': 6.43,
-};
-
-const CPV_BY_DATE = {
-  '2026-04-03': 0.101, '2026-04-04': 0.102, '2026-04-05': 0.089,
-  '2026-04-06': 0.059, '2026-04-07': 0.051, '2026-04-08': 0.068,
-  '2026-04-09': 0.053, '2026-04-10': 0.046,
-};
+const SPEND_BY_DATE = Object.fromEntries(
+  Object.entries(DATA.meta.byDay).map(([d, v]) => [d, v.spend])
+);
+const CPV_BY_DATE = Object.fromEntries(
+  Object.entries(DATA.meta.byDay)
+    .filter(([, v]) => v.lpv > 0)
+    .map(([d, v]) => [d, +(v.spend / v.lpv).toFixed(3)])
+);
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Helpers
@@ -359,14 +399,21 @@ function aggregate(records) {
   records.forEach(r => {
     if (r.country)     cMap[r.country]     = (cMap[r.country]||0) + 1;
     if (r.nationality) nMap[r.nationality] = (nMap[r.nationality]||0) + 1;
-    if (r.city)        cityMap[r.city]     = (cityMap[r.city]||0) + 1;
+    const city = r.city && r.city.toLowerCase() !== 'nan' ? r.city : null;
+    if (city) cityMap[city] = (cityMap[city]||0) + 1;
   });
   const topCountries = Object.entries(cMap).sort((a,b)=>b[1]-a[1]).slice(0, TOP_N);
   const topNat       = Object.entries(nMap).sort((a,b)=>b[1]-a[1]).slice(0, TOP_N - 1);
   const topCities    = Object.entries(cityMap).sort((a,b)=>b[1]-a[1]).slice(0, 12);
 
+  // weekday pattern (0=Sun … 6=Sat)
+  const DOW_LABELS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const dowMap = [0,0,0,0,0,0,0];
+  records.forEach(r => { dowMap[new Date(r.date+'T12:00:00').getDay()]++; });
+
   return { total: records.length, sortedDates, dayLabels, dayData, dayBg, dayBorder,
-           male, female, ageLabels, ageData, topCountries, topNat, topCities };
+           male, female, ageLabels, ageData, topCountries, topNat, topCities,
+           dowLabels: DOW_LABELS, dowData: dowMap };
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -394,6 +441,20 @@ function stripeAgg(mode) {
   const labels   = dates.map(fmtShort);
   const revData  = dates.map(d => byDay[d]?.revenue || 0);
   return { revenue: Math.round(revenue * 100) / 100, count, labels, revData, dates };
+}
+
+// Aggregate Meta byDay data for a given mode
+function metaAgg(mode) {
+  const byDay = DATA.meta.byDay || {};
+  const dates = filterDates(byDay, mode);
+  let spend = 0, impressions = 0, lpv = 0, clicks = 0;
+  dates.forEach(d => {
+    spend       += byDay[d]?.spend || 0;
+    impressions += byDay[d]?.impressions || 0;
+    lpv         += byDay[d]?.lpv || 0;
+    clicks      += byDay[d]?.clicks || 0;
+  });
+  return { spend, impressions, lpv, clicks };
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -554,6 +615,21 @@ function initCharts(agg, mode) {
     }
   });
 
+  // Weekday pattern
+  charts.dow = new Chart(document.getElementById('dowChart'), {
+    type: 'bar',
+    data: {
+      labels: agg.dowLabels,
+      datasets: [{ data: agg.dowData,
+        backgroundColor: agg.dowLabels.map(d => d==='Sun'||d==='Sat' ? C.yellow+'66' : C.accent+'55'),
+        borderColor:     agg.dowLabels.map(d => d==='Sun'||d==='Sat' ? C.yellow : C.accent),
+        borderWidth:1, borderRadius:4 }]
+    },
+    options: { plugins:{legend:{display:false}},
+      scales:{x:{grid:{display:false}},y:{grid:{color:C.grid}}} }
+  });
+
+
   // Stripe: daily revenue bars
   charts.revenue = new Chart(document.getElementById('revenueChart'), {
     type: 'bar',
@@ -638,6 +714,12 @@ function updateCharts(agg, mode) {
   charts.city.data.datasets[0].data    = agg.topCities.map(e=>e[1]);
   charts.city.update();
 
+  charts.dow.data.datasets[0].data     = agg.dowData;
+  charts.dow.data.datasets[0].backgroundColor = agg.dowLabels.map(d => d==='Sun'||d==='Sat' ? C.yellow+'66' : C.accent+'55');
+  charts.dow.data.datasets[0].borderColor     = agg.dowLabels.map(d => d==='Sun'||d==='Sat' ? C.yellow : C.accent);
+  charts.dow.update();
+
+
   charts.spend.data.labels             = metaDates.map(fmtShort);
   charts.spend.data.datasets[0].data   = metaDates.map(d => SPEND_BY_DATE[d]);
   charts.spend.data.datasets[1].data   = metaDates.map(d => subMap[d] || 0);
@@ -654,28 +736,91 @@ function updateCharts(agg, mode) {
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
+   Pacing widget (always all-time, not filtered)
+───────────────────────────────────────────────────────────────────────────── */
+const BUDGET       = 1250;
+const CAMPAIGN_END = new Date('2026-05-31T23:59:59');
+const CAMPAIGN_PAID_START = new Date('2026-04-03T00:00:00');
+
+function renderPacing(allRecords) {
+  const today       = new Date();
+  const daysTotal   = Math.round((CAMPAIGN_END - CAMPAIGN_PAID_START) / 86400000);
+  const daysElapsed = Math.max(1, Math.round((today - CAMPAIGN_PAID_START) / 86400000));
+  const daysLeft    = Math.max(0, Math.round((CAMPAIGN_END - today) / 86400000));
+
+  const spentSoFar  = Object.values(SPEND_BY_DATE).reduce((a,b)=>a+b,0);
+  const dailyBurn   = spentSoFar / daysElapsed;
+  const projSpend   = Math.min(BUDGET, spentSoFar + dailyBurn * daysLeft);
+  const budgetLeft  = BUDGET - spentSoFar;
+
+  const subsTotal   = allRecords.length;
+  const dailySubs   = subsTotal / daysElapsed;
+  const projSubs    = Math.round(subsTotal + dailySubs * daysLeft);
+
+  const items = [
+    { label:'Budget Remaining',    value:'€'+budgetLeft.toFixed(0),   sub: '€'+spentSoFar.toFixed(0)+' spent of €'+BUDGET },
+    { label:'Days Remaining',      value: daysLeft+'d',               sub: daysElapsed+'d elapsed of '+daysTotal+'d campaign' },
+    { label:'Projected Total Spend',value:'€'+projSpend.toFixed(0),   sub: '€'+dailyBurn.toFixed(2)+'/day avg burn' },
+    { label:'Projected Submissions',value: projSubs,                  sub: dailySubs.toFixed(1)+'/day avg · '+subsTotal+' to date' },
+  ];
+
+  const grid = document.getElementById('pacing-grid');
+  grid.innerHTML = items.map(({label,value,sub}) => `
+    <div>
+      <div style="font-size:9px;color:#bbb;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px">${label}</div>
+      <div style="font-size:22px;font-weight:700;color:#111">${value}</div>
+      <div style="font-size:11px;color:#999;margin-top:4px">${sub}</div>
+    </div>`).join('');
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
    Stripe KPI update
 ───────────────────────────────────────────────────────────────────────────── */
 const CUR = (DATA.stripe.currency || 'eur').toUpperCase();
-const totalAdSpend = Object.values(SPEND_BY_DATE).reduce((a,b)=>a+b, 0);
 
-function updateStripeKpis(strp) {
+function updateStripeKpis(strp, mode, submissionTotal) {
   const cur = CUR === 'EUR' ? '€' : CUR + ' ';
   document.getElementById('kpi-revenue').textContent =
     cur + strp.revenue.toLocaleString('en', {minimumFractionDigits:2, maximumFractionDigits:2});
-  document.getElementById('kpi-revenue-sub').textContent =
-    strp.count + ' payments';
+  document.getElementById('kpi-revenue-sub').textContent = strp.count + ' payments';
   document.getElementById('kpi-paid-count').textContent = strp.count;
   const avgFee = strp.count ? (strp.revenue / strp.count) : 0;
-  document.getElementById('kpi-avg-fee').textContent =
-    cur + avgFee.toFixed(2);
+  document.getElementById('kpi-avg-fee').textContent = cur + avgFee.toFixed(2);
 
-  // Revenue vs ad spend ratio (for all-time, use full spend; otherwise just show revenue
-  const spend = Object.values(SPEND_BY_DATE).reduce((a,b)=>a+b,0);
+  // Conversion: paid ÷ submitted (use filtered submission count)
+  const convPct = submissionTotal ? Math.round(strp.count / submissionTotal * 100) : 0;
+  document.getElementById('kpi-conversion').textContent = convPct + '%';
+  document.getElementById('kpi-conversion-sub').textContent =
+    strp.count + ' paid of ' + submissionTotal + ' submitted';
+
+  // ROI: use spend only for the filtered date range
+  const filteredSpendDates = filterDates(SPEND_BY_DATE, mode);
+  const spend = filteredSpendDates.reduce((a,d) => a + (SPEND_BY_DATE[d]||0), 0);
   const ratio = spend ? (strp.revenue / spend).toFixed(1) : '—';
   document.getElementById('kpi-roi').textContent = ratio + 'x';
   document.getElementById('kpi-roi-sub').textContent =
     cur + strp.revenue.toFixed(0) + ' revenue vs ' + cur + spend.toFixed(0) + ' ad spend';
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Meta KPI update
+ ───────────────────────────────────────────────────────────────────────────── */
+function updateMetaKpis(meta, mode, submissionTotal) {
+  document.getElementById('kpi-lpv').textContent = meta.lpv.toLocaleString();
+  const subRate = meta.lpv ? (submissionTotal / meta.lpv * 100).toFixed(1) : 0;
+  document.getElementById('kpi-lpv-sub').textContent = `Submission rate: ${subRate}%`;
+
+  document.getElementById('kpi-cps').textContent = '€' + (submissionTotal ? (meta.spend / submissionTotal).toFixed(2) : '0.00');
+  document.getElementById('kpi-cps-sub').textContent = `Based on €${meta.spend.toFixed(0)} spent`;
+
+  const cpv = meta.lpv ? (meta.spend / meta.lpv).toFixed(3) : 0;
+  document.getElementById('kpi-cpv').textContent = '€' + cpv;
+  document.getElementById('kpi-cpv-sub').className = 'kpi-sub ' + (cpv > 0.15 ? 'warn' : 'neutral');
+  document.getElementById('kpi-cpv-sub').textContent = 'Benchmark: €0.05–0.15';
+
+  document.getElementById('kpi-impressions').textContent = meta.impressions > 1000 ? (meta.impressions / 1000).toFixed(0) + 'K' : meta.impressions;
+  const ctr = meta.impressions ? (meta.clicks / meta.impressions * 100).toFixed(2) : 0;
+  document.getElementById('kpi-impressions-sub').textContent = `CTR: ${ctr}%`;
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -695,7 +840,9 @@ function applyFilter(mode) {
     subEl.textContent = '';
   }
 
-  updateStripeKpis(strp);
+  updateStripeKpis(strp, mode, agg.total);
+  const meta = metaAgg(mode);
+  updateMetaKpis(meta, mode, agg.total);
   updateCharts(agg, mode);
 }
 
@@ -703,13 +850,16 @@ function applyFilter(mode) {
    Boot
 ───────────────────────────────────────────────────────────────────────────── */
 buildFilters();
+renderPacing(DATA.records);
 const initAgg  = aggregate(DATA.records);
 const initStrp = stripeAgg('all');
 document.getElementById('kpi-submissions').textContent = initAgg.total;
 const organic = DATA.records.filter(r => r.date < CAMPAIGN_START).length;
 document.getElementById('kpi-submissions-sub').textContent =
   organic ? '+' + organic + ' pre-campaign organic' : '';
-updateStripeKpis(initStrp);
+updateStripeKpis(initStrp, 'all', initAgg.total);
+const initMeta = metaAgg('all');
+updateMetaKpis(initMeta, 'all', initAgg.total);
 initCharts(initAgg, 'all');
 </script>
 </body>

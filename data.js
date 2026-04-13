@@ -853,7 +853,7 @@ const DATA = {
       "gender": "female",
       "age": 50,
       "nationality": "FR",
-      "city": NaN,
+      "city": null,
       "country": "SG"
     },
     {
@@ -1280,5 +1280,79 @@ const DATA = {
         "count": 3
       }
     }
+  },
+  "meta": {
+    "byDay": {
+      "2026-04-03": {
+        "spend": 12.03,
+        "impressions": 9608,
+        "lpv": 119,
+        "clicks": 259
+      },
+      "2026-04-04": {
+        "spend": 17.43,
+        "impressions": 14167,
+        "lpv": 171,
+        "clicks": 376
+      },
+      "2026-04-05": {
+        "spend": 20.83,
+        "impressions": 18409,
+        "lpv": 234,
+        "clicks": 410
+      },
+      "2026-04-06": {
+        "spend": 17.35,
+        "impressions": 23650,
+        "lpv": 292,
+        "clicks": 517
+      },
+      "2026-04-07": {
+        "spend": 8.96,
+        "impressions": 14608,
+        "lpv": 177,
+        "clicks": 292
+      },
+      "2026-04-08": {
+        "spend": 15.04,
+        "impressions": 25282,
+        "lpv": 222,
+        "clicks": 372
+      },
+      "2026-04-09": {
+        "spend": 6.43,
+        "impressions": 11447,
+        "lpv": 121,
+        "clicks": 200
+      },
+      "2026-04-10": {
+        "spend": 14.42,
+        "impressions": 23767,
+        "lpv": 271,
+        "clicks": 447
+      },
+      "2026-04-11": {
+        "spend": 18.45,
+        "impressions": 30762,
+        "lpv": 294,
+        "clicks": 468
+      },
+      "2026-04-12": {
+        "spend": 21.96,
+        "impressions": 37959,
+        "lpv": 470,
+        "clicks": 677
+      },
+      "2026-04-13": {
+        "spend": 8.43,
+        "impressions": 13700,
+        "lpv": 170,
+        "clicks": 247
+      }
+    },
+    "totalSpend": 161.33,
+    "totalImpressions": 223359,
+    "totalLpv": 2541,
+    "totalClicks": 4265
   }
 };
