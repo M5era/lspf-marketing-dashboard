@@ -26,9 +26,11 @@ jobs:
 
       - name: Run build.py
         env:
-          PICTER_JWT:     ${{ secrets.PICTER_JWT }}
-          PICTER_CALL_ID: ${{ secrets.PICTER_CALL_ID }}
-          STRIPE_SECRET:  ${{ secrets.STRIPE_SECRET }}
+          PICTER_JWT:      ${{ secrets.PICTER_JWT }}
+          PICTER_CALL_ID:  ${{ secrets.PICTER_CALL_ID }}
+          STRIPE_SECRET:   ${{ secrets.STRIPE_SECRET }}
+          META_API_KEY:    ${{ secrets.META_API_KEY }}
+          META_ACCOUNT_ID: ${{ secrets.META_ACCOUNT_ID }}
         run: python build.py
 
       - name: Commit and push data.js
