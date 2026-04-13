@@ -62,8 +62,31 @@
   .card { background: #fff; border: 1px solid #e8e8e8; border-radius: 10px; padding: 20px;
           box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
   .card h2 { font-size: 10px; color: #bbb; text-transform: uppercase;
-             letter-spacing: 0.08em; margin-bottom: 16px; font-weight: 500; }
+             letter-spacing: 0.08em; margin-bottom: 16px; font-weight: 500;
+             display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
   canvas { max-width: 100%; }
+
+  /* ── Data source badges ─────────────────────────────────────── */
+  .src {
+    display: inline-block; border-radius: 3px; font-size: 8px; font-weight: 600;
+    padding: 2px 5px; letter-spacing: 0.05em; text-transform: uppercase;
+    line-height: 1.4; flex-shrink: 0;
+  }
+  .src-picter  { background: #ede9fe; color: #6d28d9; }
+  .src-stripe  { background: #ede9fe; color: #4f46e5; border: 1px solid #c4b5fd; }
+  .src-meta    { background: #dbeafe; color: #1d4ed8; }
+  .src-google  { background: #dcfce7; color: #15803d; }
+  .src-mixed   { background: #f3f4f6; color: #6b7280; }
+
+  /* ── KPI source dot ─────────────────────────────────────────── */
+  .kpi-label { display: flex; align-items: center; gap: 5px; }
+  .src-dot {
+    width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; display: inline-block;
+  }
+  .src-dot-picter { background: #7c3aed; }
+  .src-dot-stripe { background: #4f46e5; }
+  .src-dot-meta   { background: #1d4ed8; }
+  .src-dot-static { background: #d1d5db; }
 
   /* ── Stripe KPI row ─────────────────────────────────────────── */
   .kpi-row-stripe { margin-top: -4px; }
@@ -122,27 +145,27 @@
 <!-- ── KPIs: Submissions & Ads ────────────────────────────────────── -->
 <div class="kpi-row">
   <div class="kpi">
-    <div class="kpi-label">Submissions</div>
+    <div class="kpi-label"><span class="src-dot src-dot-picter"></span>Submissions</div>
     <div class="kpi-value" id="kpi-submissions">—</div>
     <div class="kpi-sub neutral" id="kpi-submissions-sub"></div>
   </div>
   <div class="kpi">
-    <div class="kpi-label">Landing Page Views</div>
+    <div class="kpi-label"><span class="src-dot src-dot-meta"></span>Landing Page Views</div>
     <div class="kpi-value">1,398</div>
     <div class="kpi-sub neutral">Submission rate: 8.6% ↑</div>
   </div>
   <div class="kpi">
-    <div class="kpi-label">Cost Per Submission</div>
+    <div class="kpi-label"><span class="src-dot src-dot-meta"></span>Cost Per Submission</div>
     <div class="kpi-value">€0.81</div>
     <div class="kpi-sub neutral">Based on €98 spent</div>
   </div>
   <div class="kpi">
-    <div class="kpi-label">Avg CPV</div>
+    <div class="kpi-label"><span class="src-dot src-dot-meta"></span>Avg CPV</div>
     <div class="kpi-value">€0.070</div>
     <div class="kpi-sub warn">Benchmark: €0.05–0.15</div>
   </div>
   <div class="kpi">
-    <div class="kpi-label">Impressions</div>
+    <div class="kpi-label"><span class="src-dot src-dot-meta"></span>Impressions</div>
     <div class="kpi-value">121K</div>
     <div class="kpi-sub neutral">CTR: 1.15% ↑</div>
   </div>
@@ -151,22 +174,22 @@
 <!-- ── KPIs: Stripe revenue ───────────────────────────────────────── -->
 <div class="kpi-row kpi-row-stripe">
   <div class="kpi kpi-stripe">
-    <div class="kpi-label">Total Revenue</div>
+    <div class="kpi-label"><span class="src-dot src-dot-stripe"></span>Total Revenue</div>
     <div class="kpi-value" id="kpi-revenue">—</div>
     <div class="kpi-sub neutral" id="kpi-revenue-sub"></div>
   </div>
   <div class="kpi kpi-stripe">
-    <div class="kpi-label">Paid Submissions</div>
+    <div class="kpi-label"><span class="src-dot src-dot-stripe"></span>Paid Submissions</div>
     <div class="kpi-value" id="kpi-paid-count">—</div>
     <div class="kpi-sub neutral" id="kpi-paid-sub"></div>
   </div>
   <div class="kpi kpi-stripe">
-    <div class="kpi-label">Avg Fee</div>
+    <div class="kpi-label"><span class="src-dot src-dot-stripe"></span>Avg Fee</div>
     <div class="kpi-value" id="kpi-avg-fee">—</div>
     <div class="kpi-sub neutral">per payment</div>
   </div>
   <div class="kpi kpi-stripe" style="grid-column: span 2;">
-    <div class="kpi-label">Revenue vs Ad Spend</div>
+    <div class="kpi-label"><span class="src-dot src-dot-stripe"></span><span class="src-dot src-dot-meta"></span>Revenue vs Ad Spend</div>
     <div class="kpi-value" id="kpi-roi">—</div>
     <div class="kpi-sub neutral" id="kpi-roi-sub"></div>
   </div>
@@ -175,48 +198,52 @@
 <!-- ── Charts ─────────────────────────────────────────────────────── -->
 <div class="grid-2">
   <div class="card">
-    <h2>Submissions per Day</h2>
+    <h2>Submissions per Day <span class="src src-picter">Picter</span></h2>
     <canvas id="submissionsChart" height="160"></canvas>
   </div>
   <div class="card">
-    <h2>CPV Trend</h2>
+    <h2>CPV Trend <span class="src src-meta">Meta Ads</span></h2>
     <canvas id="cpvChart" height="160"></canvas>
   </div>
 </div>
 
 <div class="grid-3">
   <div class="card">
-    <h2>Top Countries (residence)</h2>
+    <h2>Top Countries <span class="src src-picter">Picter</span></h2>
     <canvas id="countryChart" height="220"></canvas>
   </div>
   <div class="card">
-    <h2>Gender Split</h2>
+    <h2>Gender Split <span class="src src-picter">Picter</span></h2>
     <canvas id="genderChart" height="220"></canvas>
   </div>
   <div class="card">
-    <h2>Age Distribution</h2>
+    <h2>Age Distribution <span class="src src-picter">Picter</span></h2>
     <canvas id="ageChart" height="220"></canvas>
   </div>
 </div>
 
-<div class="grid-2">
+<div class="grid-3">
   <div class="card">
-    <h2>Top Nationalities</h2>
-    <canvas id="nationalityChart" height="160"></canvas>
+    <h2>Top Nationalities <span class="src src-picter">Picter</span></h2>
+    <canvas id="nationalityChart" height="200"></canvas>
   </div>
   <div class="card">
-    <h2>Daily Spend vs Submissions</h2>
-    <canvas id="spendChart" height="160"></canvas>
+    <h2>Top Cities <span class="src src-picter">Picter</span></h2>
+    <canvas id="cityChart" height="200"></canvas>
+  </div>
+  <div class="card">
+    <h2>Daily Spend vs Submissions <span class="src src-meta">Meta Ads</span> <span class="src src-picter">Picter</span></h2>
+    <canvas id="spendChart" height="200"></canvas>
   </div>
 </div>
 
 <div class="grid-2">
   <div class="card">
-    <h2>Daily Revenue (Stripe)</h2>
+    <h2>Daily Revenue <span class="src src-stripe">Stripe</span></h2>
     <canvas id="revenueChart" height="160"></canvas>
   </div>
   <div class="card">
-    <h2>Revenue vs Ad Spend per Day</h2>
+    <h2>Revenue vs Ad Spend per Day <span class="src src-stripe">Stripe</span> <span class="src src-meta">Meta Ads</span></h2>
     <canvas id="revenueSpendChart" height="160"></canvas>
   </div>
 </div>
@@ -328,16 +355,18 @@ function aggregate(records) {
   const ageLabels = BUCKETS.map(b => b[0]);
   const ageData   = BUCKETS.map(([,lo,hi]) => records.filter(r => r.age>=lo && r.age<=hi).length);
 
-  const cMap = {}, nMap = {};
+  const cMap = {}, nMap = {}, cityMap = {};
   records.forEach(r => {
     if (r.country)     cMap[r.country]     = (cMap[r.country]||0) + 1;
     if (r.nationality) nMap[r.nationality] = (nMap[r.nationality]||0) + 1;
+    if (r.city)        cityMap[r.city]     = (cityMap[r.city]||0) + 1;
   });
   const topCountries = Object.entries(cMap).sort((a,b)=>b[1]-a[1]).slice(0, TOP_N);
   const topNat       = Object.entries(nMap).sort((a,b)=>b[1]-a[1]).slice(0, TOP_N - 1);
+  const topCities    = Object.entries(cityMap).sort((a,b)=>b[1]-a[1]).slice(0, 12);
 
   return { total: records.length, sortedDates, dayLabels, dayData, dayBg, dayBorder,
-           male, female, ageLabels, ageData, topCountries, topNat };
+           male, female, ageLabels, ageData, topCountries, topNat, topCities };
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -489,6 +518,17 @@ function initCharts(agg, mode) {
       scales:{x:{grid:{color:C.grid}},y:{grid:{display:false}}} }
   });
 
+  charts.city = new Chart(document.getElementById('cityChart'), {
+    type: 'bar',
+    data: {
+      labels: agg.topCities.map(e=>e[0]),
+      datasets: [{ data:agg.topCities.map(e=>e[1]),
+        backgroundColor:C.yellow+'55', borderColor:C.yellow, borderWidth:1, borderRadius:3 }]
+    },
+    options: { indexAxis:'y', plugins:{legend:{display:false}},
+      scales:{x:{grid:{color:C.grid}},y:{grid:{display:false}}} }
+  });
+
   const subMap = {};
   agg.sortedDates.forEach((d,i) => { subMap[d] = agg.dayData[i]; });
 
@@ -593,6 +633,10 @@ function updateCharts(agg, mode) {
   charts.nat.data.labels               = agg.topNat.map(e=>e[0]);
   charts.nat.data.datasets[0].data     = agg.topNat.map(e=>e[1]);
   charts.nat.update();
+
+  charts.city.data.labels              = agg.topCities.map(e=>e[0]);
+  charts.city.data.datasets[0].data    = agg.topCities.map(e=>e[1]);
+  charts.city.update();
 
   charts.spend.data.labels             = metaDates.map(fmtShort);
   charts.spend.data.datasets[0].data   = metaDates.map(d => SPEND_BY_DATE[d]);
