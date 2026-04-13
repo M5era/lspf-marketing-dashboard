@@ -1224,11 +1224,38 @@ const DATA = {
       "nationality": "DE",
       "city": "Hamburg",
       "country": "DE"
+    },
+    {
+      "date": "2026-04-13",
+      "id": "LS02-0137-5FB",
+      "gender": "male",
+      "age": 31,
+      "nationality": "FR",
+      "city": "Etaples",
+      "country": "FR"
+    },
+    {
+      "date": "2026-04-13",
+      "id": "LS02-0138-IXD",
+      "gender": "female",
+      "age": 33,
+      "nationality": "DE",
+      "city": "Lisboa",
+      "country": "PT"
+    },
+    {
+      "date": "2026-04-13",
+      "id": "LS02-0139-GFT",
+      "gender": "male",
+      "age": 35,
+      "nationality": "BR",
+      "city": "Belfast",
+      "country": "GB"
     }
   ],
   "stripe": {
-    "totalRevenue": 4240.0,
-    "totalCount": 140,
+    "totalRevenue": 4290.0,
+    "totalCount": 143,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -1276,16 +1303,83 @@ const DATA = {
         "count": 5
       },
       "2026-04-13": {
-        "revenue": 40.0,
-        "count": 3
+        "revenue": 90.0,
+        "count": 6
       }
     }
   },
   "meta": {
-    "byDay": {},
-    "totalSpend": 0,
-    "totalImpressions": 0,
-    "totalLpv": 0,
-    "totalClicks": 0
+    "byDay": {
+      "2026-04-03": {
+        "spend": 12.03,
+        "impressions": 9608,
+        "lpv": 119,
+        "clicks": 259
+      },
+      "2026-04-04": {
+        "spend": 17.43,
+        "impressions": 14167,
+        "lpv": 171,
+        "clicks": 376
+      },
+      "2026-04-05": {
+        "spend": 20.83,
+        "impressions": 18409,
+        "lpv": 234,
+        "clicks": 410
+      },
+      "2026-04-06": {
+        "spend": 17.35,
+        "impressions": 23650,
+        "lpv": 292,
+        "clicks": 517
+      },
+      "2026-04-07": {
+        "spend": 8.96,
+        "impressions": 14608,
+        "lpv": 177,
+        "clicks": 292
+      },
+      "2026-04-08": {
+        "spend": 15.04,
+        "impressions": 25282,
+        "lpv": 222,
+        "clicks": 372
+      },
+      "2026-04-09": {
+        "spend": 6.43,
+        "impressions": 11447,
+        "lpv": 121,
+        "clicks": 200
+      },
+      "2026-04-10": {
+        "spend": 14.42,
+        "impressions": 23767,
+        "lpv": 271,
+        "clicks": 447
+      },
+      "2026-04-11": {
+        "spend": 18.45,
+        "impressions": 30762,
+        "lpv": 294,
+        "clicks": 468
+      },
+      "2026-04-12": {
+        "spend": 21.96,
+        "impressions": 37963,
+        "lpv": 470,
+        "clicks": 677
+      },
+      "2026-04-13": {
+        "spend": 11.79,
+        "impressions": 19364,
+        "lpv": 242,
+        "clicks": 360
+      }
+    },
+    "totalSpend": 164.69,
+    "totalImpressions": 229027,
+    "totalLpv": 2613,
+    "totalClicks": 4378
   }
 };
