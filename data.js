@@ -1251,11 +1251,20 @@ const DATA = {
       "nationality": "BR",
       "city": "Belfast",
       "country": "GB"
+    },
+    {
+      "date": "2026-04-13",
+      "id": "LS02-0140-XGA",
+      "gender": "female",
+      "age": 42,
+      "nationality": "CR",
+      "city": "Baleares",
+      "country": "ES"
     }
   ],
   "stripe": {
-    "totalRevenue": 4290.0,
-    "totalCount": 143,
+    "totalRevenue": 4330.0,
+    "totalCount": 144,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -1303,8 +1312,8 @@ const DATA = {
         "count": 5
       },
       "2026-04-13": {
-        "revenue": 90.0,
-        "count": 6
+        "revenue": 130.0,
+        "count": 7
       }
     }
   },
@@ -1371,15 +1380,21 @@ const DATA = {
         "clicks": 677
       },
       "2026-04-13": {
-        "spend": 11.79,
-        "impressions": 19364,
-        "lpv": 242,
-        "clicks": 360
+        "spend": 13.12,
+        "impressions": 21679,
+        "lpv": 274,
+        "clicks": 396
+      },
+      "2026-04-14": {
+        "spend": 2.67,
+        "impressions": 4084,
+        "lpv": 76,
+        "clicks": 99
       }
     },
-    "totalSpend": 164.69,
-    "totalImpressions": 229027,
-    "totalLpv": 2613,
-    "totalClicks": 4378
+    "totalSpend": 168.69,
+    "totalImpressions": 235426,
+    "totalLpv": 2721,
+    "totalClicks": 4513
   }
 };
