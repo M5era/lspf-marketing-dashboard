@@ -1452,13 +1452,13 @@ const DATA = {
       "2026-04-15": {
         "spend": 4.24,
         "impressions": 6313,
-        "lpv": 90,
+        "lpv": 89,
         "clicks": 128
       }
     },
     "totalSpend": 181.16,
     "totalImpressions": 254028,
-    "totalLpv": 2961,
+    "totalLpv": 2960,
     "totalClicks": 4870
   }
 };

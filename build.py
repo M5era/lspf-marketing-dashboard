@@ -224,7 +224,7 @@ if meta_api_key and meta_account_id:
         params={
             "fields": "date_start,spend,impressions,clicks,actions",
             "time_increment": 1,
-            "time_range": json.dumps({"since": since, "until": today}),
+            "time_range": json.dumps({"since": since, "until": today}, separators=(',', ':')),
             "access_token": meta_api_key,
         },
         timeout=30,
