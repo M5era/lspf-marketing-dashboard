@@ -189,11 +189,6 @@
     <div class="kpi-sub neutral">per payment</div>
   </div>
   <div class="kpi kpi-stripe">
-    <div class="kpi-label"><span class="src-dot src-dot-stripe"></span><span class="src-dot src-dot-picter"></span>Paid Conversion</div>
-    <div class="kpi-value" id="kpi-conversion">—</div>
-    <div class="kpi-sub neutral" id="kpi-conversion-sub"></div>
-  </div>
-  <div class="kpi kpi-stripe">
     <div class="kpi-label"><span class="src-dot src-dot-stripe"></span><span class="src-dot src-dot-meta"></span>Revenue vs Ad Spend</div>
     <div class="kpi-value" id="kpi-roi">—</div>
     <div class="kpi-sub neutral" id="kpi-roi-sub"></div>
@@ -782,11 +777,6 @@ function updateStripeKpis(strp, mode, submissionTotal) {
   const avgFee = strp.count ? (strp.revenue / strp.count) : 0;
   document.getElementById('kpi-avg-fee').textContent = cur + avgFee.toFixed(2);
 
-  // Conversion: paid ÷ submitted (use filtered submission count)
-  const convPct = submissionTotal ? Math.round(strp.count / submissionTotal * 100) : 0;
-  document.getElementById('kpi-conversion').textContent = convPct + '%';
-  document.getElementById('kpi-conversion-sub').textContent =
-    strp.count + ' paid of ' + submissionTotal + ' submitted';
 
   // ROI: use spend only for the filtered date range
   const filteredSpendDates = filterDates(SPEND_BY_DATE, mode);
