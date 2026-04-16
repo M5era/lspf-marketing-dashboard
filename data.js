@@ -155,6 +155,15 @@ const DATA = {
       "country": "IN"
     },
     {
+      "date": "2026-04-15",
+      "id": "LS02-0148-XEU",
+      "gender": "female",
+      "age": 49,
+      "nationality": "AR",
+      "city": "Buenos Aires",
+      "country": "AR"
+    },
+    {
       "date": "2026-04-07",
       "id": "LS02-0071-LVU",
       "gender": "male",
@@ -1314,11 +1323,20 @@ const DATA = {
       "nationality": "GB",
       "city": "South Ockendon",
       "country": "GB"
+    },
+    {
+      "date": "2026-04-15",
+      "id": "LS02-0147-EQW",
+      "gender": "male",
+      "age": 81,
+      "nationality": "CA",
+      "city": "Indian Harbour",
+      "country": "CA"
     }
   ],
   "stripe": {
-    "totalRevenue": 4460.0,
-    "totalCount": 150,
+    "totalRevenue": 4510.0,
+    "totalCount": 152,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -1372,6 +1390,10 @@ const DATA = {
       "2026-04-14": {
         "revenue": 130.0,
         "count": 6
+      },
+      "2026-04-15": {
+        "revenue": 50.0,
+        "count": 2
       }
     }
   },
@@ -1444,21 +1466,27 @@ const DATA = {
         "clicks": 396
       },
       "2026-04-14": {
-        "spend": 10.9,
-        "impressions": 16366,
+        "spend": 10.91,
+        "impressions": 16368,
         "lpv": 226,
         "clicks": 328
       },
       "2026-04-15": {
-        "spend": 5.43,
-        "impressions": 7642,
-        "lpv": 118,
-        "clicks": 168
+        "spend": 11.52,
+        "impressions": 16664,
+        "lpv": 232,
+        "clicks": 323
+      },
+      "2026-04-16": {
+        "spend": 3.43,
+        "impressions": 4414,
+        "lpv": 84,
+        "clicks": 99
       }
     },
-    "totalSpend": 182.35,
-    "totalImpressions": 255360,
-    "totalLpv": 2989,
-    "totalClicks": 4910
+    "totalSpend": 191.88,
+    "totalImpressions": 268798,
+    "totalLpv": 3187,
+    "totalClicks": 5164
   }
 };
