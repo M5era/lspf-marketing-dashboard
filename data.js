@@ -362,6 +362,15 @@ const DATA = {
       "country": "GB"
     },
     {
+      "date": "2026-04-16",
+      "id": "LS02-0150-JVN",
+      "gender": "male",
+      "age": 28,
+      "nationality": "AT",
+      "city": "Krieglach",
+      "country": "AT"
+    },
+    {
       "date": "2026-04-06",
       "id": "LS02-0055-FBH",
       "gender": "male",
@@ -1332,11 +1341,47 @@ const DATA = {
       "nationality": "CA",
       "city": "Indian Harbour",
       "country": "CA"
+    },
+    {
+      "date": "2026-04-16",
+      "id": "LS02-0149-BW1",
+      "gender": "male",
+      "age": 26,
+      "nationality": "DE",
+      "city": "Unterschlei\u00dfheim",
+      "country": "DE"
+    },
+    {
+      "date": "2026-04-16",
+      "id": "LS02-0151-4JW",
+      "gender": "male",
+      "age": 47,
+      "nationality": "DE",
+      "city": "Sankt Augustin",
+      "country": "DE"
+    },
+    {
+      "date": "2026-04-16",
+      "id": "LS02-0152-OAP",
+      "gender": "male",
+      "age": 42,
+      "nationality": "PT",
+      "city": "Guarda",
+      "country": "PT"
+    },
+    {
+      "date": "2026-04-17",
+      "id": "LS02-0153-MFH",
+      "gender": "female",
+      "age": 41,
+      "nationality": "IN",
+      "city": "KOLKATA",
+      "country": "IN"
     }
   ],
   "stripe": {
-    "totalRevenue": 4510.0,
-    "totalCount": 152,
+    "totalRevenue": 4620.0,
+    "totalCount": 157,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -1394,6 +1439,14 @@ const DATA = {
       "2026-04-15": {
         "revenue": 50.0,
         "count": 2
+      },
+      "2026-04-16": {
+        "revenue": 100.0,
+        "count": 4
+      },
+      "2026-04-17": {
+        "revenue": 10.0,
+        "count": 1
       }
     }
   },
@@ -1473,20 +1526,26 @@ const DATA = {
       },
       "2026-04-15": {
         "spend": 11.52,
-        "impressions": 16664,
+        "impressions": 16673,
         "lpv": 232,
         "clicks": 323
       },
       "2026-04-16": {
-        "spend": 3.43,
-        "impressions": 4414,
-        "lpv": 84,
-        "clicks": 99
+        "spend": 11.69,
+        "impressions": 16122,
+        "lpv": 232,
+        "clicks": 309
+      },
+      "2026-04-17": {
+        "spend": 3.45,
+        "impressions": 4379,
+        "lpv": 66,
+        "clicks": 91
       }
     },
-    "totalSpend": 191.88,
-    "totalImpressions": 268798,
-    "totalLpv": 3187,
-    "totalClicks": 5164
+    "totalSpend": 203.59,
+    "totalImpressions": 284894,
+    "totalLpv": 3401,
+    "totalClicks": 5465
   }
 };
