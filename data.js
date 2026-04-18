@@ -11,6 +11,15 @@ const DATA = {
       "country": "FR"
     },
     {
+      "date": "2026-04-17",
+      "id": "LS02-0154-4GN",
+      "gender": "male",
+      "age": 32,
+      "nationality": "PT",
+      "city": "Albufeira",
+      "country": "PT"
+    },
+    {
       "date": "2026-04-05",
       "id": "LS02-0042-068",
       "gender": "male",
@@ -1377,11 +1386,20 @@ const DATA = {
       "nationality": "IN",
       "city": "KOLKATA",
       "country": "IN"
+    },
+    {
+      "date": "2026-04-17",
+      "id": "LS02-0155-4QA",
+      "gender": "female",
+      "age": 23,
+      "nationality": "ES",
+      "city": "Rincon De Milberg",
+      "country": "AR"
     }
   ],
   "stripe": {
-    "totalRevenue": 4620.0,
-    "totalCount": 157,
+    "totalRevenue": 4640.0,
+    "totalCount": 159,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -1445,8 +1463,8 @@ const DATA = {
         "count": 4
       },
       "2026-04-17": {
-        "revenue": 10.0,
-        "count": 1
+        "revenue": 30.0,
+        "count": 3
       }
     }
   },
@@ -1532,20 +1550,26 @@ const DATA = {
       },
       "2026-04-16": {
         "spend": 11.69,
-        "impressions": 16122,
+        "impressions": 16126,
         "lpv": 232,
         "clicks": 309
       },
       "2026-04-17": {
-        "spend": 3.45,
-        "impressions": 4379,
-        "lpv": 66,
-        "clicks": 91
+        "spend": 11.76,
+        "impressions": 15018,
+        "lpv": 166,
+        "clicks": 263
+      },
+      "2026-04-18": {
+        "spend": 3.15,
+        "impressions": 4445,
+        "lpv": 68,
+        "clicks": 86
       }
     },
-    "totalSpend": 203.59,
-    "totalImpressions": 284894,
-    "totalLpv": 3401,
-    "totalClicks": 5465
+    "totalSpend": 215.05,
+    "totalImpressions": 299982,
+    "totalLpv": 3569,
+    "totalClicks": 5723
   }
 };
