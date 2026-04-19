@@ -1395,11 +1395,47 @@ const DATA = {
       "nationality": "ES",
       "city": "Rincon De Milberg",
       "country": "AR"
+    },
+    {
+      "date": "2026-04-18",
+      "id": "LS02-0156-T2K",
+      "gender": "male",
+      "age": 52,
+      "nationality": "NL",
+      "city": "Oss",
+      "country": "NL"
+    },
+    {
+      "date": "2026-04-18",
+      "id": "LS02-0157-ZJ5",
+      "gender": "male",
+      "age": 64,
+      "nationality": "TW",
+      "city": "Taipei",
+      "country": "TW"
+    },
+    {
+      "date": "2026-04-18",
+      "id": "LS02-0158-QMW",
+      "gender": "female",
+      "age": 23,
+      "nationality": "CN",
+      "city": "London",
+      "country": "GB"
+    },
+    {
+      "date": "2026-04-18",
+      "id": "LS02-0159-IEG",
+      "gender": "male",
+      "age": 25,
+      "nationality": "SI",
+      "city": "Maribor",
+      "country": "SI"
     }
   ],
   "stripe": {
-    "totalRevenue": 4640.0,
-    "totalCount": 159,
+    "totalRevenue": 4680.0,
+    "totalCount": 163,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -1465,6 +1501,10 @@ const DATA = {
       "2026-04-17": {
         "revenue": 30.0,
         "count": 3
+      },
+      "2026-04-18": {
+        "revenue": 40.0,
+        "count": 4
       }
     }
   },
@@ -1555,21 +1595,27 @@ const DATA = {
         "clicks": 309
       },
       "2026-04-17": {
-        "spend": 11.76,
-        "impressions": 15018,
+        "spend": 11.77,
+        "impressions": 15022,
         "lpv": 166,
-        "clicks": 263
+        "clicks": 264
       },
       "2026-04-18": {
-        "spend": 3.15,
-        "impressions": 4445,
-        "lpv": 68,
-        "clicks": 86
+        "spend": 12.31,
+        "impressions": 18944,
+        "lpv": 248,
+        "clicks": 332
+      },
+      "2026-04-19": {
+        "spend": 4.22,
+        "impressions": 6466,
+        "lpv": 77,
+        "clicks": 110
       }
     },
-    "totalSpend": 215.05,
-    "totalImpressions": 299982,
-    "totalLpv": 3569,
-    "totalClicks": 5723
+    "totalSpend": 228.44,
+    "totalImpressions": 320951,
+    "totalLpv": 3826,
+    "totalClicks": 6080
   }
 };
