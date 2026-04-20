@@ -101,6 +101,15 @@ const DATA = {
       "country": "DE"
     },
     {
+      "date": "2026-04-19",
+      "id": "LS02-0162-NBU",
+      "gender": "male",
+      "age": 30,
+      "nationality": "ES",
+      "city": "Barcelona",
+      "country": "ES"
+    },
+    {
       "date": "2026-04-09",
       "id": "LS02-0119-IHN",
       "gender": "male",
@@ -126,6 +135,15 @@ const DATA = {
       "nationality": "DE",
       "city": "Dortmund",
       "country": "DE"
+    },
+    {
+      "date": "2026-04-19",
+      "id": "LS02-0165-UV9",
+      "gender": "male",
+      "age": 41,
+      "nationality": "TR",
+      "city": "Letterkenny",
+      "country": "IE"
     },
     {
       "date": "2026-04-06",
@@ -164,6 +182,15 @@ const DATA = {
       "country": "IN"
     },
     {
+      "date": "2026-04-19",
+      "id": "LS02-0168-BJ2",
+      "gender": "male",
+      "age": 40,
+      "nationality": "US",
+      "city": "Chula Vista",
+      "country": "US"
+    },
+    {
       "date": "2026-04-15",
       "id": "LS02-0148-XEU",
       "gender": "female",
@@ -189,6 +216,15 @@ const DATA = {
       "nationality": "FR",
       "city": "Grasse",
       "country": "FR"
+    },
+    {
+      "date": "2026-04-20",
+      "id": "LS02-0169-7O3",
+      "gender": "male",
+      "age": 37,
+      "nationality": "MX",
+      "city": "Xalapa",
+      "country": "MX"
     },
     {
       "date": "2026-04-07",
@@ -1431,11 +1467,65 @@ const DATA = {
       "nationality": "SI",
       "city": "Maribor",
       "country": "SI"
+    },
+    {
+      "date": "2026-04-19",
+      "id": "LS02-0160-ODH",
+      "gender": "male",
+      "age": 44,
+      "nationality": "IN",
+      "city": "Paralakhemundi",
+      "country": "IN"
+    },
+    {
+      "date": "2026-04-19",
+      "id": "LS02-0161-TKI",
+      "gender": "male",
+      "age": 47,
+      "nationality": "CH",
+      "city": "Berne",
+      "country": "CH"
+    },
+    {
+      "date": "2026-04-19",
+      "id": "LS02-0163-TK8",
+      "gender": "male",
+      "age": 24,
+      "nationality": "BE",
+      "city": "Zonhoven",
+      "country": "BE"
+    },
+    {
+      "date": "2026-04-19",
+      "id": "LS02-0164-U3R",
+      "gender": "male",
+      "age": 52,
+      "nationality": "CH",
+      "city": "Z\u00fcrich",
+      "country": "CH"
+    },
+    {
+      "date": "2026-04-19",
+      "id": "LS02-0166-HK0",
+      "gender": "male",
+      "age": 46,
+      "nationality": "KZ",
+      "city": "Almaty",
+      "country": "KZ"
+    },
+    {
+      "date": "2026-04-19",
+      "id": "LS02-0167-2JU",
+      "gender": "male",
+      "age": 42,
+      "nationality": "PL",
+      "city": "Wroc\u0142aw",
+      "country": "PL"
     }
   ],
   "stripe": {
-    "totalRevenue": 4680.0,
-    "totalCount": 163,
+    "totalRevenue": 4930.0,
+    "totalCount": 173,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -1505,6 +1595,14 @@ const DATA = {
       "2026-04-18": {
         "revenue": 40.0,
         "count": 4
+      },
+      "2026-04-19": {
+        "revenue": 220.0,
+        "count": 9
+      },
+      "2026-04-20": {
+        "revenue": 30.0,
+        "count": 1
       }
     }
   },
@@ -1602,20 +1700,26 @@ const DATA = {
       },
       "2026-04-18": {
         "spend": 12.31,
-        "impressions": 18944,
+        "impressions": 18946,
         "lpv": 248,
         "clicks": 332
       },
       "2026-04-19": {
-        "spend": 4.22,
-        "impressions": 6466,
-        "lpv": 77,
-        "clicks": 110
+        "spend": 13.44,
+        "impressions": 20402,
+        "lpv": 308,
+        "clicks": 411
+      },
+      "2026-04-20": {
+        "spend": 3.78,
+        "impressions": 5671,
+        "lpv": 87,
+        "clicks": 122
       }
     },
-    "totalSpend": 228.44,
-    "totalImpressions": 320951,
-    "totalLpv": 3826,
-    "totalClicks": 6080
+    "totalSpend": 241.44,
+    "totalImpressions": 340560,
+    "totalLpv": 4144,
+    "totalClicks": 6503
   }
 };
