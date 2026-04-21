@@ -146,6 +146,33 @@ const DATA = {
       "country": "IE"
     },
     {
+      "date": "2026-04-20",
+      "id": "LS02-0172-AQQ",
+      "gender": "female",
+      "age": 26,
+      "nationality": "IT",
+      "city": "Lisboa",
+      "country": "PT"
+    },
+    {
+      "date": "2026-04-20",
+      "id": "LS02-0173-DIW",
+      "gender": "female",
+      "age": 43,
+      "nationality": "PL",
+      "city": "Berlin",
+      "country": "DE"
+    },
+    {
+      "date": "2026-04-20",
+      "id": "LS02-0170-TQ2",
+      "gender": "male",
+      "age": 28,
+      "nationality": "FR",
+      "city": "Carnaxide",
+      "country": "PT"
+    },
+    {
       "date": "2026-04-06",
       "id": "LS02-0063-OAH",
       "gender": "male",
@@ -261,6 +288,15 @@ const DATA = {
       "nationality": "CA",
       "city": "Toronto",
       "country": "CA"
+    },
+    {
+      "date": "2026-04-20",
+      "id": "LS02-0179-AOE",
+      "gender": "female",
+      "age": 27,
+      "nationality": "BR",
+      "city": "Berlin",
+      "country": "DE"
     },
     {
       "date": "2026-04-08",
@@ -1521,11 +1557,65 @@ const DATA = {
       "nationality": "PL",
       "city": "Wroc\u0142aw",
       "country": "PL"
+    },
+    {
+      "date": "2026-04-20",
+      "id": "LS02-0171-5WH",
+      "gender": "male",
+      "age": 35,
+      "nationality": "AR",
+      "city": "CABA",
+      "country": "AR"
+    },
+    {
+      "date": "2026-04-20",
+      "id": "LS02-0174-ZX6",
+      "gender": "female",
+      "age": 52,
+      "nationality": "LB",
+      "city": "Crans Vd",
+      "country": "CH"
+    },
+    {
+      "date": "2026-04-20",
+      "id": "LS02-0175-UAX",
+      "gender": "male",
+      "age": 31,
+      "nationality": "PT",
+      "city": "Aveiro",
+      "country": "PT"
+    },
+    {
+      "date": "2026-04-20",
+      "id": "LS02-0176-OQQ",
+      "gender": "male",
+      "age": 45,
+      "nationality": "GR",
+      "city": "athens",
+      "country": "GR"
+    },
+    {
+      "date": "2026-04-20",
+      "id": "LS02-0177-Y4K",
+      "gender": "male",
+      "age": 18,
+      "nationality": "GB",
+      "city": "Glasgow",
+      "country": "GB"
+    },
+    {
+      "date": "2026-04-20",
+      "id": "LS02-0178-SEU",
+      "gender": "male",
+      "age": 77,
+      "nationality": "IL",
+      "city": "Bat Yam",
+      "country": "IL"
     }
   ],
   "stripe": {
-    "totalRevenue": 4930.0,
-    "totalCount": 173,
+    "totalRevenue": 5150.0,
+    "totalCount": 183,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -1601,8 +1691,8 @@ const DATA = {
         "count": 9
       },
       "2026-04-20": {
-        "revenue": 30.0,
-        "count": 1
+        "revenue": 250.0,
+        "count": 11
       }
     }
   },
@@ -1706,20 +1796,26 @@ const DATA = {
       },
       "2026-04-19": {
         "spend": 13.44,
-        "impressions": 20402,
+        "impressions": 20405,
         "lpv": 308,
         "clicks": 411
       },
       "2026-04-20": {
-        "spend": 3.78,
-        "impressions": 5671,
-        "lpv": 87,
-        "clicks": 122
+        "spend": 11.29,
+        "impressions": 18945,
+        "lpv": 232,
+        "clicks": 339
+      },
+      "2026-04-21": {
+        "spend": 1.05,
+        "impressions": 1915,
+        "lpv": 26,
+        "clicks": 33
       }
     },
-    "totalSpend": 241.44,
-    "totalImpressions": 340560,
-    "totalLpv": 4144,
-    "totalClicks": 6503
+    "totalSpend": 250.0,
+    "totalImpressions": 355752,
+    "totalLpv": 4315,
+    "totalClicks": 6753
   }
 };
