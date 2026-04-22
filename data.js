@@ -524,6 +524,15 @@ const DATA = {
       "country": "PR"
     },
     {
+      "date": "2026-04-21",
+      "id": "LS02-0183-PO5",
+      "gender": "male",
+      "age": 66,
+      "nationality": "IL",
+      "city": "beit zera",
+      "country": "IL"
+    },
+    {
       "date": "2026-04-08",
       "id": "LS02-0087-3NV",
       "gender": "male",
@@ -531,6 +540,15 @@ const DATA = {
       "nationality": "FR",
       "city": "Bruges",
       "country": "FR"
+    },
+    {
+      "date": "2026-04-22",
+      "id": "LS02-0184-BDB",
+      "gender": "male",
+      "age": 43,
+      "nationality": "US",
+      "city": "Tacoma",
+      "country": "US"
     },
     {
       "date": "2026-04-06",
@@ -1083,15 +1101,6 @@ const DATA = {
     },
     {
       "date": "2026-04-08",
-      "id": "LS02-0100-ACH",
-      "gender": "male",
-      "age": 34,
-      "nationality": "PT",
-      "city": "lisboa",
-      "country": "PT"
-    },
-    {
-      "date": "2026-04-08",
       "id": "LS02-0101-HT2",
       "gender": "male",
       "age": 43,
@@ -1611,11 +1620,47 @@ const DATA = {
       "nationality": "IL",
       "city": "Bat Yam",
       "country": "IL"
+    },
+    {
+      "date": "2026-04-21",
+      "id": "LS02-0180-TTB",
+      "gender": "female",
+      "age": 45,
+      "nationality": "FR",
+      "city": "Lesconil",
+      "country": "FR"
+    },
+    {
+      "date": "2026-04-21",
+      "id": "LS02-0182-VO0",
+      "gender": "male",
+      "age": 40,
+      "nationality": "PT",
+      "city": "Porto",
+      "country": "PT"
+    },
+    {
+      "date": "2026-04-21",
+      "id": "LS02-0181-RVM",
+      "gender": "male",
+      "age": 52,
+      "nationality": "BE",
+      "city": "Ghent",
+      "country": "BE"
+    },
+    {
+      "date": "2026-04-08",
+      "id": "LS02-0100-ACH",
+      "gender": "male",
+      "age": 34,
+      "nationality": "PT",
+      "city": "lisboa",
+      "country": "PT"
     }
   ],
   "stripe": {
-    "totalRevenue": 5150.0,
-    "totalCount": 183,
+    "totalRevenue": 5310.0,
+    "totalCount": 188,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -1693,6 +1738,14 @@ const DATA = {
       "2026-04-20": {
         "revenue": 250.0,
         "count": 11
+      },
+      "2026-04-21": {
+        "revenue": 150.0,
+        "count": 4
+      },
+      "2026-04-22": {
+        "revenue": 10.0,
+        "count": 1
       }
     }
   },
@@ -1802,7 +1855,7 @@ const DATA = {
       },
       "2026-04-20": {
         "spend": 11.29,
-        "impressions": 18945,
+        "impressions": 18953,
         "lpv": 232,
         "clicks": 339
       },
@@ -1814,7 +1867,7 @@ const DATA = {
       }
     },
     "totalSpend": 250.0,
-    "totalImpressions": 355752,
+    "totalImpressions": 355760,
     "totalLpv": 4315,
     "totalClicks": 6753
   }
