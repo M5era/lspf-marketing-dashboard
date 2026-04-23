@@ -389,6 +389,15 @@ const DATA = {
       "country": "RO"
     },
     {
+      "date": "2026-04-22",
+      "id": "LS02-0186-BIG",
+      "gender": "male",
+      "age": 53,
+      "nationality": "NO",
+      "city": "Tromso",
+      "country": "NO"
+    },
+    {
       "date": "2026-04-02",
       "id": "LS02-0006-FTI",
       "gender": "male",
@@ -1656,11 +1665,38 @@ const DATA = {
       "nationality": "PT",
       "city": "lisboa",
       "country": "PT"
+    },
+    {
+      "date": "2026-04-22",
+      "id": "LS02-0185-VW9",
+      "gender": "male",
+      "age": 61,
+      "nationality": "NL",
+      "city": "Ponte da Barca",
+      "country": "PT"
+    },
+    {
+      "date": "2026-04-22",
+      "id": "LS02-0187-THN",
+      "gender": "male",
+      "age": 33,
+      "nationality": "IT",
+      "city": "rome",
+      "country": "IT"
+    },
+    {
+      "date": "2026-04-22",
+      "id": "LS02-0188-93U",
+      "gender": "female",
+      "age": 38,
+      "nationality": "PT",
+      "city": "lisboa",
+      "country": "PT"
     }
   ],
   "stripe": {
-    "totalRevenue": 5310.0,
-    "totalCount": 188,
+    "totalRevenue": 5460.0,
+    "totalCount": 192,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -1744,8 +1780,8 @@ const DATA = {
         "count": 4
       },
       "2026-04-22": {
-        "revenue": 10.0,
-        "count": 1
+        "revenue": 160.0,
+        "count": 5
       }
     }
   },
