@@ -371,6 +371,24 @@ const DATA = {
       "country": "BE"
     },
     {
+      "date": "2026-04-23",
+      "id": "LS02-0190-TP7",
+      "gender": "male",
+      "age": 59,
+      "nationality": "GB",
+      "city": "Shipston-on-Stour",
+      "country": "GB"
+    },
+    {
+      "date": "2026-04-23",
+      "id": "LS02-0193-FOP",
+      "gender": "female",
+      "age": 28,
+      "nationality": "CN",
+      "city": "Beijing",
+      "country": "CN"
+    },
+    {
       "date": "2026-04-12",
       "id": "LS02-0129-W4W",
       "gender": "female",
@@ -1692,11 +1710,56 @@ const DATA = {
       "nationality": "PT",
       "city": "lisboa",
       "country": "PT"
+    },
+    {
+      "date": "2026-04-23",
+      "id": "LS02-0189-AXD",
+      "gender": "male",
+      "age": 39,
+      "nationality": "CH",
+      "city": "Z\u00fcrich",
+      "country": "CH"
+    },
+    {
+      "date": "2026-04-23",
+      "id": "LS02-0191-44O",
+      "gender": "female",
+      "age": 27,
+      "nationality": "FR",
+      "city": "Brie-Comte-Robert",
+      "country": "FR"
+    },
+    {
+      "date": "2026-04-23",
+      "id": "LS02-0192-UCX",
+      "gender": "male",
+      "age": 40,
+      "nationality": "RS",
+      "city": "Beograd - Novi Beograd",
+      "country": "RS"
+    },
+    {
+      "date": "2026-04-24",
+      "id": "LS02-0194-MFR",
+      "gender": "female",
+      "age": 58,
+      "nationality": "SG",
+      "city": "Singapore",
+      "country": "SG"
+    },
+    {
+      "date": "2026-04-24",
+      "id": "LS02-0195-E9F",
+      "gender": "male",
+      "age": 51,
+      "nationality": "KR",
+      "city": "Bishkek",
+      "country": "KG"
     }
   ],
   "stripe": {
-    "totalRevenue": 5460.0,
-    "totalCount": 192,
+    "totalRevenue": 5730.0,
+    "totalCount": 200,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -1782,6 +1845,14 @@ const DATA = {
       "2026-04-22": {
         "revenue": 160.0,
         "count": 5
+      },
+      "2026-04-23": {
+        "revenue": 190.0,
+        "count": 6
+      },
+      "2026-04-24": {
+        "revenue": 80.0,
+        "count": 2
       }
     }
   },
