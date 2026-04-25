@@ -1755,11 +1755,20 @@ const DATA = {
       "nationality": "KR",
       "city": "Bishkek",
       "country": "KG"
+    },
+    {
+      "date": "2026-04-24",
+      "id": "LS02-0196-TZN",
+      "gender": "female",
+      "age": 36,
+      "nationality": "SK",
+      "city": "Bratislava",
+      "country": "SK"
     }
   ],
   "stripe": {
-    "totalRevenue": 5730.0,
-    "totalCount": 200,
+    "totalRevenue": 5740.0,
+    "totalCount": 201,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -1851,8 +1860,8 @@ const DATA = {
         "count": 6
       },
       "2026-04-24": {
-        "revenue": 80.0,
-        "count": 2
+        "revenue": 90.0,
+        "count": 3
       }
     }
   },
