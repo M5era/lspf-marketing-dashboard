@@ -1764,11 +1764,29 @@ const DATA = {
       "nationality": "SK",
       "city": "Bratislava",
       "country": "SK"
+    },
+    {
+      "date": "2026-04-25",
+      "id": "LS02-0197-TB5",
+      "gender": "male",
+      "age": 33,
+      "nationality": "IN",
+      "city": "Howrah",
+      "country": "IN"
+    },
+    {
+      "date": "2026-04-25",
+      "id": "LS02-0198-WMU",
+      "gender": "male",
+      "age": 59,
+      "nationality": "DE",
+      "city": "London",
+      "country": "GB"
     }
   ],
   "stripe": {
-    "totalRevenue": 5740.0,
-    "totalCount": 201,
+    "totalRevenue": 5760.0,
+    "totalCount": 203,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -1862,6 +1880,10 @@ const DATA = {
       "2026-04-24": {
         "revenue": 90.0,
         "count": 3
+      },
+      "2026-04-25": {
+        "revenue": 20.0,
+        "count": 2
       }
     }
   },
