@@ -1782,11 +1782,47 @@ const DATA = {
       "nationality": "DE",
       "city": "London",
       "country": "GB"
+    },
+    {
+      "date": "2026-04-26",
+      "id": "LS02-0199-PXC",
+      "gender": "male",
+      "age": 47,
+      "nationality": "IN",
+      "city": "KOLKATA",
+      "country": "IN"
+    },
+    {
+      "date": "2026-04-26",
+      "id": "LS02-0200-M9M",
+      "gender": "female",
+      "age": 53,
+      "nationality": "NL",
+      "city": "Amsterdam",
+      "country": "NL"
+    },
+    {
+      "date": "2026-04-26",
+      "id": "LS02-0201-7QY",
+      "gender": "male",
+      "age": 37,
+      "nationality": "RU",
+      "city": "Bishkek",
+      "country": "KG"
+    },
+    {
+      "date": "2026-04-26",
+      "id": "LS02-0202-ISS",
+      "gender": "male",
+      "age": 58,
+      "nationality": "US",
+      "city": "Hyattsville",
+      "country": "US"
     }
   ],
   "stripe": {
-    "totalRevenue": 5760.0,
-    "totalCount": 203,
+    "totalRevenue": 5850.0,
+    "totalCount": 207,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -1884,6 +1920,10 @@ const DATA = {
       "2026-04-25": {
         "revenue": 20.0,
         "count": 2
+      },
+      "2026-04-26": {
+        "revenue": 90.0,
+        "count": 4
       }
     }
   },
