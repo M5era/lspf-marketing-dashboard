@@ -20,6 +20,15 @@ const DATA = {
       "country": "PT"
     },
     {
+      "date": "2026-04-27",
+      "id": "LS02-0206-ZGZ",
+      "gender": "male",
+      "age": 60,
+      "nationality": "IT",
+      "city": "Veduggio (MB)",
+      "country": "IT"
+    },
+    {
       "date": "2026-04-05",
       "id": "LS02-0042-068",
       "gender": "male",
@@ -254,6 +263,15 @@ const DATA = {
       "country": "MX"
     },
     {
+      "date": "2026-04-27",
+      "id": "LS02-0208-CRF",
+      "gender": "female",
+      "age": 69,
+      "nationality": "CH",
+      "city": "Wabern",
+      "country": "CH"
+    },
+    {
       "date": "2026-04-07",
       "id": "LS02-0083-EIK",
       "gender": "female",
@@ -315,6 +333,15 @@ const DATA = {
       "nationality": "BR",
       "city": "Curitiba",
       "country": "BR"
+    },
+    {
+      "date": "2026-04-27",
+      "id": "LS02-0203-MFI",
+      "gender": "male",
+      "age": 52,
+      "nationality": "GB",
+      "city": "Edinburgh",
+      "country": "GB"
     },
     {
       "date": "2026-04-03",
@@ -567,6 +594,15 @@ const DATA = {
       "nationality": "FR",
       "city": "Bruges",
       "country": "FR"
+    },
+    {
+      "date": "2026-04-27",
+      "id": "LS02-0209-10L",
+      "gender": "male",
+      "age": 50,
+      "nationality": "ES",
+      "city": "VALENCIA",
+      "country": "ES"
     },
     {
       "date": "2026-04-22",
@@ -1818,11 +1854,74 @@ const DATA = {
       "nationality": "US",
       "city": "Hyattsville",
       "country": "US"
+    },
+    {
+      "date": "2026-04-27",
+      "id": "LS02-0204-KQM",
+      "gender": "female",
+      "age": 50,
+      "nationality": "GR",
+      "city": "THESSALONIKI",
+      "country": "GR"
+    },
+    {
+      "date": "2026-04-27",
+      "id": "LS02-0205-P03",
+      "gender": "male",
+      "age": 58,
+      "nationality": "DE",
+      "city": "Birkirkara",
+      "country": "MT"
+    },
+    {
+      "date": "2026-04-27",
+      "id": "LS02-0207-7HV",
+      "gender": "male",
+      "age": 29,
+      "nationality": "MX",
+      "city": "Queretaro",
+      "country": "MX"
+    },
+    {
+      "date": "2026-04-27",
+      "id": "LS02-0212-2B2",
+      "gender": "male",
+      "age": 27,
+      "nationality": "PT",
+      "city": "Guimar\u00e3es",
+      "country": "PT"
+    },
+    {
+      "date": "2026-04-27",
+      "id": "LS02-0210-0TP",
+      "gender": "male",
+      "age": 21,
+      "nationality": "GB",
+      "city": "Manchester",
+      "country": "GB"
+    },
+    {
+      "date": "2026-04-27",
+      "id": "LS02-0211-F9P",
+      "gender": "female",
+      "age": 66,
+      "nationality": "US",
+      "city": "Santa Monica",
+      "country": "US"
+    },
+    {
+      "date": "2026-04-27",
+      "id": "LS02-0213-ZGV",
+      "gender": "male",
+      "age": 40,
+      "nationality": "PT",
+      "city": "Lisboa",
+      "country": "PT"
     }
   ],
   "stripe": {
-    "totalRevenue": 5850.0,
-    "totalCount": 207,
+    "totalRevenue": 6180.0,
+    "totalCount": 219,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -1924,6 +2023,14 @@ const DATA = {
       "2026-04-26": {
         "revenue": 90.0,
         "count": 4
+      },
+      "2026-04-27": {
+        "revenue": 310.0,
+        "count": 11
+      },
+      "2026-04-28": {
+        "revenue": 20.0,
+        "count": 1
       }
     }
   },
