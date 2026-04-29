@@ -20,6 +20,24 @@ const DATA = {
       "country": "PT"
     },
     {
+      "date": "2026-04-28",
+      "id": "LS02-0214-W7T",
+      "gender": "female",
+      "age": 23,
+      "nationality": "US",
+      "city": "ravenna",
+      "country": "US"
+    },
+    {
+      "date": "2026-04-28",
+      "id": "LS02-0217-9L6",
+      "gender": "male",
+      "age": 58,
+      "nationality": "FR",
+      "city": "CHAMPS SUR MARNE",
+      "country": "FR"
+    },
+    {
       "date": "2026-04-27",
       "id": "LS02-0206-ZGZ",
       "gender": "male",
@@ -1917,11 +1935,38 @@ const DATA = {
       "nationality": "PT",
       "city": "Lisboa",
       "country": "PT"
+    },
+    {
+      "date": "2026-04-28",
+      "id": "LS02-0215-EGZ",
+      "gender": "male",
+      "age": 43,
+      "nationality": "FR",
+      "city": "Grasse",
+      "country": "FR"
+    },
+    {
+      "date": "2026-04-28",
+      "id": "LS02-0216-Z1I",
+      "gender": "female",
+      "age": 59,
+      "nationality": "ES",
+      "city": "GRANADA",
+      "country": "ES"
+    },
+    {
+      "date": "2026-04-28",
+      "id": "LS02-0218-LNH",
+      "gender": "female",
+      "age": 66,
+      "nationality": "US",
+      "city": "New York",
+      "country": "US"
     }
   ],
   "stripe": {
-    "totalRevenue": 6180.0,
-    "totalCount": 219,
+    "totalRevenue": 6420.0,
+    "totalCount": 224,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -2029,8 +2074,8 @@ const DATA = {
         "count": 11
       },
       "2026-04-28": {
-        "revenue": 20.0,
-        "count": 1
+        "revenue": 260.0,
+        "count": 6
       }
     }
   },
@@ -2149,11 +2194,23 @@ const DATA = {
         "impressions": 1915,
         "lpv": 26,
         "clicks": 33
+      },
+      "2026-04-28": {
+        "spend": 7.52,
+        "impressions": 9716,
+        "lpv": 69,
+        "clicks": 124
+      },
+      "2026-04-29": {
+        "spend": 6.04,
+        "impressions": 7464,
+        "lpv": 98,
+        "clicks": 156
       }
     },
-    "totalSpend": 250.0,
-    "totalImpressions": 355760,
-    "totalLpv": 4315,
-    "totalClicks": 6753
+    "totalSpend": 263.56,
+    "totalImpressions": 372940,
+    "totalLpv": 4482,
+    "totalClicks": 7033
   }
 };
