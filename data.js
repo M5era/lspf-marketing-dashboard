@@ -74,6 +74,15 @@ const DATA = {
       "country": "PT"
     },
     {
+      "date": "2026-04-29",
+      "id": "LS02-0222-ZE3",
+      "gender": "male",
+      "age": 57,
+      "nationality": "DE",
+      "city": "Lisboa",
+      "country": "PT"
+    },
+    {
       "date": "2026-04-08",
       "id": "LS02-0085-9FM",
       "gender": "male",
@@ -1962,11 +1971,65 @@ const DATA = {
       "nationality": "US",
       "city": "New York",
       "country": "US"
+    },
+    {
+      "date": "2026-04-29",
+      "id": "LS02-0219-VP1",
+      "gender": "female",
+      "age": 60,
+      "nationality": "US",
+      "city": "Uppingham, Oakham",
+      "country": "GB"
+    },
+    {
+      "date": "2026-04-29",
+      "id": "LS02-0220-CTN",
+      "gender": "female",
+      "age": 42,
+      "nationality": "ES",
+      "city": "Matar\u00f3",
+      "country": "ES"
+    },
+    {
+      "date": "2026-04-29",
+      "id": "LS02-0221-W7Q",
+      "gender": "female",
+      "age": 62,
+      "nationality": "GR",
+      "city": "ATHENS",
+      "country": "GR"
+    },
+    {
+      "date": "2026-04-29",
+      "id": "LS02-0223-QXX",
+      "gender": "male",
+      "age": 36,
+      "nationality": "CL",
+      "city": "San Antonio",
+      "country": "CL"
+    },
+    {
+      "date": "2026-04-29",
+      "id": "LS02-0224-VCX",
+      "gender": "male",
+      "age": 29,
+      "nationality": "US",
+      "city": "Astoria",
+      "country": "US"
+    },
+    {
+      "date": "2026-04-30",
+      "id": "LS02-0225-5XX",
+      "gender": "female",
+      "age": 30,
+      "nationality": "CN",
+      "city": "New York",
+      "country": "US"
     }
   ],
   "stripe": {
-    "totalRevenue": 6420.0,
-    "totalCount": 224,
+    "totalRevenue": 6710.0,
+    "totalCount": 231,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -2076,6 +2139,14 @@ const DATA = {
       "2026-04-28": {
         "revenue": 260.0,
         "count": 6
+      },
+      "2026-04-29": {
+        "revenue": 260.0,
+        "count": 6
+      },
+      "2026-04-30": {
+        "revenue": 30.0,
+        "count": 1
       }
     }
   },
@@ -2197,20 +2268,26 @@ const DATA = {
       },
       "2026-04-28": {
         "spend": 7.52,
-        "impressions": 9716,
+        "impressions": 9721,
         "lpv": 69,
         "clicks": 124
       },
       "2026-04-29": {
-        "spend": 6.04,
-        "impressions": 7464,
-        "lpv": 98,
-        "clicks": 156
+        "spend": 18.19,
+        "impressions": 23335,
+        "lpv": 269,
+        "clicks": 445
+      },
+      "2026-04-30": {
+        "spend": 4.85,
+        "impressions": 5317,
+        "lpv": 81,
+        "clicks": 133
       }
     },
-    "totalSpend": 263.56,
-    "totalImpressions": 372940,
-    "totalLpv": 4482,
-    "totalClicks": 7033
+    "totalSpend": 280.56,
+    "totalImpressions": 394133,
+    "totalLpv": 4734,
+    "totalClicks": 7455
   }
 };
