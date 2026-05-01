@@ -74,6 +74,15 @@ const DATA = {
       "country": "PT"
     },
     {
+      "date": "2026-04-30",
+      "id": "LS02-0231-MRB",
+      "gender": "male",
+      "age": 50,
+      "nationality": "FR",
+      "city": "PARIS",
+      "country": "FR"
+    },
+    {
       "date": "2026-04-29",
       "id": "LS02-0222-ZE3",
       "gender": "male",
@@ -2025,11 +2034,65 @@ const DATA = {
       "nationality": "CN",
       "city": "New York",
       "country": "US"
+    },
+    {
+      "date": "2026-04-30",
+      "id": "LS02-0226-QAN",
+      "gender": "male",
+      "age": 55,
+      "nationality": "IT",
+      "city": "FRASCATI",
+      "country": "IT"
+    },
+    {
+      "date": "2026-04-30",
+      "id": "LS02-0227-TFG",
+      "gender": "male",
+      "age": 26,
+      "nationality": "CN",
+      "city": "London",
+      "country": "GB"
+    },
+    {
+      "date": "2026-04-30",
+      "id": "LS02-0228-CPI",
+      "gender": "male",
+      "age": 61,
+      "nationality": "GB",
+      "city": "Nottinghzm",
+      "country": "GB"
+    },
+    {
+      "date": "2026-04-30",
+      "id": "LS02-0229-N61",
+      "gender": "male",
+      "age": 34,
+      "nationality": "FR",
+      "city": "ST JEAN PIED DE PORT",
+      "country": "FR"
+    },
+    {
+      "date": "2026-04-30",
+      "id": "LS02-0230-GS0",
+      "gender": "female",
+      "age": 44,
+      "nationality": "RU",
+      "city": "Moscow",
+      "country": "RU"
+    },
+    {
+      "date": "2026-04-30",
+      "id": "LS02-0232-A18",
+      "gender": "male",
+      "age": 68,
+      "nationality": "US",
+      "city": "Redondo Beach",
+      "country": "GB"
     }
   ],
   "stripe": {
-    "totalRevenue": 6710.0,
-    "totalCount": 231,
+    "totalRevenue": 6820.0,
+    "totalCount": 237,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -2145,8 +2208,8 @@ const DATA = {
         "count": 6
       },
       "2026-04-30": {
-        "revenue": 30.0,
-        "count": 1
+        "revenue": 140.0,
+        "count": 7
       }
     }
   },
@@ -2274,20 +2337,26 @@ const DATA = {
       },
       "2026-04-29": {
         "spend": 18.19,
-        "impressions": 23335,
+        "impressions": 23338,
         "lpv": 269,
         "clicks": 445
       },
       "2026-04-30": {
-        "spend": 4.85,
-        "impressions": 5317,
-        "lpv": 81,
-        "clicks": 133
+        "spend": 18.58,
+        "impressions": 20507,
+        "lpv": 305,
+        "clicks": 506
+      },
+      "2026-05-01": {
+        "spend": 5.88,
+        "impressions": 7731,
+        "lpv": 103,
+        "clicks": 142
       }
     },
-    "totalSpend": 280.56,
-    "totalImpressions": 394133,
-    "totalLpv": 4734,
-    "totalClicks": 7455
+    "totalSpend": 300.17,
+    "totalImpressions": 417057,
+    "totalLpv": 5061,
+    "totalClicks": 7970
   }
 };
