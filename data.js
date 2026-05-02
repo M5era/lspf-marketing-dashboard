@@ -551,6 +551,15 @@ const DATA = {
       "country": "NL"
     },
     {
+      "date": "2026-05-01",
+      "id": "LS02-0234-DIF",
+      "gender": "male",
+      "age": 34,
+      "nationality": "AE",
+      "city": "Abu Dhabi",
+      "country": "AE"
+    },
+    {
       "date": "2026-04-02",
       "id": "LS02-0020-OS0",
       "gender": "male",
@@ -2081,6 +2090,24 @@ const DATA = {
       "country": "RU"
     },
     {
+      "date": "2026-05-01",
+      "id": "LS02-0237-OCX",
+      "gender": "female",
+      "age": 51,
+      "nationality": "FR",
+      "city": "Lisboa",
+      "country": "PT"
+    },
+    {
+      "date": "2026-05-01",
+      "id": "LS02-0238-II8",
+      "gender": "other",
+      "age": 25,
+      "nationality": "FR",
+      "city": "Paris",
+      "country": "FR"
+    },
+    {
       "date": "2026-04-30",
       "id": "LS02-0232-A18",
       "gender": "male",
@@ -2088,11 +2115,38 @@ const DATA = {
       "nationality": "US",
       "city": "Redondo Beach",
       "country": "GB"
+    },
+    {
+      "date": "2026-05-01",
+      "id": "LS02-0233-3DM",
+      "gender": "male",
+      "age": 57,
+      "nationality": "AU",
+      "city": "Sydney",
+      "country": "AU"
+    },
+    {
+      "date": "2026-05-01",
+      "id": "LS02-0235-VJA",
+      "gender": "male",
+      "age": 81,
+      "nationality": "DE",
+      "city": "Cologne",
+      "country": "DE"
+    },
+    {
+      "date": "2026-05-01",
+      "id": "LS02-0236-PZH",
+      "gender": "male",
+      "age": 76,
+      "nationality": "DE",
+      "city": "Frankfurt am Main",
+      "country": "DE"
     }
   ],
   "stripe": {
-    "totalRevenue": 6820.0,
-    "totalCount": 237,
+    "totalRevenue": 7200.0,
+    "totalCount": 243,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -2210,6 +2264,10 @@ const DATA = {
       "2026-04-30": {
         "revenue": 140.0,
         "count": 7
+      },
+      "2026-05-01": {
+        "revenue": 380.0,
+        "count": 6
       }
     }
   },
@@ -2343,20 +2401,26 @@ const DATA = {
       },
       "2026-04-30": {
         "spend": 18.58,
-        "impressions": 20507,
+        "impressions": 20508,
         "lpv": 305,
-        "clicks": 506
+        "clicks": 507
       },
       "2026-05-01": {
-        "spend": 5.88,
-        "impressions": 7731,
-        "lpv": 103,
-        "clicks": 142
+        "spend": 19.63,
+        "impressions": 30737,
+        "lpv": 366,
+        "clicks": 505
+      },
+      "2026-05-02": {
+        "spend": 6.05,
+        "impressions": 11033,
+        "lpv": 119,
+        "clicks": 166
       }
     },
-    "totalSpend": 300.17,
-    "totalImpressions": 417057,
-    "totalLpv": 5061,
-    "totalClicks": 7970
+    "totalSpend": 319.97,
+    "totalImpressions": 451097,
+    "totalLpv": 5443,
+    "totalClicks": 8500
   }
 };
