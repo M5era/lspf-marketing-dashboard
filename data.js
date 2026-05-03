@@ -578,6 +578,33 @@ const DATA = {
       "country": "CN"
     },
     {
+      "date": "2026-05-02",
+      "id": "LS02-0242-ERA",
+      "gender": "female",
+      "age": 37,
+      "nationality": "IT",
+      "city": "cosenza",
+      "country": "IT"
+    },
+    {
+      "date": "2026-05-02",
+      "id": "LS02-0243-CUB",
+      "gender": "male",
+      "age": 49,
+      "nationality": "CL",
+      "city": "La Serena",
+      "country": "CL"
+    },
+    {
+      "date": "2026-05-03",
+      "id": "LS02-0244-QJ6",
+      "gender": "female",
+      "age": 59,
+      "nationality": "BR",
+      "city": "Suzano",
+      "country": "BR"
+    },
+    {
       "date": "2026-04-03",
       "id": "LS02-0023-GWZ",
       "gender": "female",
@@ -2142,11 +2169,38 @@ const DATA = {
       "nationality": "DE",
       "city": "Frankfurt am Main",
       "country": "DE"
+    },
+    {
+      "date": "2026-05-02",
+      "id": "LS02-0239-C3I",
+      "gender": "female",
+      "age": 60,
+      "nationality": "TR",
+      "city": "Ankara",
+      "country": "TR"
+    },
+    {
+      "date": "2026-05-02",
+      "id": "LS02-0240-F66",
+      "gender": "male",
+      "age": 32,
+      "nationality": "ES",
+      "city": "Madrid",
+      "country": "ES"
+    },
+    {
+      "date": "2026-05-02",
+      "id": "LS02-0241-3DR",
+      "gender": "male",
+      "age": 28,
+      "nationality": "ES",
+      "city": "Barcelona",
+      "country": "ES"
     }
   ],
   "stripe": {
-    "totalRevenue": 7200.0,
-    "totalCount": 243,
+    "totalRevenue": 7330.0,
+    "totalCount": 249,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -2268,6 +2322,14 @@ const DATA = {
       "2026-05-01": {
         "revenue": 380.0,
         "count": 6
+      },
+      "2026-05-02": {
+        "revenue": 120.0,
+        "count": 5
+      },
+      "2026-05-03": {
+        "revenue": 10.0,
+        "count": 1
       }
     }
   },
@@ -2407,20 +2469,26 @@ const DATA = {
       },
       "2026-05-01": {
         "spend": 19.63,
-        "impressions": 30737,
+        "impressions": 30742,
         "lpv": 366,
         "clicks": 505
       },
       "2026-05-02": {
-        "spend": 6.05,
-        "impressions": 11033,
-        "lpv": 119,
-        "clicks": 166
+        "spend": 20.0,
+        "impressions": 37460,
+        "lpv": 394,
+        "clicks": 563
+      },
+      "2026-05-03": {
+        "spend": 3.96,
+        "impressions": 6760,
+        "lpv": 100,
+        "clicks": 143
       }
     },
-    "totalSpend": 319.97,
-    "totalImpressions": 451097,
-    "totalLpv": 5443,
-    "totalClicks": 8500
+    "totalSpend": 337.88,
+    "totalImpressions": 484289,
+    "totalLpv": 5818,
+    "totalClicks": 9040
   }
 };
