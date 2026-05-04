@@ -732,15 +732,6 @@ const DATA = {
     },
     {
       "date": "2026-04-02",
-      "id": "LS02-0015-HBU",
-      "gender": "female",
-      "age": 75,
-      "nationality": "US",
-      "city": "Jamaica Plain",
-      "country": "US"
-    },
-    {
-      "date": "2026-04-02",
       "id": "LS02-0003-SZ1",
       "gender": "female",
       "age": 56,
@@ -2196,11 +2187,101 @@ const DATA = {
       "nationality": "ES",
       "city": "Barcelona",
       "country": "ES"
+    },
+    {
+      "date": "2026-05-03",
+      "id": "LS02-0245-VQY",
+      "gender": "male",
+      "age": 32,
+      "nationality": "DE",
+      "city": "Brussels",
+      "country": "BE"
+    },
+    {
+      "date": "2026-05-03",
+      "id": "LS02-0246-COZ",
+      "gender": "female",
+      "age": 54,
+      "nationality": "GB",
+      "city": "London",
+      "country": "GB"
+    },
+    {
+      "date": "2026-05-03",
+      "id": "LS02-0247-DK8",
+      "gender": "male",
+      "age": 34,
+      "nationality": "DE",
+      "city": "Bremen",
+      "country": "DE"
+    },
+    {
+      "date": "2026-05-03",
+      "id": "LS02-0248-7WX",
+      "gender": "male",
+      "age": 39,
+      "nationality": "FR",
+      "city": "Paris",
+      "country": "FR"
+    },
+    {
+      "date": "2026-04-02",
+      "id": "LS02-0015-HBU",
+      "gender": "female",
+      "age": 75,
+      "nationality": "US",
+      "city": "Jamaica Plain",
+      "country": "US"
+    },
+    {
+      "date": "2026-05-03",
+      "id": "LS02-0249-KD6",
+      "gender": "male",
+      "age": 58,
+      "nationality": "NL",
+      "city": "Rotterdam",
+      "country": "NL"
+    },
+    {
+      "date": "2026-05-03",
+      "id": "LS02-0250-AV5",
+      "gender": "male",
+      "age": 45,
+      "nationality": "DE",
+      "city": "Colomiers",
+      "country": "FR"
+    },
+    {
+      "date": "2026-05-03",
+      "id": "LS02-0251-7NX",
+      "gender": "female",
+      "age": 46,
+      "nationality": "DE",
+      "city": "Winnenden",
+      "country": "DE"
+    },
+    {
+      "date": "2026-05-04",
+      "id": "LS02-0252-MGX",
+      "gender": "male",
+      "age": 26,
+      "nationality": "TR",
+      "city": "London",
+      "country": "GB"
+    },
+    {
+      "date": "2026-05-04",
+      "id": "LS02-0253-2TL",
+      "gender": "male",
+      "age": 26,
+      "nationality": "PH",
+      "city": "Masdar City",
+      "country": "AE"
     }
   ],
   "stripe": {
-    "totalRevenue": 7330.0,
-    "totalCount": 249,
+    "totalRevenue": 7600.0,
+    "totalCount": 258,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -2328,8 +2409,12 @@ const DATA = {
         "count": 5
       },
       "2026-05-03": {
-        "revenue": 10.0,
-        "count": 1
+        "revenue": 230.0,
+        "count": 8
+      },
+      "2026-05-04": {
+        "revenue": 50.0,
+        "count": 2
       }
     }
   },
@@ -2475,20 +2560,20 @@ const DATA = {
       },
       "2026-05-02": {
         "spend": 20.0,
-        "impressions": 37460,
+        "impressions": 37463,
         "lpv": 394,
         "clicks": 563
       },
       "2026-05-03": {
-        "spend": 3.96,
-        "impressions": 6760,
-        "lpv": 100,
-        "clicks": 143
+        "spend": 13.16,
+        "impressions": 25502,
+        "lpv": 305,
+        "clicks": 450
       }
     },
-    "totalSpend": 337.88,
-    "totalImpressions": 484289,
-    "totalLpv": 5818,
-    "totalClicks": 9040
+    "totalSpend": 347.08,
+    "totalImpressions": 503034,
+    "totalLpv": 6023,
+    "totalClicks": 9347
   }
 };
