@@ -596,6 +596,15 @@ const DATA = {
       "country": "CL"
     },
     {
+      "date": "2026-05-06",
+      "id": "LS02-0267-3R2",
+      "gender": "male",
+      "age": 41,
+      "nationality": "IN",
+      "city": "Mumbai",
+      "country": "IN"
+    },
+    {
       "date": "2026-05-03",
       "id": "LS02-0244-QJ6",
       "gender": "female",
@@ -2340,11 +2349,65 @@ const DATA = {
       "nationality": "BR",
       "city": "Bras\u00edlia",
       "country": "BR"
+    },
+    {
+      "date": "2026-05-05",
+      "id": "LS02-0261-1HE",
+      "gender": "female",
+      "age": 60,
+      "nationality": "DE",
+      "city": "Heidelberg",
+      "country": "DE"
+    },
+    {
+      "date": "2026-05-05",
+      "id": "LS02-0262-SXR",
+      "gender": "male",
+      "age": 25,
+      "nationality": "PT",
+      "city": "Braga",
+      "country": "PT"
+    },
+    {
+      "date": "2026-05-05",
+      "id": "LS02-0263-LTC",
+      "gender": "male",
+      "age": 51,
+      "nationality": "IT",
+      "city": "Catania",
+      "country": "IT"
+    },
+    {
+      "date": "2026-05-05",
+      "id": "LS02-0264-5U9",
+      "gender": "male",
+      "age": 44,
+      "nationality": "NL",
+      "city": "Amsterdam",
+      "country": "NL"
+    },
+    {
+      "date": "2026-05-05",
+      "id": "LS02-0265-0LI",
+      "gender": "male",
+      "age": 42,
+      "nationality": "NO",
+      "city": "Oslo",
+      "country": "NO"
+    },
+    {
+      "date": "2026-05-06",
+      "id": "LS02-0266-RUW",
+      "gender": "male",
+      "age": 71,
+      "nationality": "US",
+      "city": "Takoma Park",
+      "country": "US"
     }
   ],
   "stripe": {
-    "totalRevenue": 7800.0,
-    "totalCount": 265,
+    "totalRevenue": 8000.0,
+    "totalCount": 272,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -2480,8 +2543,12 @@ const DATA = {
         "count": 8
       },
       "2026-05-05": {
-        "revenue": 90.0,
-        "count": 1
+        "revenue": 250.0,
+        "count": 6
+      },
+      "2026-05-06": {
+        "revenue": 40.0,
+        "count": 2
       }
     }
   },
