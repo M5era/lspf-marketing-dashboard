@@ -2403,11 +2403,83 @@ const DATA = {
       "nationality": "US",
       "city": "Takoma Park",
       "country": "US"
+    },
+    {
+      "date": "2026-05-06",
+      "id": "LS02-0271-GLQ",
+      "gender": "female",
+      "age": 42,
+      "nationality": "RU",
+      "city": "Lisbon",
+      "country": "PT"
+    },
+    {
+      "date": "2026-05-06",
+      "id": "LS02-0268-SMZ",
+      "gender": "female",
+      "age": 52,
+      "nationality": "PL",
+      "city": "Warsaw",
+      "country": "PL"
+    },
+    {
+      "date": "2026-05-06",
+      "id": "LS02-0269-X99",
+      "gender": "male",
+      "age": 53,
+      "nationality": "PT",
+      "city": "Lisboa",
+      "country": "PT"
+    },
+    {
+      "date": "2026-05-06",
+      "id": "LS02-0270-MAW",
+      "gender": "male",
+      "age": 53,
+      "nationality": "MY",
+      "city": "Petaling Jaya",
+      "country": "MY"
+    },
+    {
+      "date": "2026-05-06",
+      "id": "LS02-0274-EXH",
+      "gender": "male",
+      "age": 61,
+      "nationality": "IT",
+      "city": "Taranto",
+      "country": "IT"
+    },
+    {
+      "date": "2026-05-06",
+      "id": "LS02-0272-2K0",
+      "gender": "female",
+      "age": 60,
+      "nationality": "CH",
+      "city": "PORZA",
+      "country": "CH"
+    },
+    {
+      "date": "2026-05-06",
+      "id": "LS02-0273-TSP",
+      "gender": "male",
+      "age": 44,
+      "nationality": "US",
+      "city": "Chicago",
+      "country": "US"
+    },
+    {
+      "date": "2026-05-06",
+      "id": "LS02-0275-RB4",
+      "gender": "male",
+      "age": 25,
+      "nationality": "PT",
+      "city": "Loures",
+      "country": "PT"
     }
   ],
   "stripe": {
-    "totalRevenue": 8000.0,
-    "totalCount": 272,
+    "totalRevenue": 8310.0,
+    "totalCount": 280,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -2547,8 +2619,8 @@ const DATA = {
         "count": 6
       },
       "2026-05-06": {
-        "revenue": 40.0,
-        "count": 2
+        "revenue": 350.0,
+        "count": 10
       }
     }
   },
