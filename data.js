@@ -47,6 +47,15 @@ const DATA = {
       "country": "IT"
     },
     {
+      "date": "2026-05-07",
+      "id": "LS02-0281-K9Y",
+      "gender": "male",
+      "age": 46,
+      "nationality": "PT",
+      "city": "Funchal",
+      "country": "PT"
+    },
+    {
       "date": "2026-04-05",
       "id": "LS02-0042-068",
       "gender": "male",
@@ -2442,15 +2451,6 @@ const DATA = {
     },
     {
       "date": "2026-05-06",
-      "id": "LS02-0274-EXH",
-      "gender": "male",
-      "age": 61,
-      "nationality": "IT",
-      "city": "Taranto",
-      "country": "IT"
-    },
-    {
-      "date": "2026-05-06",
       "id": "LS02-0272-2K0",
       "gender": "female",
       "age": 60,
@@ -2475,11 +2475,65 @@ const DATA = {
       "nationality": "PT",
       "city": "Loures",
       "country": "PT"
+    },
+    {
+      "date": "2026-05-07",
+      "id": "LS02-0276-CTA",
+      "gender": "male",
+      "age": 61,
+      "nationality": "PL",
+      "city": "Warsaw",
+      "country": "PL"
+    },
+    {
+      "date": "2026-05-07",
+      "id": "LS02-0277-MZ9",
+      "gender": "male",
+      "age": 45,
+      "nationality": "ES",
+      "city": "Malaga",
+      "country": "ES"
+    },
+    {
+      "date": "2026-05-07",
+      "id": "LS02-0278-COW",
+      "gender": "female",
+      "age": 44,
+      "nationality": "TR",
+      "city": "Utrecht",
+      "country": "NL"
+    },
+    {
+      "date": "2026-05-06",
+      "id": "LS02-0274-EXH",
+      "gender": "male",
+      "age": 61,
+      "nationality": "IT",
+      "city": "Taranto",
+      "country": "IT"
+    },
+    {
+      "date": "2026-05-07",
+      "id": "LS02-0279-UK0",
+      "gender": "male",
+      "age": 36,
+      "nationality": "IT",
+      "city": "Berlin",
+      "country": "DE"
+    },
+    {
+      "date": "2026-05-07",
+      "id": "LS02-0280-Q6Z",
+      "gender": "female",
+      "age": 41,
+      "nationality": "US",
+      "city": "Savannah",
+      "country": "US"
     }
   ],
   "stripe": {
-    "totalRevenue": 8310.0,
-    "totalCount": 280,
+    "totalRevenue": 8440.0,
+    "totalCount": 286,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -2621,6 +2675,10 @@ const DATA = {
       "2026-05-06": {
         "revenue": 350.0,
         "count": 10
+      },
+      "2026-05-07": {
+        "revenue": 130.0,
+        "count": 6
       }
     }
   },
