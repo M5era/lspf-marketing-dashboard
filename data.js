@@ -389,6 +389,15 @@ const DATA = {
       "country": "GB"
     },
     {
+      "date": "2026-05-08",
+      "id": "LS02-0285-4NS",
+      "gender": "male",
+      "age": 61,
+      "nationality": "US",
+      "city": "Brooklyn",
+      "country": "US"
+    },
+    {
       "date": "2026-04-03",
       "id": "LS02-0028-3HE",
       "gender": "male",
@@ -2529,11 +2538,65 @@ const DATA = {
       "nationality": "US",
       "city": "Savannah",
       "country": "US"
+    },
+    {
+      "date": "2026-05-08",
+      "id": "LS02-0287-UIO",
+      "gender": "male",
+      "age": 45,
+      "nationality": "AT",
+      "city": NaN,
+      "country": "AT"
+    },
+    {
+      "date": "2026-05-08",
+      "id": "LS02-0284-50E",
+      "gender": "female",
+      "age": 34,
+      "nationality": "SK",
+      "city": "Maspalomas",
+      "country": "ES"
+    },
+    {
+      "date": "2026-05-08",
+      "id": "LS02-0282-WON",
+      "gender": "male",
+      "age": 44,
+      "nationality": "DE",
+      "city": "Dusseldorf",
+      "country": "DE"
+    },
+    {
+      "date": "2026-05-08",
+      "id": "LS02-0283-WQF",
+      "gender": "male",
+      "age": 53,
+      "nationality": "FR",
+      "city": "Barcelona",
+      "country": "ES"
+    },
+    {
+      "date": "2026-05-08",
+      "id": "LS02-0286-ISA",
+      "gender": "female",
+      "age": 32,
+      "nationality": "GB",
+      "city": "London",
+      "country": "GB"
+    },
+    {
+      "date": "2026-05-08",
+      "id": "LS02-0288-0TW",
+      "gender": "female",
+      "age": 62,
+      "nationality": "BR",
+      "city": "S\u00e3o Paulo",
+      "country": "BR"
     }
   ],
   "stripe": {
-    "totalRevenue": 8440.0,
-    "totalCount": 286,
+    "totalRevenue": 8670.0,
+    "totalCount": 293,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -2679,6 +2742,10 @@ const DATA = {
       "2026-05-07": {
         "revenue": 130.0,
         "count": 6
+      },
+      "2026-05-08": {
+        "revenue": 230.0,
+        "count": 7
       }
     }
   },
