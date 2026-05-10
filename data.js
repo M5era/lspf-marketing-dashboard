@@ -2513,15 +2513,6 @@ const DATA = {
       "country": "NL"
     },
     {
-      "date": "2026-05-06",
-      "id": "LS02-0274-EXH",
-      "gender": "male",
-      "age": 61,
-      "nationality": "IT",
-      "city": "Taranto",
-      "country": "IT"
-    },
-    {
       "date": "2026-05-07",
       "id": "LS02-0279-UK0",
       "gender": "male",
@@ -2592,11 +2583,65 @@ const DATA = {
       "nationality": "BR",
       "city": "S\u00e3o Paulo",
       "country": "BR"
+    },
+    {
+      "date": "2026-05-06",
+      "id": "LS02-0274-EXH",
+      "gender": "male",
+      "age": 61,
+      "nationality": "IT",
+      "city": "Taranto",
+      "country": "IT"
+    },
+    {
+      "date": "2026-05-09",
+      "id": "LS02-0289-GJG",
+      "gender": "male",
+      "age": 60,
+      "nationality": "NL",
+      "city": "Amsterdam",
+      "country": "NL"
+    },
+    {
+      "date": "2026-05-09",
+      "id": "LS02-0291-TE7",
+      "gender": "male",
+      "age": 49,
+      "nationality": "AU",
+      "city": "Sydney",
+      "country": "AU"
+    },
+    {
+      "date": "2026-05-09",
+      "id": "LS02-0290-AV9",
+      "gender": "female",
+      "age": 29,
+      "nationality": "CZ",
+      "city": "Prague",
+      "country": "CZ"
+    },
+    {
+      "date": "2026-05-09",
+      "id": "LS02-0292-BHG",
+      "gender": "male",
+      "age": 51,
+      "nationality": "FR",
+      "city": "Paris",
+      "country": "FR"
+    },
+    {
+      "date": "2026-05-09",
+      "id": "LS02-0293-YFH",
+      "gender": "male",
+      "age": 49,
+      "nationality": "PL",
+      "city": "\u0141\u0105ck",
+      "country": "PL"
     }
   ],
   "stripe": {
-    "totalRevenue": 8670.0,
-    "totalCount": 293,
+    "totalRevenue": 8830.0,
+    "totalCount": 298,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -2746,6 +2791,10 @@ const DATA = {
       "2026-05-08": {
         "revenue": 230.0,
         "count": 7
+      },
+      "2026-05-09": {
+        "revenue": 160.0,
+        "count": 5
       }
     }
   },
