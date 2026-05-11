@@ -2637,11 +2637,74 @@ const DATA = {
       "nationality": "PL",
       "city": "\u0141\u0105ck",
       "country": "PL"
+    },
+    {
+      "date": "2026-05-10",
+      "id": "LS02-0294-WLD",
+      "gender": "male",
+      "age": 65,
+      "nationality": "US",
+      "city": "Setubal",
+      "country": "PT"
+    },
+    {
+      "date": "2026-05-10",
+      "id": "LS02-0295-TJ0",
+      "gender": "male",
+      "age": 53,
+      "nationality": "IT",
+      "city": "Milano",
+      "country": "IT"
+    },
+    {
+      "date": "2026-05-10",
+      "id": "LS02-0297-HWM",
+      "gender": "male",
+      "age": 61,
+      "nationality": "IT",
+      "city": "Gorizia",
+      "country": "IT"
+    },
+    {
+      "date": "2026-05-10",
+      "id": "LS02-0296-CXP",
+      "gender": "male",
+      "age": 36,
+      "nationality": "BD",
+      "city": "Dhaka",
+      "country": "BD"
+    },
+    {
+      "date": "2026-05-10",
+      "id": "LS02-0298-GDC",
+      "gender": "male",
+      "age": 41,
+      "nationality": "DE",
+      "city": "M\u00fcnchen",
+      "country": "DE"
+    },
+    {
+      "date": "2026-05-11",
+      "id": "LS02-0299-E8F",
+      "gender": "male",
+      "age": 52,
+      "nationality": "TH",
+      "city": "Hatyai",
+      "country": "TH"
+    },
+    {
+      "date": "2026-05-11",
+      "id": "LS02-0300-S3M",
+      "gender": "male",
+      "age": 30,
+      "nationality": "AZ",
+      "city": NaN,
+      "country": "EE"
     }
   ],
   "stripe": {
-    "totalRevenue": 8830.0,
-    "totalCount": 298,
+    "totalRevenue": 9020.0,
+    "totalCount": 305,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -2795,6 +2858,14 @@ const DATA = {
       "2026-05-09": {
         "revenue": 160.0,
         "count": 5
+      },
+      "2026-05-10": {
+        "revenue": 150.0,
+        "count": 5
+      },
+      "2026-05-11": {
+        "revenue": 40.0,
+        "count": 2
       }
     }
   },
