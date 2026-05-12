@@ -2514,15 +2514,6 @@ const DATA = {
     },
     {
       "date": "2026-05-07",
-      "id": "LS02-0279-UK0",
-      "gender": "male",
-      "age": 36,
-      "nationality": "IT",
-      "city": "Berlin",
-      "country": "DE"
-    },
-    {
-      "date": "2026-05-07",
       "id": "LS02-0280-Q6Z",
       "gender": "female",
       "age": 41,
@@ -2700,11 +2691,65 @@ const DATA = {
       "nationality": "AZ",
       "city": NaN,
       "country": "EE"
+    },
+    {
+      "date": "2026-05-07",
+      "id": "LS02-0279-UK0",
+      "gender": "male",
+      "age": 36,
+      "nationality": "IT",
+      "city": "Berlin",
+      "country": "DE"
+    },
+    {
+      "date": "2026-05-12",
+      "id": "LS02-0305-XZ2",
+      "gender": "male",
+      "age": 61,
+      "nationality": "US",
+      "city": "Paris",
+      "country": "FR"
+    },
+    {
+      "date": "2026-05-11",
+      "id": "LS02-0304-DZQ",
+      "gender": "male",
+      "age": 55,
+      "nationality": "NL",
+      "city": "thessaloniki",
+      "country": "GR"
+    },
+    {
+      "date": "2026-05-11",
+      "id": "LS02-0303-ZV8",
+      "gender": "male",
+      "age": 74,
+      "nationality": "US",
+      "city": "Bar Harbor",
+      "country": "US"
+    },
+    {
+      "date": "2026-05-11",
+      "id": "LS02-0301-H2Z",
+      "gender": "male",
+      "age": 67,
+      "nationality": "ES",
+      "city": "Mutilva alta",
+      "country": "ES"
+    },
+    {
+      "date": "2026-05-11",
+      "id": "LS02-0302-BMI",
+      "gender": "male",
+      "age": 64,
+      "nationality": "US",
+      "city": "Charlottesville",
+      "country": "US"
     }
   ],
   "stripe": {
-    "totalRevenue": 9020.0,
-    "totalCount": 305,
+    "totalRevenue": 9170.0,
+    "totalCount": 310,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -2864,8 +2909,12 @@ const DATA = {
         "count": 5
       },
       "2026-05-11": {
-        "revenue": 40.0,
-        "count": 2
+        "revenue": 180.0,
+        "count": 6
+      },
+      "2026-05-12": {
+        "revenue": 10.0,
+        "count": 1
       }
     }
   },
