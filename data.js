@@ -2676,15 +2676,6 @@ const DATA = {
     },
     {
       "date": "2026-05-11",
-      "id": "LS02-0299-E8F",
-      "gender": "male",
-      "age": 52,
-      "nationality": "TH",
-      "city": "Hatyai",
-      "country": "TH"
-    },
-    {
-      "date": "2026-05-11",
       "id": "LS02-0300-S3M",
       "gender": "male",
       "age": 30,
@@ -2702,13 +2693,49 @@ const DATA = {
       "country": "DE"
     },
     {
-      "date": "2026-05-12",
-      "id": "LS02-0305-XZ2",
+      "date": "2026-05-11",
+      "id": "LS02-0299-E8F",
       "gender": "male",
-      "age": 61,
+      "age": 52,
+      "nationality": "TH",
+      "city": "Hatyai",
+      "country": "TH"
+    },
+    {
+      "date": "2026-05-11",
+      "id": "LS02-0301-H2Z",
+      "gender": "male",
+      "age": 67,
+      "nationality": "ES",
+      "city": "Mutilva alta",
+      "country": "ES"
+    },
+    {
+      "date": "2026-05-12",
+      "id": "LS02-0306-ULP",
+      "gender": "female",
+      "age": 65,
+      "nationality": "NL",
+      "city": "Amersfoort",
+      "country": "NL"
+    },
+    {
+      "date": "2026-05-12",
+      "id": "LS02-0309-DDR",
+      "gender": "male",
+      "age": 54,
+      "nationality": "PL",
+      "city": "Wroc\u0142aw",
+      "country": "PL"
+    },
+    {
+      "date": "2026-05-11",
+      "id": "LS02-0302-BMI",
+      "gender": "male",
+      "age": 64,
       "nationality": "US",
-      "city": "Paris",
-      "country": "FR"
+      "city": "Charlottesville",
+      "country": "US"
     },
     {
       "date": "2026-05-11",
@@ -2729,27 +2756,45 @@ const DATA = {
       "country": "US"
     },
     {
-      "date": "2026-05-11",
-      "id": "LS02-0301-H2Z",
+      "date": "2026-05-12",
+      "id": "LS02-0305-XZ2",
       "gender": "male",
-      "age": 67,
-      "nationality": "ES",
-      "city": "Mutilva alta",
-      "country": "ES"
+      "age": 61,
+      "nationality": "US",
+      "city": "Paris",
+      "country": "FR"
     },
     {
-      "date": "2026-05-11",
-      "id": "LS02-0302-BMI",
+      "date": "2026-05-12",
+      "id": "LS02-0307-N2Z",
       "gender": "male",
-      "age": 64,
-      "nationality": "US",
-      "city": "Charlottesville",
-      "country": "US"
+      "age": 45,
+      "nationality": "CN",
+      "city": "Shanghai",
+      "country": "CN"
+    },
+    {
+      "date": "2026-05-12",
+      "id": "LS02-0308-B6O",
+      "gender": "male",
+      "age": 35,
+      "nationality": "FR",
+      "city": "Paris",
+      "country": "FR"
+    },
+    {
+      "date": "2026-05-12",
+      "id": "LS02-0310-B85",
+      "gender": "female",
+      "age": 43,
+      "nationality": "ES",
+      "city": "Barcelona",
+      "country": "ES"
     }
   ],
   "stripe": {
-    "totalRevenue": 9170.0,
-    "totalCount": 310,
+    "totalRevenue": 9440.0,
+    "totalCount": 316,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -2913,8 +2958,8 @@ const DATA = {
         "count": 6
       },
       "2026-05-12": {
-        "revenue": 10.0,
-        "count": 1
+        "revenue": 280.0,
+        "count": 7
       }
     }
   },
