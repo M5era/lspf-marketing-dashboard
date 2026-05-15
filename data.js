@@ -2729,6 +2729,24 @@ const DATA = {
       "country": "PL"
     },
     {
+      "date": "2026-05-14",
+      "id": "LS02-0317-RO6",
+      "gender": "male",
+      "age": 54,
+      "nationality": "IT",
+      "city": "Rome",
+      "country": "IT"
+    },
+    {
+      "date": "2026-05-14",
+      "id": "LS02-0321-9W1",
+      "gender": "male",
+      "age": 62,
+      "nationality": "US",
+      "city": "Orlando",
+      "country": "US"
+    },
+    {
       "date": "2026-05-11",
       "id": "LS02-0302-BMI",
       "gender": "male",
@@ -2844,11 +2862,47 @@ const DATA = {
       "nationality": "PT",
       "city": "Lisboa",
       "country": "PT"
+    },
+    {
+      "date": "2026-05-14",
+      "id": "LS02-0322-OFV",
+      "gender": "male",
+      "age": 31,
+      "nationality": "FR",
+      "city": "Argis",
+      "country": "FR"
+    },
+    {
+      "date": "2026-05-14",
+      "id": "LS02-0318-AOQ",
+      "gender": "male",
+      "age": 46,
+      "nationality": "SE",
+      "city": "M\u00f6lndal",
+      "country": "SE"
+    },
+    {
+      "date": "2026-05-14",
+      "id": "LS02-0319-I1N",
+      "gender": "male",
+      "age": 32,
+      "nationality": "HK",
+      "city": "Kennedy Town",
+      "country": "HK"
+    },
+    {
+      "date": "2026-05-14",
+      "id": "LS02-0320-UVZ",
+      "gender": "male",
+      "age": 64,
+      "nationality": "ES",
+      "city": "Cabanillas del campo",
+      "country": "ES"
     }
   ],
   "stripe": {
-    "totalRevenue": 9695.0,
-    "totalCount": 323,
+    "totalRevenue": 10055.0,
+    "totalCount": 330,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -3020,8 +3074,8 @@ const DATA = {
         "count": 6
       },
       "2026-05-14": {
-        "revenue": 10.0,
-        "count": 1
+        "revenue": 370.0,
+        "count": 8
       }
     }
   },
