@@ -2702,6 +2702,69 @@ const DATA = {
       "country": "TH"
     },
     {
+      "date": "2026-05-15",
+      "id": "LS02-0324-QBP",
+      "gender": "male",
+      "age": 65,
+      "nationality": "IE",
+      "city": "Dublin",
+      "country": "IE"
+    },
+    {
+      "date": "2026-05-15",
+      "id": "LS02-0325-Z0M",
+      "gender": "female",
+      "age": 54,
+      "nationality": "FR",
+      "city": "Dubai",
+      "country": "AE"
+    },
+    {
+      "date": "2026-05-15",
+      "id": "LS02-0326-H0V",
+      "gender": "male",
+      "age": 40,
+      "nationality": "PL",
+      "city": "Oslo",
+      "country": "NO"
+    },
+    {
+      "date": "2026-05-15",
+      "id": "LS02-0327-CAF",
+      "gender": "male",
+      "age": 33,
+      "nationality": "IT",
+      "city": "seregno",
+      "country": "IT"
+    },
+    {
+      "date": "2026-05-15",
+      "id": "LS02-0328-IDR",
+      "gender": "female",
+      "age": 62,
+      "nationality": "DE",
+      "city": "Heidelberg",
+      "country": "DE"
+    },
+    {
+      "date": "2026-05-16",
+      "id": "LS02-0329-DKO",
+      "gender": "male",
+      "age": 68,
+      "nationality": "FR",
+      "city": "REIMS",
+      "country": "FR"
+    },
+    {
+      "date": "2026-05-16",
+      "id": "LS02-0330-TOQ",
+      "gender": "male",
+      "age": 37,
+      "nationality": "PH",
+      "city": "Makati",
+      "country": "PH"
+    },
+    {
       "date": "2026-05-11",
       "id": "LS02-0301-H2Z",
       "gender": "male",
@@ -2898,11 +2961,20 @@ const DATA = {
       "nationality": "ES",
       "city": "Cabanillas del campo",
       "country": "ES"
+    },
+    {
+      "date": "2026-05-15",
+      "id": "LS02-0323-PZH",
+      "gender": "male",
+      "age": 49,
+      "nationality": "PT",
+      "city": "Berlin",
+      "country": "DE"
     }
   ],
   "stripe": {
-    "totalRevenue": 10055.0,
-    "totalCount": 330,
+    "totalRevenue": 10270.0,
+    "totalCount": 338,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -3076,6 +3148,14 @@ const DATA = {
       "2026-05-14": {
         "revenue": 370.0,
         "count": 8
+      },
+      "2026-05-15": {
+        "revenue": 125.0,
+        "count": 6
+      },
+      "2026-05-16": {
+        "revenue": 90.0,
+        "count": 2
       }
     }
   },
