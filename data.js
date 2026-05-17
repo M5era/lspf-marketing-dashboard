@@ -2703,15 +2703,6 @@ const DATA = {
     },
     {
       "date": "2026-05-15",
-      "id": "LS02-0324-QBP",
-      "gender": "male",
-      "age": 65,
-      "nationality": "IE",
-      "city": "Dublin",
-      "country": "IE"
-    },
-    {
-      "date": "2026-05-15",
       "id": "LS02-0325-Z0M",
       "gender": "female",
       "age": 54,
@@ -2763,6 +2754,42 @@ const DATA = {
       "nationality": "PH",
       "city": "Makati",
       "country": "PH"
+    },
+    {
+      "date": "2026-05-15",
+      "id": "LS02-0324-QBP",
+      "gender": "male",
+      "age": 65,
+      "nationality": "IE",
+      "city": "Dublin",
+      "country": "IE"
+    },
+    {
+      "date": "2026-05-16",
+      "id": "LS02-0331-FHA",
+      "gender": "male",
+      "age": 40,
+      "nationality": "AU",
+      "city": "Liverpool",
+      "country": "AU"
+    },
+    {
+      "date": "2026-05-16",
+      "id": "LS02-0332-OQZ",
+      "gender": "male",
+      "age": 63,
+      "nationality": "US",
+      "city": "Clifton",
+      "country": "US"
+    },
+    {
+      "date": "2026-05-16",
+      "id": "LS02-0333-EL0",
+      "gender": "male",
+      "age": 44,
+      "nationality": "IT",
+      "city": "Stockholm",
+      "country": "SE"
     },
     {
       "date": "2026-05-11",
@@ -2973,8 +3000,8 @@ const DATA = {
     }
   ],
   "stripe": {
-    "totalRevenue": 10270.0,
-    "totalCount": 338,
+    "totalRevenue": 10360.0,
+    "totalCount": 341,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -3154,8 +3181,8 @@ const DATA = {
         "count": 6
       },
       "2026-05-16": {
-        "revenue": 90.0,
-        "count": 2
+        "revenue": 180.0,
+        "count": 5
       }
     }
   },
