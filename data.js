@@ -83,15 +83,6 @@ const DATA = {
       "country": "RO"
     },
     {
-      "date": "2026-04-05",
-      "id": "LS02-0045-LNT",
-      "gender": "male",
-      "age": 52,
-      "nationality": "PT",
-      "city": "Sobral de Monte Agra\u00e7o",
-      "country": "PT"
-    },
-    {
       "date": "2026-04-30",
       "id": "LS02-0231-MRB",
       "gender": "male",
@@ -236,6 +227,15 @@ const DATA = {
       "country": "PT"
     },
     {
+      "date": "2026-04-13",
+      "id": "LS02-0135-RHT",
+      "gender": "female",
+      "age": 36,
+      "nationality": "IT",
+      "city": "Montecchio",
+      "country": "IT"
+    },
+    {
       "date": "2026-04-06",
       "id": "LS02-0063-OAH",
       "gender": "male",
@@ -324,6 +324,15 @@ const DATA = {
       "nationality": "CH",
       "city": "Wabern",
       "country": "CH"
+    },
+    {
+      "date": "2026-04-05",
+      "id": "LS02-0045-LNT",
+      "gender": "male",
+      "age": 52,
+      "nationality": "PT",
+      "city": "Sobral de Monte Agra\u00e7o",
+      "country": "PT"
     },
     {
       "date": "2026-04-07",
@@ -1476,15 +1485,6 @@ const DATA = {
       "nationality": "BR",
       "city": "Rio De Janeiro",
       "country": "BR"
-    },
-    {
-      "date": "2026-04-13",
-      "id": "LS02-0135-RHT",
-      "gender": "female",
-      "age": 36,
-      "nationality": "IT",
-      "city": "Montecchio",
-      "country": "IT"
     },
     {
       "date": "2026-04-13",
@@ -2765,6 +2765,15 @@ const DATA = {
       "country": "IE"
     },
     {
+      "date": "2026-05-20",
+      "id": "LS02-0372-Z79",
+      "gender": "male",
+      "age": 63,
+      "nationality": "DE",
+      "city": "Braunschweig",
+      "country": "DE"
+    },
+    {
       "date": "2026-05-16",
       "id": "LS02-0331-FHA",
       "gender": "male",
@@ -2990,13 +2999,13 @@ const DATA = {
       "country": "CN"
     },
     {
-      "date": "2026-05-18",
-      "id": "LS02-0357-6Q1",
+      "date": "2026-05-20",
+      "id": "LS02-0371-BMB",
       "gender": "male",
-      "age": 65,
-      "nationality": "DE",
-      "city": "Hamburg",
-      "country": "DE"
+      "age": 47,
+      "nationality": "BE",
+      "city": "Bruselas",
+      "country": "BE"
     },
     {
       "date": "2026-05-18",
@@ -3062,6 +3071,15 @@ const DATA = {
       "country": "DK"
     },
     {
+      "date": "2026-05-19",
+      "id": "LS02-0362-1TB",
+      "gender": "male",
+      "age": 35,
+      "nationality": "DE",
+      "city": "Berlin",
+      "country": "DE"
+    },
+    {
       "date": "2026-05-18",
       "id": "LS02-0346-CLW",
       "gender": "male",
@@ -3071,12 +3089,66 @@ const DATA = {
       "country": "US"
     },
     {
-      "date": "2026-05-19",
-      "id": "LS02-0362-1TB",
+      "date": "2026-05-20",
+      "id": "LS02-0367-V5R",
       "gender": "male",
-      "age": 35,
+      "age": 54,
       "nationality": "DE",
-      "city": "Berlin",
+      "city": "Neustrelitz",
+      "country": "DE"
+    },
+    {
+      "date": "2026-05-20",
+      "id": "LS02-0368-N4Z",
+      "gender": "female",
+      "age": 40,
+      "nationality": "IT",
+      "city": "Madrid",
+      "country": "ES"
+    },
+    {
+      "date": "2026-05-20",
+      "id": "LS02-0369-XHG",
+      "gender": "male",
+      "age": 72,
+      "nationality": "US",
+      "city": "Nice",
+      "country": "FR"
+    },
+    {
+      "date": "2026-05-20",
+      "id": "LS02-0370-P6K",
+      "gender": "male",
+      "age": 61,
+      "nationality": "GB",
+      "city": "Nottingham",
+      "country": "GB"
+    },
+    {
+      "date": "2026-05-20",
+      "id": "LS02-0373-SVD",
+      "gender": "male",
+      "age": 53,
+      "nationality": "US",
+      "city": "Brooklyn",
+      "country": "US"
+    },
+    {
+      "date": "2026-05-20",
+      "id": "LS02-0374-7PO",
+      "gender": "female",
+      "age": 74,
+      "nationality": "AU",
+      "city": "Newport Beach",
+      "country": "US"
+    },
+    {
+      "date": "2026-05-18",
+      "id": "LS02-0357-6Q1",
+      "gender": "male",
+      "age": 65,
+      "nationality": "DE",
+      "city": "Hamburg",
       "country": "DE"
     },
     {
@@ -3297,8 +3369,8 @@ const DATA = {
     }
   ],
   "stripe": {
-    "totalRevenue": 11420.0,
-    "totalCount": 375,
+    "totalRevenue": 11690.0,
+    "totalCount": 383,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -3491,6 +3563,10 @@ const DATA = {
       },
       "2026-05-19": {
         "revenue": 240.0,
+        "count": 8
+      },
+      "2026-05-20": {
+        "revenue": 270.0,
         "count": 8
       }
     }
