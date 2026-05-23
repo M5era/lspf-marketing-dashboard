@@ -362,6 +362,15 @@ const DATA = {
       "country": "PT"
     },
     {
+      "date": "2026-05-03",
+      "id": "LS02-0247-DK8",
+      "gender": "male",
+      "age": 34,
+      "nationality": "DE",
+      "city": "Bremen",
+      "country": "DE"
+    },
+    {
       "date": "2026-04-07",
       "id": "LS02-0082-KSW",
       "gender": "female",
@@ -2235,15 +2244,6 @@ const DATA = {
     },
     {
       "date": "2026-05-03",
-      "id": "LS02-0247-DK8",
-      "gender": "male",
-      "age": 34,
-      "nationality": "DE",
-      "city": "Bremen",
-      "country": "DE"
-    },
-    {
-      "date": "2026-05-03",
       "id": "LS02-0248-7WX",
       "gender": "male",
       "age": 39,
@@ -3071,6 +3071,15 @@ const DATA = {
       "country": "DE"
     },
     {
+      "date": "2026-05-22",
+      "id": "LS02-0407-TVP",
+      "gender": "male",
+      "age": 42,
+      "nationality": "FR",
+      "city": "Paris",
+      "country": "FR"
+    },
+    {
       "date": "2026-05-21",
       "id": "LS02-0392-U4P",
       "gender": "male",
@@ -3161,6 +3170,15 @@ const DATA = {
       "country": "US"
     },
     {
+      "date": "2026-05-22",
+      "id": "LS02-0400-4AI",
+      "gender": "male",
+      "age": 29,
+      "nationality": "GB",
+      "city": "Wallingford",
+      "country": "GB"
+    },
+    {
       "date": "2026-05-20",
       "id": "LS02-0368-N4Z",
       "gender": "female",
@@ -3186,6 +3204,15 @@ const DATA = {
       "nationality": "US",
       "city": "Islsnd Heights",
       "country": "US"
+    },
+    {
+      "date": "2026-05-22",
+      "id": "LS02-0401-XG2",
+      "gender": "male",
+      "age": 44,
+      "nationality": "DE",
+      "city": "Nidderau",
+      "country": "DE"
     },
     {
       "date": "2026-05-22",
@@ -3242,6 +3269,15 @@ const DATA = {
       "country": "FR"
     },
     {
+      "date": "2026-05-22",
+      "id": "LS02-0402-R6Q",
+      "gender": "female",
+      "age": 55,
+      "nationality": "IT",
+      "city": "granarolo dell'emilia",
+      "country": "IT"
+    },
+    {
       "date": "2026-05-21",
       "id": "LS02-0383-ZGI",
       "gender": "male",
@@ -3285,6 +3321,24 @@ const DATA = {
       "nationality": "US",
       "city": "Brooklyn",
       "country": "US"
+    },
+    {
+      "date": "2026-05-22",
+      "id": "LS02-0403-1N7",
+      "gender": "male",
+      "age": 43,
+      "nationality": "PT",
+      "city": "Funchal",
+      "country": "PT"
+    },
+    {
+      "date": "2026-05-22",
+      "id": "LS02-0404-GDF",
+      "gender": "male",
+      "age": 47,
+      "nationality": "IE",
+      "city": "Terranora",
+      "country": "AU"
     },
     {
       "date": "2026-05-20",
@@ -3359,6 +3413,24 @@ const DATA = {
       "country": "GB"
     },
     {
+      "date": "2026-05-22",
+      "id": "LS02-0405-P8R",
+      "gender": "male",
+      "age": 63,
+      "nationality": "GB",
+      "city": "Carluke",
+      "country": "GB"
+    },
+    {
+      "date": "2026-05-22",
+      "id": "LS02-0406-BHE",
+      "gender": "male",
+      "age": 31,
+      "nationality": "UA",
+      "city": NaN,
+      "country": "UA"
+    },
+    {
       "date": "2026-05-21",
       "id": "LS02-0391-VQZ",
       "gender": "male",
@@ -3368,6 +3440,15 @@ const DATA = {
       "country": "BR"
     },
     {
+      "date": "2026-05-22",
+      "id": "LS02-0408-FWG",
+      "gender": "male",
+      "age": 61,
+      "nationality": "GB",
+      "city": "Houghton le Spring",
+      "country": "GB"
+    },
+    {
       "date": "2026-05-11",
       "id": "LS02-0301-H2Z",
       "gender": "male",
@@ -3375,6 +3456,24 @@ const DATA = {
       "nationality": "ES",
       "city": "Mutilva alta",
       "country": "ES"
+    },
+    {
+      "date": "2026-05-22",
+      "id": "LS02-0409-NC4",
+      "gender": "male",
+      "age": 50,
+      "nationality": "GR",
+      "city": "Athens",
+      "country": "GR"
+    },
+    {
+      "date": "2026-05-22",
+      "id": "LS02-0410-TZY",
+      "gender": "female",
+      "age": 60,
+      "nationality": "US",
+      "city": "New York",
+      "country": "US"
     },
     {
       "date": "2026-05-12",
@@ -3393,6 +3492,15 @@ const DATA = {
       "nationality": "PL",
       "city": "Wroc\u0142aw",
       "country": "PL"
+    },
+    {
+      "date": "2026-05-23",
+      "id": "LS02-0411-KMK",
+      "gender": "female",
+      "age": 65,
+      "nationality": "US",
+      "city": "New York",
+      "country": "US"
     },
     {
       "date": "2026-05-22",
@@ -3594,8 +3702,8 @@ const DATA = {
     }
   ],
   "stripe": {
-    "totalRevenue": 12460.0,
-    "totalCount": 409,
+    "totalRevenue": 12810.0,
+    "totalCount": 420,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -3799,8 +3907,12 @@ const DATA = {
         "count": 22
       },
       "2026-05-22": {
-        "revenue": 150.0,
-        "count": 4
+        "revenue": 420.0,
+        "count": 14
+      },
+      "2026-05-23": {
+        "revenue": 80.0,
+        "count": 1
       }
     }
   },
