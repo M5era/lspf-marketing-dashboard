@@ -4442,10 +4442,161 @@ const DATA = {
     }
   },
   "meta": {
-    "byDay": {},
-    "totalSpend": 0,
-    "totalImpressions": 0,
-    "totalLpv": 0,
-    "totalClicks": 0
+    "byDay": {
+      "2026-04-03": {
+        "spend": 12.03,
+        "impressions": 9608,
+        "lpv": 119,
+        "clicks": 259
+      },
+      "2026-04-04": {
+        "spend": 17.43,
+        "impressions": 14167,
+        "lpv": 171,
+        "clicks": 376
+      },
+      "2026-04-05": {
+        "spend": 20.83,
+        "impressions": 18409,
+        "lpv": 234,
+        "clicks": 410
+      },
+      "2026-04-06": {
+        "spend": 17.35,
+        "impressions": 23650,
+        "lpv": 292,
+        "clicks": 517
+      },
+      "2026-04-07": {
+        "spend": 8.96,
+        "impressions": 14608,
+        "lpv": 177,
+        "clicks": 292
+      },
+      "2026-04-08": {
+        "spend": 15.04,
+        "impressions": 25282,
+        "lpv": 222,
+        "clicks": 372
+      },
+      "2026-04-09": {
+        "spend": 6.43,
+        "impressions": 11447,
+        "lpv": 121,
+        "clicks": 200
+      },
+      "2026-04-10": {
+        "spend": 14.42,
+        "impressions": 23767,
+        "lpv": 271,
+        "clicks": 447
+      },
+      "2026-04-11": {
+        "spend": 18.45,
+        "impressions": 30762,
+        "lpv": 294,
+        "clicks": 468
+      },
+      "2026-04-12": {
+        "spend": 21.96,
+        "impressions": 37963,
+        "lpv": 470,
+        "clicks": 677
+      },
+      "2026-04-13": {
+        "spend": 13.12,
+        "impressions": 21689,
+        "lpv": 274,
+        "clicks": 396
+      },
+      "2026-04-14": {
+        "spend": 10.91,
+        "impressions": 16368,
+        "lpv": 226,
+        "clicks": 328
+      },
+      "2026-04-15": {
+        "spend": 11.52,
+        "impressions": 16673,
+        "lpv": 232,
+        "clicks": 323
+      },
+      "2026-04-16": {
+        "spend": 11.69,
+        "impressions": 16126,
+        "lpv": 232,
+        "clicks": 309
+      },
+      "2026-04-17": {
+        "spend": 11.77,
+        "impressions": 15022,
+        "lpv": 166,
+        "clicks": 264
+      },
+      "2026-04-18": {
+        "spend": 12.31,
+        "impressions": 18946,
+        "lpv": 248,
+        "clicks": 332
+      },
+      "2026-04-19": {
+        "spend": 13.44,
+        "impressions": 20405,
+        "lpv": 308,
+        "clicks": 411
+      },
+      "2026-04-20": {
+        "spend": 11.29,
+        "impressions": 18953,
+        "lpv": 232,
+        "clicks": 339
+      },
+      "2026-04-21": {
+        "spend": 1.05,
+        "impressions": 1915,
+        "lpv": 26,
+        "clicks": 33
+      },
+      "2026-04-28": {
+        "spend": 7.52,
+        "impressions": 9721,
+        "lpv": 69,
+        "clicks": 124
+      },
+      "2026-04-29": {
+        "spend": 18.19,
+        "impressions": 23338,
+        "lpv": 269,
+        "clicks": 445
+      },
+      "2026-04-30": {
+        "spend": 18.58,
+        "impressions": 20508,
+        "lpv": 305,
+        "clicks": 507
+      },
+      "2026-05-01": {
+        "spend": 19.63,
+        "impressions": 30742,
+        "lpv": 366,
+        "clicks": 505
+      },
+      "2026-05-02": {
+        "spend": 20.0,
+        "impressions": 37463,
+        "lpv": 394,
+        "clicks": 563
+      },
+      "2026-05-03": {
+        "spend": 13.16,
+        "impressions": 25507,
+        "lpv": 305,
+        "clicks": 450
+      }
+    },
+    "totalSpend": 347.08,
+    "totalImpressions": 503039,
+    "totalLpv": 6023,
+    "totalClicks": 9347
   }
 };
