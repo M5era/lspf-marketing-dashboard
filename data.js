@@ -767,6 +767,15 @@ const DATA = {
       "country": "US"
     },
     {
+      "date": "2026-04-07",
+      "id": "LS02-0084-4RY",
+      "gender": "female",
+      "age": 65.0,
+      "nationality": "IE",
+      "city": "Dublin 16",
+      "country": "IE"
+    },
+    {
       "date": "2026-04-06",
       "id": "LS02-0059-1MA",
       "gender": "male",
@@ -1215,15 +1224,6 @@ const DATA = {
       "nationality": "FR",
       "city": "Binic-Etables sur mer",
       "country": "FR"
-    },
-    {
-      "date": "2026-04-07",
-      "id": "LS02-0084-4RY",
-      "gender": "female",
-      "age": 65.0,
-      "nationality": "IE",
-      "city": "Dublin 16",
-      "country": "IE"
     },
     {
       "date": "2026-04-11",
@@ -3764,15 +3764,6 @@ const DATA = {
       "country": "IT"
     },
     {
-      "date": "2026-05-26",
-      "id": "LS02-0468-CJS",
-      "gender": "male",
-      "age": 54.0,
-      "nationality": "GB",
-      "city": "Worcester Park",
-      "country": "GB"
-    },
-    {
       "date": "2026-05-25",
       "id": "LS02-0450-RXP",
       "gender": "female",
@@ -4527,6 +4518,15 @@ const DATA = {
       "nationality": "IN",
       "city": "Villebon-Sur-Yvette",
       "country": "FR"
+    },
+    {
+      "date": "2026-05-26",
+      "id": "LS02-0468-CJS",
+      "gender": "male",
+      "age": 54.0,
+      "nationality": "GB",
+      "city": "Worcester Park",
+      "country": "GB"
     },
     {
       "date": "2026-05-28",
@@ -5402,6 +5402,15 @@ const DATA = {
       "country": "DE"
     },
     {
+      "date": "2026-06-01",
+      "id": "LS02-0792-ORM",
+      "gender": "female",
+      "age": 63.0,
+      "nationality": "IT",
+      "city": "Novara",
+      "country": "IT"
+    },
+    {
       "date": "2026-05-31",
       "id": "LS02-0675-NQF",
       "gender": "male",
@@ -5753,6 +5762,123 @@ const DATA = {
       "country": "PT"
     },
     {
+      "date": "2026-06-01",
+      "id": "LS02-0789-KDG",
+      "gender": "female",
+      "age": 19.0,
+      "nationality": "IT",
+      "city": "Altopiano della Vigolana, TN",
+      "country": "IT"
+    },
+    {
+      "date": "2026-06-01",
+      "id": "LS02-0790-4WB",
+      "gender": "female",
+      "age": 33.0,
+      "nationality": "ES",
+      "city": "Madrid",
+      "country": "ES"
+    },
+    {
+      "date": "2026-06-01",
+      "id": "LS02-0791-NTT",
+      "gender": "male",
+      "age": 30.0,
+      "nationality": "US",
+      "city": "Caucasian",
+      "country": "US"
+    },
+    {
+      "date": "2026-05-31",
+      "id": "LS02-0702-8DI",
+      "gender": "male",
+      "age": 41.0,
+      "nationality": "PL",
+      "city": "Warsaw",
+      "country": "PL"
+    },
+    {
+      "date": "2026-06-01",
+      "id": "LS02-0793-MFT",
+      "gender": "male",
+      "age": 32.0,
+      "nationality": "GB",
+      "city": "London",
+      "country": "GB"
+    },
+    {
+      "date": "2026-06-01",
+      "id": "LS02-0794-BRM",
+      "gender": "male",
+      "age": 61.0,
+      "nationality": "BE",
+      "city": "Schaerbeek",
+      "country": "BE"
+    },
+    {
+      "date": "2026-06-01",
+      "id": "LS02-0795-78S",
+      "gender": "male",
+      "age": 49.0,
+      "nationality": "GB",
+      "city": "Salisbury",
+      "country": "GB"
+    },
+    {
+      "date": "2026-06-01",
+      "id": "LS02-0796-KYD",
+      "gender": "female",
+      "age": 21.0,
+      "nationality": "PT",
+      "city": "Manchester, Hulme",
+      "country": "GB"
+    },
+    {
+      "date": "2026-06-01",
+      "id": "LS02-0797-0BZ",
+      "gender": "female",
+      "age": 60.0,
+      "nationality": "DE",
+      "city": "Esslingen",
+      "country": "DE"
+    },
+    {
+      "date": "2026-06-01",
+      "id": "LS02-0798-T8B",
+      "gender": "male",
+      "age": 35.0,
+      "nationality": "PL",
+      "city": "Jar",
+      "country": "NO"
+    },
+    {
+      "date": "2026-06-01",
+      "id": "LS02-0799-HT0",
+      "gender": "male",
+      "age": 45.0,
+      "nationality": "US",
+      "city": "Brooklyn",
+      "country": "US"
+    },
+    {
+      "date": "2026-05-31",
+      "id": "LS02-0743-V7D",
+      "gender": "female",
+      "age": 29.0,
+      "nationality": "JP",
+      "city": "London",
+      "country": "GB"
+    },
+    {
+      "date": "2026-05-31",
+      "id": "LS02-0654-7BU",
+      "gender": "male",
+      "age": 50.0,
+      "nationality": "GR",
+      "city": "Athens",
+      "country": "GR"
+    },
+    {
       "date": "2026-05-31",
       "id": "LS02-0672-VV3",
       "gender": "female",
@@ -5760,6 +5886,33 @@ const DATA = {
       "nationality": "US",
       "city": "Wellesley",
       "country": "US"
+    },
+    {
+      "date": "2026-06-01",
+      "id": "LS02-0800-WQ6",
+      "gender": "male",
+      "age": 25.0,
+      "nationality": "SY",
+      "city": "Rotterdam",
+      "country": "NL"
+    },
+    {
+      "date": "2026-06-01",
+      "id": "LS02-0801-SYA",
+      "gender": "male",
+      "age": 61.0,
+      "nationality": "BR",
+      "city": "Juazeiro do Norte",
+      "country": "BR"
+    },
+    {
+      "date": "2026-06-02",
+      "id": "LS02-0802-PV0",
+      "gender": "male",
+      "age": 27.0,
+      "nationality": "HK",
+      "city": "Seoul",
+      "country": "KR"
     },
     {
       "date": "2026-05-31",
@@ -6555,15 +6708,6 @@ const DATA = {
     },
     {
       "date": "2026-05-31",
-      "id": "LS02-0654-7BU",
-      "gender": "male",
-      "age": 50.0,
-      "nationality": "GR",
-      "city": "Athens",
-      "country": "GR"
-    },
-    {
-      "date": "2026-05-31",
       "id": "LS02-0687-6ZX",
       "gender": "male",
       "age": 65.0,
@@ -6696,15 +6840,6 @@ const DATA = {
       "nationality": "IT",
       "city": "Civitavecchia",
       "country": "IT"
-    },
-    {
-      "date": "2026-05-31",
-      "id": "LS02-0702-8DI",
-      "gender": "male",
-      "age": 41.0,
-      "nationality": "PL",
-      "city": "Warsaw",
-      "country": "PL"
     },
     {
       "date": "2026-05-31",
@@ -7050,15 +7185,6 @@ const DATA = {
     },
     {
       "date": "2026-05-31",
-      "id": "LS02-0743-V7D",
-      "gender": "female",
-      "age": 29.0,
-      "nationality": "JP",
-      "city": "London",
-      "country": "GB"
-    },
-    {
-      "date": "2026-05-31",
       "id": "LS02-0745-UAB",
       "gender": "male",
       "age": 60.0,
@@ -7095,8 +7221,8 @@ const DATA = {
     }
   ],
   "stripe": {
-    "totalRevenue": 26675.0,
-    "totalCount": 813,
+    "totalRevenue": 27035.0,
+    "totalCount": 828,
     "currency": "eur",
     "byDay": {
       "2026-04-02": {
@@ -7338,6 +7464,14 @@ const DATA = {
       "2026-05-31": {
         "revenue": 5960.0,
         "count": 161
+      },
+      "2026-06-01": {
+        "revenue": 330.0,
+        "count": 13
+      },
+      "2026-06-02": {
+        "revenue": 30.0,
+        "count": 2
       }
     }
   },
